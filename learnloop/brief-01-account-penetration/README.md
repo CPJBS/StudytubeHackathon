@@ -8,7 +8,7 @@
 
 The board wants **five enterprise logos from a list of 50 DACH accounts this quarter**. The current outbound reply rate is **0.4%**. The team is burning the list with templated sequences nobody answers.
 
-**What you'll build:** don't write a clever email — **build the machine that writes them.** A system that takes one account and produces tailored, ready-to-send outreach (or a personalised landing page), then does it again for the next account, and the next.
+**What you'll build:** don't write a clever email — **build the machine that writes them.** The catch: in a machine like this, the writing is the last 10%. What makes the output reply-worthy is everything upstream: research the account, catch the live signal, map the buying committee, choose the way in (email? phone? LinkedIn? a reference from the beachhead?). Only then does it produce the tailored, ready-to-send outreach (or a personalised landing page) — and then it does the next account, and the next. Account research on steroids, with a send button at the end.
 
 **A winning demo:** pick a live account, run your tool, and show outreach so specific the room forgets it was AI-assisted — then prove it does the next one too.
 
@@ -19,6 +19,8 @@ The board wants **five enterprise logos from a list of 50 DACH accounts this qua
 LearnLoop's machine has three functions: SENSE (who, why now), SPEAK (what to say, in whose voice), REACH (land it, earn the reply). You're building REACH.
 
 The backstory matters: the Berlin pod won LearnLoop's first 9 German customers the artisanal way — founder intros, references, feet on the ground. That motion worked and cannot be multiplied. When the warm network ran dry, the pod fell back on templates: 3,200 emails, 13 replies. The 50 accounts in this pack are the pod's own target list — well-researched, barely penetrated. Your machine has to do what the warm network did (earn trust through relevance) without the warm network.
+
+A scoping note that saves you an hour: **you own the relevance — who, why now, through which door.** The voice belongs to the SPEAK team (their checker meets your outreach at the reconnect); the bible's voice rules are all you need in the meantime. A team that spends the afternoon polishing sentences is doing another brief's job with worse tools.
 
 **At the reconnect (last half hour) you hand over:** your tool, run live, plus one send-ready multi-threaded sequence — which gets passed through the SPEAK team's voice checker in front of the room. You'll also receive the SENSE team's read on which accounts, channels, and angles the data actually supports. Build so those hand-offs are easy.
 

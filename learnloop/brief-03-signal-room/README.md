@@ -12,7 +12,7 @@ LearnLoop is **drowning in data** — site analytics, funnel drop-off, customer 
 
 **A winning demo:** show something LearnLoop would open again on Monday — **a living view they can interrogate, not a screenshot.**
 
-One clarification that decides who wins: **the interpretation is the product.** A chart-dump without a reading loses to a plain page that says what's true, what's noise, and what to do — but the promised bar stands: it should be alive, reusable, and able to answer follow-up questions on the spot. Build the reading *into* the tool.
+One clarification that decides everything: **this is a synthesis layer, not a visualisation layer.** The deliverable is the *reading* — "here's what it means and here's what to do," short enough that a VP acts on it in three minutes — kept alive so it can be interrogated and fed next month's data. Charts are welcome only where they carry the reading. A dashboard that re-plots the CSVs is the thing LearnLoop already has too many of; it loses to a plain page that says what's true, what's noise, and what to do.
 
 ---
 

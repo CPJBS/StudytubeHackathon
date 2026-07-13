@@ -73,9 +73,9 @@ Total talk time: ~9.5 minutes across 8 beats.
 *Context: connect the machine to the briefs they already read online. Each brief is one subsystem. Pitch all three as equally heroic; the room skews demand-gen, so give SPEAK and SENSE deliberate love. End with where Germany fits: proving ground, not theme.*
 
 - Each team takes one subsystem of the same machine. You've seen these briefs; here's how they connect:
-  - **The Signal Room = SENSE.** Four messy data sources, no shared truth. Build the living read: what's actually working, what's noise, what to do. Winning demo: something LearnLoop would open again on Monday.
+  - **The Signal Room = SENSE.** Four messy data sources, no shared truth. Build the synthesis layer — not more charts: the reading. What's actually working, what's noise, what to do, short enough that a VP acts on it. Winning demo: something LearnLoop would open again on Monday and interrogate.
   - **The Brand Voice Machine = SPEAK.** Six authors, drifting voice, hand-editing that can't scale, and next quarter it must survive German and Spanish. Build the tool that checks, rewrites, explains, and travels. Winning demo: prove it travels to Madrid and Berlin.
-  - **The Account Penetration Machine = REACH.** 50 named DACH accounts, 5 logos wanted this quarter, 0.4% baseline. Don't write a clever email; build the machine that writes them. Winning demo: outreach so specific the room forgets it was AI-assisted, then prove it does the next account too.
+  - **The Account Penetration Machine = REACH.** 50 named DACH accounts, 5 logos wanted this quarter, 0.4% baseline. Don't write a clever email; build the machine that writes them — and in that machine, the writing is the last step. Research, signal, committee, way in: account research on steroids. Winning demo: outreach so specific the room forgets it was AI-assisted, then prove it does the next account too.
 - Why Germany? Because that's where the artisanal way ran out first. If the machine works where LearnLoop is nearly nobody, it works anywhere. Germany is the exam, not the syllabus.
 
 **Slide cue:** the three brief names mapped onto the SENSE/SPEAK/REACH machine diagram.

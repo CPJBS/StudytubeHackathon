@@ -22,6 +22,8 @@ Here's what makes this urgent rather than cosmetic: the voice isn't a taste thin
 
 **At the reconnect (last half hour) you hand over:** your checker, run live on the REACH team's German outreach in front of the room. You'll also receive the SENSE team's read on which content actually performs — treat it as input for what the voice system should amplify. Build so those hand-offs are easy.
 
+Division of labour, so nobody duplicates work: the REACH team owns *relevance* (which account, why now, through which door). You own *the voice* — everything LearnLoop says, in any format and any language, sounds like LearnLoop. Their research feeds your words; your words guard their sends.
+
 ---
 
 ## What's in this pack (suggested 20-minute sift order)
