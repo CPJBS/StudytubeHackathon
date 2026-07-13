@@ -1,47 +1,62 @@
-# Brief 02 — The Brand Voice Machine
+# Brief 02 · Brand × AI — The Brand Voice Machine
 
-> **Fictional data pack.** LearnLoop is a made-up company built for the GTM AI Workshop. Every name, number, and sample in this pack is invented. See `../learnloop-company-bible.md` for the world — the bible is the single source of truth.
+> **Fictional workshop material.** Everything here lives in the LearnLoop world. Read `../learnloop-story-onepager.md` first (the story), then this brief. Numbers: `../company-facts.json`. Nothing here is a real company's asset.
 
 ---
 
-## The situation
+## The brief
 
-LearnLoop had a voice worth reading. Direct, confident, a little contrarian. It talked to L&D leaders as peers, led with claims and numbers, and named the pain nobody else would say out loud. Early content stood out *because* it didn't sound like every other learning-platform blog.
+LearnLoop **4x'd its content output** this year. **Six people** now publish in the company's name, and the brand voice is drifting into beige. On top of that, LearnLoop is expanding into **Spain and Germany** — so "on-brand" now has to survive new markets too. Editing everything by hand doesn't scale.
 
-Then the content team scaled. Output is up **4x this year** — but now **six people publish under the brand**, and the writing has quietly turned beige. "Empower." "Unlock." "Seamless solutions that drive results in today's fast-paced world." The sentences got longer and the claims got softer. Nobody decided to sound generic; it happened one hedge at a time, because hand-editing every piece to hold the line doesn't scale across six authors.
+**What you'll build:** a reusable tool that rewrites any draft into the brand voice **and explains what it changed and why** — then push it further and build it as a skill that can flex to a new language or market without starting from scratch.
 
-And it's about to get harder. LearnLoop is **expanding into DACH and Spain this quarter.** That means the same voice has to hold not just across six authors, but across three languages — and a straight translation of a beige English sentence just gives you a beige German one. The voice has to survive *transcreation*, not survive translation.
+**A winning demo:** feed in an ugly draft live, get back something on-brand with a clear explanation of every change — then **prove it travels to Madrid and Berlin.**
 
-## The goal
+---
 
-Build a **voice system** — not a style memo nobody reads. Two moving parts:
+## You are the SPEAK subsystem
 
-1. **A codified voice** — the principles, the banned-word list, the DO/DON'T rules, made machine-usable so a model (or a person) can apply them consistently.
-2. **A check + rewrite loop** — feed in any draft, get back a verdict (on-voice / drifted) plus a rewrite that fixes it, in EN, and adapts (not translates) for DE and ES.
+LearnLoop's machine has three functions: SENSE (who, why now), SPEAK (what to say, in whose voice), REACH (land it, earn the reply). You're building SPEAK.
 
-The bar: the system should catch the same drift a good human editor would, hold the line across all six authors, and travel across languages without going flat. Hand-editing is the thing you're replacing.
+Here's what makes this urgent rather than cosmetic: the voice isn't a taste thing — it's the thing that pulled the right buyers in when LearnLoop was small (ask the sales team how many deals started with someone forwarding a LearnLoop post). Today the voice is held together by one pair of hands editing six people's output, one draft at a time. That pair of hands does not scale to 4x output — and it does not speak German or Spanish at all. Nora's memo in this pack is the whole problem in 250 words.
 
-## What's in this pack
+**At the reconnect (last half hour) you hand over:** your checker, run live on the REACH team's German outreach in front of the room. You'll also receive the SENSE team's read on which content actually performs — treat it as input for what the voice system should amplify. Build so those hand-offs are easy.
 
-| File | What it is |
-|------|------------|
-| `voice-guide.md` | LearnLoop's official brand voice guide — principles, DO/DON'T word lists, before/after tone examples, and how the voice *adapts* (not just translates) for DE and ES. This is your rubric. |
-| `author-samples/` | 6 short pieces, one per publisher, varied by content type. **Some are on-voice, some have drifted.** Your check-loop should be able to tell them apart. (Each file carries a hidden intended-answer note for mentors.) |
-| `localisation-pieces.md` | 2–3 English pieces that need DE/ES *transcreation*. Each flags the trap — an idiom, a pun, or a claim that needs softening for the German market. DE/ES versions are left blank for you to build. |
-| `gold-standard.md` | One reference piece that nails the voice, annotated line-by-line with *why* it works. Calibrate against this. |
+---
+
+## What's in this pack (suggested 20-minute sift order)
+
+| # | File | What it is |
+|---|------|-----------|
+| 1 | This README | The brief. |
+| 2 | [`voice-guide.md`](./voice-guide.md) | The official voice rules: principles, DO/DON'T lists, banned words, and how the voice adapts (not translates) for DE and ES. **Your rubric.** |
+| 3 | [`gold-standard.md`](./gold-standard.md) | One reference piece that nails the voice, annotated line-by-line. Calibrate against this. |
+| 4 | [`on-brand-corpus.md`](./on-brand-corpus.md) | 20 on-brand reference pieces across formats. The training set: if a draft doesn't sound like these, it isn't ready. |
+| 5 | [`off-brand-stack.md`](./off-brand-stack.md) | 10 recent drafts awaiting review, from all six authors. All have drifted — some obviously, some subtly. Your checker should catch every one and say why. |
+| 6 | [`author-samples/`](./author-samples/) | 6 short pieces, one per author. Some on-voice, some drifted — can your system tell? |
+| 7 | [`de-launch-memo.md`](./de-launch-memo.md) | Nora's German-launch memo + the freelance translation that came back "grammatically perfect and completely dead." Diagnosing *why* it's dead is your job. |
+| 8 | [`localisation-pieces.md`](./localisation-pieces.md) | 3 EN pieces awaiting DE/ES transcreation, each with a trap (idiom, bold claim, register). |
+
+Shared world (parent folder): the story one-pager, the bible, `company-facts.json`, `icp-snapshot.md`, `customer-quote-bank.md` (how buyers actually talk — useful calibration), `win-loss-call-notes.md`, `gtm-roster.md`.
+
+---
 
 ## Suggested starting prompts
 
-Copy-paste to get moving — then make them your own.
+Adapt freely — these are starters, not scripts.
 
-1. **Codify the checker.** "Read `voice-guide.md` and turn it into a scoring rubric a model can apply. Then score every file in `author-samples/` on-voice or drifted, cite the specific rule broken, and rank them worst-to-best."
+1. **Codify the checker.**
+   *"Read voice-guide.md, gold-standard.md and on-brand-corpus.md. Turn the voice into a scoring rubric a model can apply consistently — including the structural rules (claim-first, proof, no hedging), not just the banned-word list. Then score every draft in off-brand-stack.md and author-samples/, cite the specific rule broken, and rank worst-to-best."*
 
-2. **Build the rewrite loop.** "Take the worst-scoring author sample. Rewrite it to pass the `voice-guide.md` rules and read like `gold-standard.md`. Show a before/after diff and name every change you made and which rule it satisfies."
+2. **Build the rewrite loop.**
+   *"Take the worst-scoring draft. Rewrite it to pass every rule and read like the gold standard. Show a before/after diff and name every change and the rule it satisfies. Then wrap this into a reusable flow: paste any draft → verdict → rewrite → explanation."*
 
-3. **Cross the language line.** "Take piece 1 in `localisation-pieces.md`. Transcreate it for DE (Sie-form, more precise) and ES (warmer, more relational) — don't translate literally. Explain how you handled the trap flagged in the note, and prove the LearnLoop voice survived the jump."
+3. **Cross the language line.**
+   *"Read de-launch-memo.md. First diagnose precisely why the freelance German translation is voice-dead (be specific: which rules did it break, where did the rhythm and the aside die). Then produce the transcreation that fixes it — and prove the voice survived with a back-translation test."*
 
-4. **Prove it scales.** "Design a repeatable loop: any author pastes a draft → the system returns a verdict, the broken rules, and a fixed rewrite. Run it on all 6 samples and show it holds the line the same way each time."
+4. **Prove it scales.**
+   *"Run the full loop on all 10 stack drafts + all 6 author samples in one pass. Show it holds the line the same way each time. Then package it as a reusable skill: what would another team need to run this on their own brand?"*
 
 ---
 
-*Fictional pack. Nothing here is a real LearnLoop asset — the company doesn't exist.*
+*Fictional. Consistent with `company-facts.json` (canon v2). Built for the GTM AI Workshop, Jul 16.*

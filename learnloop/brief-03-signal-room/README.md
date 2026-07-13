@@ -1,47 +1,28 @@
-# Brief 03 — The Signal Room
+# Brief 03 · Data × AI — The Signal Room
 
-> **Fictional data pack.** LearnLoop is a made-up company built for the GTM AI Workshop (Jul 16). Every number, review, and post below is invented. Nothing here is real data. See `../learnloop-company-bible.md` for the world it lives in.
-
----
-
-## The situation
-
-LearnLoop has one RevOps person, and they are drowning.
-
-They pipe together four data sources — web/funnel analytics (GA4-style), the LMS product funnel, review-site feedback (G2/Capterra-style), and LinkedIn engagement. The pipes work. The dashboards render. But nobody in the building can say what any of it *means*.
-
-- The board wants to know why trial→paid conversion is "stuck." Nobody agrees on the actual number.
-- Sales blames the top of the funnel ("marketing sends junk"). Marketing blames activation ("the product loses people in week one"). Product blames sales ("they promised things Loop doesn't do yet").
-- One dashboard says LinkedIn is the best channel. Another says it converts worst. Both are "right," depending on which column you read.
-- Reviews are a wall of stars and paragraphs. Everyone has read "a few" and drawn opposite conclusions.
-
-Every meeting re-litigates the same argument because there is no shared answer. There is data. There is no *signal*.
+> **Fictional workshop material.** Everything here lives in the LearnLoop world. Read `../learnloop-story-onepager.md` first (the story), then this brief. Numbers: `../company-facts.json`. Every review, post, and row below is invented — and the pile is messy **on purpose**.
 
 ---
 
-## The goal
+## The brief
 
-Build a **synthesis layer**: something that ingests this messy, multi-source pile and produces a short **"what it means + what to do" briefing** a VP could read in three minutes and act on.
+LearnLoop is **drowning in data** — site analytics, funnel drop-off, customer reviews, LinkedIn engagement — and nobody can say what any of it actually means.
 
-Not a dashboard. Not more charts. A *reading* of the data — the two or three things that are actually true, stated plainly, with the one recommendation each implies. The judges care about **the interpretation**, not the visualization.
+**What you'll build:** not a one-off analysis — **build something they can keep using.** An interactive dashboard or tool that turns the raw data into a live read of what's happening, and lets someone point at any part of it and ask *"wait, what happened here?"* and get an answer.
 
-A great output looks like:
-> "Trial→paid is not stuck — it's two different funnels wearing one number. [insight]. Do X. Here's the evidence." (~1 page)
+**A winning demo:** show something LearnLoop would open again on Monday — **a living view they can interrogate, not a screenshot.**
 
-A weak output re-plots the CSVs and calls the messiest month a "trend."
+One clarification that decides who wins: **the interpretation is the product.** A chart-dump without a reading loses to a plain page that says what's true, what's noise, and what to do — but the promised bar stands: it should be alive, reusable, and able to answer follow-up questions on the spot. Build the reading *into* the tool.
 
 ---
 
-## What's in this pack
+## You are the SENSE subsystem
 
-| File | What it is | The trap |
-|------|-----------|----------|
-| `funnel-analytics.csv` | ~12 months of web + funnel data, by channel | Inconsistent channel names, missing months, an outlier month, a column that disagrees with the LinkedIn export |
-| `reviews.md` | ~18 review-site reviews, mixed sentiment | The signal is a *pattern across reviews*, not any single 5-star or 1-star |
-| `linkedin-engagement.csv` | ~30 LinkedIn posts with engagement metrics | One content type quietly outperforms the rest ~5x; product posts look busy but do nothing |
-| `README.md` | This file | — |
+LearnLoop's machine has three functions: SENSE (who, why now, what works), SPEAK (what to say), REACH (land it). You're building SENSE.
 
-There is a fifth file, `contradictions-and-redherrings.md` — **that one is for mentors only.** If you're a participant, don't open it. It's the answer key.
+The stakes: LearnLoop is about to bet the quarter on 50 German accounts. The answer to "what actually works for us — which channel, which content, which product strength, which weakness will bite us in a market where we have zero goodwill" is buried in the company's own data. Right now every meeting re-litigates it: read `what-the-org-believes.md` — five leaders, five theories, at most one of them right. Mila (RevOps, team of one) pipes the data together; nobody can read it. Your tool settles arguments.
+
+**At the reconnect (last half hour) you hand over:** the play — which accounts/channels deserve the DACH budget, which content does the pulling, where the product leaks — delivered to the REACH and SPEAK teams as their input. Build so that hand-off is one screen, not a lecture.
 
 ---
 
@@ -49,37 +30,47 @@ There is a fifth file, `contradictions-and-redherrings.md` — **that one is for
 
 **The data is deliberately messy and it contradicts itself. That is the point of the exercise.**
 
-There is **no pre-cleaned "correct" table** hiding behind this. The mess is realistic: real RevOps piles look exactly like this. Your job is not to find *the* answer — it's to build a layer that separates **signal from noise** and is honest about which is which.
+There is no pre-cleaned "correct" table hiding behind this. Real RevOps piles look exactly like this. Expect:
+- **Naming chaos** — the same channel appears under multiple spellings. A naive `GROUP BY` will mis-rank everything.
+- **Holes** — missing rows, blank cells. Blank is not zero.
+- **An outlier** — one month is wildly off. Tracking bug or real spike? Deciding *is* the analysis.
+- **Cross-source disagreement** — two files describe the same channel and don't match. Which is closer to the truth, for which question?
+- **Loud-but-empty data** — the highest-volume things are not the highest-value things.
 
-Specifically, expect:
-- **Naming chaos** — the same channel appears under 3+ spellings. If you `GROUP BY channel` naively, you'll split one channel into three and mis-rank everything.
-- **Holes** — some months are missing rows or blank cells. Don't quietly treat blank as zero.
-- **An outlier** — one month is wildly off. It's either a tracking bug or a one-off spike. Deciding which *is* the analysis.
-- **Cross-source disagreement** — the funnel CSV and the LinkedIn CSV describe the same channel and don't match. One of them is closer to the truth. Which, and why?
-- **Loud-but-empty data** — the highest-*volume* things are not the highest-*value* things. Reviews with the most words aren't the most representative. Posts with the most impressions aren't the ones that drove signups.
+---
 
-A team that reports "LinkedIn is our #1 channel, onboarding is great, and March was a breakout month" has pattern-matched the noise. A team that catches *why* each of those is a trap has found the signal.
+## What's in this pack (suggested 20-minute sift order)
 
-**Be honest about confidence.** If the data can't support a claim, say so. "We can't tell X from this data, and here's the one thing we'd instrument to find out" is a *strong* answer, not a weak one.
+| # | File | What it is |
+|---|------|-----------|
+| 1 | This README | The brief. |
+| 2 | [`what-the-org-believes.md`](./what-the-org-believes.md) | Five leaders' current theories about what's wrong. Your tool gets to adjudicate. Pick your suspect now — you'll probably be wrong. |
+| 3 | [`funnel-analytics.csv`](./funnel-analytics.csv) | ~12 months of web + funnel data by channel. Raw. |
+| 4 | [`linkedin-engagement.csv`](./linkedin-engagement.csv) | ~30 LinkedIn posts with engagement metrics. Raw. |
+| 5 | [`reviews.md`](./reviews.md) | 21 review-site reviews, mixed sentiment, including the first German customers. The signal is a pattern, not a quote. |
+
+There is a sixth file, `contradictions-and-redherrings.md` — **mentor-only answer key. Don't open it.** (Yes, really. Your demo is better if you earned it.)
+
+Shared world (parent folder): the story one-pager, the bible, `company-facts.json`, `win-loss-call-notes.md` (qualitative corroboration lives there), `customer-quote-bank.md`, `rate-card.md` (for sanity-checking any revenue math), `gtm-roster.md`.
 
 ---
 
 ## Suggested starting prompts
 
-Paste one of these into your build to get moving. Adapt freely.
+Adapt freely — these are starters, not scripts.
 
 1. **Clean-then-read:**
-   "Here are four messy GTM data files from a company called LearnLoop. First, reconcile the inconsistencies — especially channel names across the two CSVs — and flag anything missing, contradictory, or anomalous. Don't fix silently; list every judgment call you made. Then tell me the 2-3 things that are actually true across all four sources."
+   *"Here are the LearnLoop GTM data files. First reconcile the inconsistencies — especially channel naming across the two CSVs — and flag everything missing, contradictory, or anomalous. Don't fix silently; list every judgment call. Then tell me the 2–3 things that are actually true across all sources."*
 
-2. **The briefing:**
-   "Act as a RevOps analyst. From these four files, write a one-page briefing for our VP GTM: what the data means (max 3 insights, each with its evidence and a confidence level) and what to do about each (one concrete action). Ignore anything you can't support. Explicitly name any metric you think is being misread by the org."
+2. **Adjudicate the org.**
+   *"Read what-the-org-believes.md. For each of the five claims, use the data to rule: right, wrong, or half-right — with the evidence and a confidence level. Where the data can't rule, say so and name what you'd instrument."*
 
-3. **Signal vs noise audit:**
-   "Go through these files and split them into SIGNAL (patterns that repeat across sources or reviews) and NOISE (outliers, one-offs, naming artifacts, loud-but-unrepresentative items). For each noise item, say what a naive analyst would wrongly conclude from it."
+3. **Build the living read.**
+   *"Build an interactive page/tool over these files: the 2-4 true insights up top with evidence and confidence, the noise explicitly quarantined with reasons, and a question box where I can ask 'what happened here?' about any channel, month, or claim and get a grounded answer. It should still be useful when new data lands next month."*
 
-4. **The contradiction hunt:**
-   "The funnel CSV and the LinkedIn CSV both describe LinkedIn performance and they disagree. Find the contradiction, reason about which source is more trustworthy for which question, and tell me what conversion story is actually true — then do the same for the reviews vs the funnel drop-off."
+4. **The signal-vs-noise audit:**
+   *"Split everything in these files into SIGNAL (patterns that repeat across sources) and NOISE (outliers, artifacts, loud-but-unrepresentative items). For each noise item, say what a naive analyst would wrongly conclude from it."*
 
 ---
 
-*Fictional pack for the GTM AI Workshop. All data invented. If anything here contradicts the company bible, the bible wins.*
+*Fictional. Consistent with `company-facts.json` (canon v2). Built for the GTM AI Workshop, Jul 16.*

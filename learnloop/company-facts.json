@@ -1,0 +1,104 @@
+{
+  "_meta": {
+    "what": "LearnLoop canonical facts. Machine-readable single source of truth for the GTM AI Workshop fiction.",
+    "rule": "Every number and name in every asset must match this file. Where any other document disagrees, this file wins.",
+    "fictional": true,
+    "canon_version": "v2 (2026-07-13)"
+  },
+  "company": {
+    "name": "LearnLoop",
+    "legal_name": "LearnLoop B.V.",
+    "hq": "Amsterdam, Netherlands",
+    "offices": ["Amsterdam (HQ)", "Berlin (opened Q3 2025)"],
+    "founded": 2019,
+    "employees": 280,
+    "tagline": "Close the loop between learning and doing.",
+    "one_liner": "B2B learning platform for the mid-market: proves the skill landed, not just that the training was completed."
+  },
+  "funding": {
+    "total_raised_eur_m": 68,
+    "rounds": [
+      { "round": "Seed", "year": 2020, "amount_eur_m": 3 },
+      { "round": "Series A", "year": 2022, "amount_eur_m": 8 },
+      { "round": "Series B", "year": 2023, "amount_eur_m": 12 },
+      { "round": "Series C", "year": 2025, "amount_eur_m": 45 }
+    ]
+  },
+  "metrics": {
+    "arr_eur_m": 30,
+    "growth_yoy_pct": 55,
+    "growth_trajectory_pct": { "2024": 90, "2025": 70, "2026_run_rate": 55 },
+    "customers_mid_market": 750,
+    "customers_note": "Sales-led, mid-market (200-2,000 employees). Free-trial signups are product-led, mostly individual users and small teams, and are NOT counted in the 750.",
+    "avg_acv_eur_k": 40,
+    "acv_range_eur_k": [15, 120],
+    "nrr_pct": 112,
+    "gross_margin_pct": 78,
+    "blended_win_rate_pct": 24,
+    "avg_sales_cycle_days_mid_market": 90,
+    "trial_signups_per_quarter": 2100,
+    "board_plan": "EUR 200M ARR by 2030"
+  },
+  "product": {
+    "modules": {
+      "Learn": "The LMS: courses, learning paths, compliance tracking, mobile.",
+      "Loop": "The skills engine: maps who can actually do what, flags gaps, prescribes the learning that closes them. The moat.",
+      "Market": "8,000+ courses from external providers, bought and administered in one place."
+    },
+    "pricing_model": "Per-seat per year; Learn-only or Learn+Loop bundle; Market usage-based on top."
+  },
+  "markets": {
+    "home": "Benelux (NL strongest)",
+    "beachhead": "DACH via Berlin office; 9 customers won through warm network (founder intros, references, feet on the ground)",
+    "next": "Spain (next quarter, planning only)",
+    "dach_beachhead_customers_named": [
+      { "name": "Falkenrode Logistik GmbH", "city": "Hamburg", "employees": 1100, "industry": "Logistics" },
+      { "name": "Brandwerk Media AG", "city": "Cologne", "employees": 450, "industry": "Media" },
+      { "name": "Steinbach & Roth Maschinen GmbH", "city": "Nuremberg", "employees": 800, "industry": "Manufacturing" },
+      { "name": "Quellwerk Energie AG", "city": "Leipzig", "employees": 1300, "industry": "Energy" }
+    ],
+    "dach_beachhead_note": "The other 5 beachhead customers are unnamed; do not invent additional named DACH customers."
+  },
+  "icp": {
+    "company_profile": "200-2,000 employees, mid-market, in transformation (scaling, reorg, compliance pressure, or skills shortage)",
+    "personas": {
+      "economic_buyer": { "titles": ["CHRO", "VP People", "L&D Director"], "wants": "provable ROI, board-ready impact numbers", "fears": "buying another tool nobody uses" },
+      "champion": { "titles": ["L&D Manager", "People Ops Lead"], "wants": "less manual admin, higher engagement", "fears": "being blamed for low adoption" },
+      "blocker": { "titles": ["IT / Security", "Procurement", "Works council (DE)"], "wants": "integration, data security, no new risk", "fears": "shadow tools, SSO/compliance gaps, employee-monitoring concerns (DE)" }
+    }
+  },
+  "competitors": {
+    "SkillForge": { "archetype": "Enterprise incumbent: heavy, expensive", "line": "Built for the org chart of 2010" },
+    "Cognita": { "archetype": "Content marketplace, nothing else", "line": "A library, not a loop" },
+    "Bloomwork": { "archetype": "Engagement-first, data-light", "line": "Great streaks, no skills" },
+    "Traida": { "archetype": "HR suite with a bolt-on LMS", "line": "Learning as an afterthought" }
+  },
+  "gtm_org": {
+    "sales": { "aes": 12, "sdrs_home": 6, "berlin_pod_sdrs": 3 },
+    "marketing": { "headcount": 10, "publishing_authors": 6 },
+    "revops": { "headcount": 1 },
+    "customer_success": { "headcount": 18 }
+  },
+  "cast": {
+    "ceo": "Daan Vermeulen",
+    "cro": "Bram Hoekstra",
+    "vp_marketing": "Nora Bakker",
+    "head_of_product": "Iris Chen",
+    "revops_analyst": "Mila Verhoeven",
+    "publishing_authors": ["Marcus de Wit", "Priya Sharma", "Daniel Okafor", "Sofia Marchetti", "Tom Willems", "Hannah Berg"],
+    "berlin_pod": ["Lukas Brandt", "Frieda Sommer", "Joris van Dam"]
+  },
+  "gtm_baselines": {
+    "dach_cold_outbound": {
+      "target_accounts": 50,
+      "contacts_targeted": 130,
+      "emails_sent_last_quarter": 3200,
+      "replies": 13,
+      "reply_rate_pct": 0.4,
+      "meetings_booked": 2,
+      "goal_this_quarter": "5 enterprise logos from the 50-account list"
+    },
+    "content": { "output_growth": "4x this year", "publishing_authors": 6, "editing_model": "hand-editing by whoever holds the voice; does not scale" },
+    "quarter_now": "Q3 2026"
+  }
+}

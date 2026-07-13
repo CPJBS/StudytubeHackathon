@@ -1,31 +1,26 @@
-# Brief 01 — The Account Penetration Machine
+# Brief 01 · ABM — The Account Penetration Machine
 
-> **Fictional workshop material.** Everything here lives in the LearnLoop world. Read the [company bible](../learnloop-company-bible.md) first — it is the single source of truth. No real companies, people, or data appear in this pack.
-
----
-
-## The situation
-
-LearnLoop is a Series B B2B learning-enablement platform (€11.4M ARR, 140 people, ~55% YoY growth and slowing). The board has one demand this quarter: **prove LearnLoop can grow outside its home market.** The spotlight is on **DACH** (Germany, Austria, Switzerland).
-
-The problem: LearnLoop's 3 SDRs are running outbound into a list of DACH mid-market accounts, and it isn't working. The reply rate is **0.4%**. Not because the list is bad — the accounts are squarely in ICP (200–2,000 employees, mid-market, in some kind of transformation) — but because the outreach is generic. Mail-merged templates, feature dumps, "Hope this email finds you well," fake "loved your post" personalisation. The list is getting *burned* faster than it's producing pipeline.
-
-Sending more of the same makes it worse. The motion has to change.
+> **Fictional workshop material.** Everything here lives in the LearnLoop world. Read `../learnloop-story-onepager.md` first (the story), then this brief. Numbers: `../company-facts.json`. No real companies, people, or data appear in this pack.
 
 ---
 
-## The goal
+## The brief
 
-**Win 5 enterprise logos from 50 DACH accounts this quarter.**
+The board wants **five enterprise logos from a list of 50 DACH accounts this quarter**. The current outbound reply rate is **0.4%**. The team is burning the list with templated sequences nobody answers.
 
-To get there, teams build an **AI-assisted account-penetration workflow**:
+**What you'll build:** don't write a clever email — **build the machine that writes them.** A system that takes one account and produces tailored, ready-to-send outreach (or a personalised landing page), then does it again for the next account, and the next.
 
-> **research → signal → personalised, multi-threaded outreach that earns replies**
+**A winning demo:** pick a live account, run your tool, and show outreach so specific the room forgets it was AI-assisted — then prove it does the next one too.
 
-- **Research** the account: firmographics, tech stack, what's changing.
-- **Find the signal**: a real trigger event (reorg, leadership hire, competitor tool, job posts, compliance pressure, expansion) that makes *now* the right time.
-- **Personalise + multi-thread**: coordinated, persona-specific outreach to the buying committee (economic buyer, champion, blocker) — not the same email to three people.
-- **Earn the reply**: prove you looked, name a pain they already feel, make the ask easy.
+---
+
+## You are the REACH subsystem
+
+LearnLoop's machine has three functions: SENSE (who, why now), SPEAK (what to say, in whose voice), REACH (land it, earn the reply). You're building REACH.
+
+The backstory matters: the Berlin pod won LearnLoop's first 9 German customers the artisanal way — founder intros, references, feet on the ground. That motion worked and cannot be multiplied. When the warm network ran dry, the pod fell back on templates: 3,200 emails, 13 replies. The 50 accounts in this pack are the pod's own target list — well-researched, barely penetrated. Your machine has to do what the warm network did (earn trust through relevance) without the warm network.
+
+**At the reconnect (last half hour) you hand over:** your tool, run live, plus one send-ready multi-threaded sequence — which gets passed through the SPEAK team's voice checker in front of the room. You'll also receive the SENSE team's read on which accounts, channels, and angles the data actually supports. Build so those hand-offs are easy.
 
 ---
 
@@ -38,53 +33,54 @@ To get there, teams build an **AI-assisted account-penetration workflow**:
 | Accounts multi-threaded | ~0 | ≥3 personas on every Tier-A account |
 | Enterprise logos won | 0 | **5 of 50** |
 
-Full funnel + how "good" is judged: [`baseline-and-targets.md`](./baseline-and-targets.md).
+Full funnel + targets: [`baseline-and-targets.md`](./baseline-and-targets.md). Deliverability and opens are healthy — the collapse is at *reply*. This is a relevance problem, not a volume problem.
 
 ---
 
-## What "good" looks like
+## Working Germany (read before you write a single line)
 
-Not a nicer template — a **different category of email**:
+The market you're entering plays by different rules than NL:
 
-1. **Proves you looked** — a real, account-specific signal you can actually cite.
-2. **Names a pain the buyer already feels** — mapped to their persona (buyer wants board-ready ROI; champion wants less admin and higher adoption; blocker wants security/integration proof).
-3. **Earns the reply** — one low-friction ask, no feature dump, no banned words (`empower / unlock / seamless / leverage / drive results / in today's world`).
-4. **Works the account as a committee** — coordinated angles across buyer + champion + blocker.
-
-The test: *could this email only have been sent to this one account?* If it could go to any of the 50 unchanged, it fails.
+- **Sie-form, always.** Titles matter (Dr. is used). First-naming a German L&D director you've never met costs you the reply.
+- **Proof beats punch.** German buyers are more skeptical of bold unbacked claims. Keep the confidence; attach the number or the mechanism.
+- **Cold email is legally and culturally tighter than in NL** (company counsel's note to the pod: one-to-one relevance and a legitimate reason to write, or don't send; bulk blasts are how domains die). This makes channel choice part of the puzzle: phone is normal in German B2B; LinkedIn is where the L&D community actually talks.
+- **The works council (Betriebsrat) is a real stakeholder.** Any hint of "employee monitoring" in your messaging triggers the blocker. Talk about capability visibility for teams, not tracking of individuals. See what happened in the call notes.
+- **"Wer nutzt Sie in Deutschland?"** — the reference question kills cold deals here. The pod's 9 beachhead customers are the scarce asset; use them deliberately.
 
 ---
 
-## What's in this pack
+## What's in this pack (suggested 20-minute sift order)
 
-| File | What it is |
-|------|-----------|
-| [`README.md`](./README.md) | This brief. |
-| [`accounts.csv`](./accounts.csv) | 50 fictional DACH target accounts (DE/AT/CH), with firmographics, tech signals, and A/B/C priority tiers. |
-| [`contacts.csv`](./contacts.csv) | ~130 contacts across those accounts — economic buyers, champions, blockers, and a few end users — each with a title, seniority, and a hook/signal. |
-| [`burned-templates.md`](./burned-templates.md) | 4 examples of the *current* generic outbound (the 0.4% stuff) with a "why this fails" note under each — the anti-patterns to beat. |
-| [`baseline-and-targets.md`](./baseline-and-targets.md) | The current funnel, the targets, and an optional intent-signals table (dated trigger events per account). |
+| # | File | What it is |
+|---|------|-----------|
+| 1 | This README | The brief. |
+| 2 | [`burned-templates.md`](./burned-templates.md) | The 4-touch sequence that produced 0.4%, with why-this-fails notes. The anti-patterns to beat. |
+| 3 | [`berlin-pod-call-notes.md`](./berlin-pod-call-notes.md) | 5 call notes from the pod: how the warm wins actually happened, and what killed the cold calls. The objections in here are your messaging map. |
+| 4 | [`accounts.csv`](./accounts.csv) | The 50 target accounts (DE/AT/CH): firmographics, tech signals, A/B/C tiers. Skim 10 rows, trust the rest — your tool reads them all. |
+| 5 | [`contacts.csv`](./contacts.csv) | ~130 contacts mapped to the buying committee. Joins on `account_id`. |
+| 6 | [`contact-signals.md`](./contact-signals.md) | Quotable public LinkedIn activity for 10 Tier-A contacts. Real personalisation raw material. |
+| 7 | [`baseline-and-targets.md`](./baseline-and-targets.md) | The funnel, the targets, and the dated intent-signals table (joins on `account_id`). |
 
-**How the files connect:** `contacts.csv.account_id` joins to `accounts.csv.account_id`. The intent-signals table in `baseline-and-targets.md` also joins on `account_id` and enriches the `tech_signals` already in `accounts.csv`.
+Shared world (in the parent folder): the story one-pager, the bible, `company-facts.json`, `icp-snapshot.md`, `rate-card.md`, `win-loss-call-notes.md`, `customer-quote-bank.md`, `gtm-roster.md`. Your machine gets smarter with every one of them it reads.
 
 ---
 
 ## Suggested starting prompts
 
-Drop these into your AI tool of choice to get moving. Adapt freely.
+Adapt freely — these are starters, not scripts.
 
 1. **Prioritise the list.**
-   *"Here are 50 DACH accounts (accounts.csv) and their contacts (contacts.csv). Score each account on fit + timing for LearnLoop (a B2B learning-enablement platform — see the company bible). Rank the top 10 to attack first and explain the signal that makes each one time-sensitive right now."*
+   *"Read accounts.csv, contacts.csv and the intent-signals table in baseline-and-targets.md. Score each account on fit + timing for LearnLoop (see company-facts.json and icp-snapshot.md). Rank the top 10 to attack first and cite the signal that makes each time-sensitive."*
 
-2. **Build a per-account penetration plan.**
-   *"For account ACC-013 (Eschenbach Chemie), map the buying committee from contacts.csv. For each persona (economic buyer / champion / blocker), tell me the one pain they feel and the one angle that would earn a reply. Then propose a 3-touch, multi-threaded sequence — coordinated, not repetitive."*
+2. **Mine the calls for angles.**
+   *"Read berlin-pod-call-notes.md and win-loss-call-notes.md. List every objection and buying trigger German buyers actually voiced. Turn them into messaging rules: what to lead with, what to never say, what proof to attach."*
 
-3. **Write outreach that beats the burned templates.**
-   *"Read burned-templates.md and its 'why this fails' notes. Now write a first-touch email to the champion at ACC-015 (Meridian Software) grounded in a real signal from the data. Ban these words: empower, unlock, seamless, leverage, drive results, in today's world. Then explain, line by line, why yours would out-reply the burned version."*
+3. **Build a per-account penetration plan.**
+   *"For account ACC-013, map the buying committee from contacts.csv. For each persona, name the one pain they feel and the angle that earns a reply. Propose a 3-touch multi-threaded sequence — coordinated, not repetitive — citing a real signal per touch."*
 
-4. **Design the workflow, not just one email.**
-   *"Design an AI-assisted workflow that turns this raw pack into personalised, multi-threaded outreach for all 50 accounts at scale — research step, signal step, drafting step, and a quality check. Show where a human reviews. Estimate the reply-rate lift vs the 0.4% baseline and justify the number."*
+4. **Build the machine, not the email.**
+   *"Design a repeatable workflow: account in → research dossier → chosen signal → three persona angles → send-ready sequence (respecting the German rules in this README and the voice rules in the bible) → quality gate → next account. Build it so I can run it on any account_id. Show where a human reviews."*
 
 ---
 
-*Fictional. Consistent with the LearnLoop company bible. Built for the GTM AI Workshop (Jul 16).*
+*Fictional. Consistent with `company-facts.json` (canon v2). Built for the GTM AI Workshop, Jul 16.*

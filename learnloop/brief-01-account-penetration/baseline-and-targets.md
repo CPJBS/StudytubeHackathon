@@ -78,11 +78,3 @@ Fictional trigger events per account teams can weave into outreach. Each account
 **Signal-type legend:** `leadership_hire`, `job_post`, `m_and_a`, `reorg`, `tech_change`, `competitor`, `compliance`, `announcement`, `expansion`, `rfp`, `funding_expansion`.
 
 ---
-
-## How teams will be judged (suggested)
-
-- **Relevance** — could this email *only* have been sent to this account? (If it could go to any of the 50 unchanged, it fails.)
-- **Signal use** — is the outreach grounded in a real, cited signal?
-- **Multi-threading** — is the account worked as a committee (buyer + champion + blocker), with coordinated, persona-specific angles?
-- **Voice** — direct, specific, human; zero banned words (per the bible).
-- **Believable lift** — is the reply-rate story credible (3–5%), or hand-wavy?

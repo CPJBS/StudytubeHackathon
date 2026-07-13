@@ -14,7 +14,7 @@ Created: 2026-07-07
 
 Hi {{first_name}},
 
-You're in for the AI Workshop on **Wednesday, July 16**. You'll pick one of three real GTM challenges and **build a working fix with Claude** in a couple of hours — with us in the room to help.
+You're in for the AI Workshop on **Thursday, July 16**. You'll pick one of three real GTM challenges and **build a working fix with Claude** in a couple of hours — with us in the room to help.
 
 To make the most of the day, spend **10 minutes** getting set up now. Do this before you arrive and you'll be building from minute one.
 

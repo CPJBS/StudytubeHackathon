@@ -1,0 +1,6 @@
+account_id,company,country,city,industry,employees,revenue_band,tech_signals,priority_tier
+ACC-051,Wetterstein Fertigungstechnik GmbH,DE,Augsburg,Manufacturing,1150,€250M-500M,"uses SkillForge; reorg into 3 business units; hiring Head of People Development",A
+ACC-052,Rheingold Versicherung KG,DE,Mainz,Insurance,890,€100M-250M,"Bloomwork rollout stalled; new CHRO hired from enterprise; NPS-driven L&D mandate",A
+ACC-053,Nordseeperle Handelshaus GmbH,DE,Bremen,Retail,1600,€500M-1B,"omnichannel frontline reskilling; uses Cognita for content only; Works Council digitalisation talks",B
+ACC-054,Tirolensis Alpin AG,AT,Salzburg,Hospitality,970,€100M-250M,"seasonal multilingual onboarding; hiring VP People; no unified LMS across resorts",A
+ACC-055,Reusstal Präzisionswerk GmbH,CH,Zug,Engineering,540,€100M-250M,"Industry 4.0 upskilling grant; uses SkillForge legacy; hiring L&D Manager",B

@@ -114,4 +114,22 @@ Don't expect them to hold your hand — build your own rollout plan and you'll b
 
 ---
 
+**★★★★☆ — "Loop is real, but Market is thin in German"**
+*Role: L&D Lead, Logistikunternehmen · Company size: 1,000–2,000 · Source: G2 · Date: 2026-06*
+We are a logistics company, over 1,000 people, and Loop finally gives us skills visibility we can bring into the Vorstand meeting — not "training completed" but who can actually do the job on the floor. This convinced even our most skeptical operations leads, and that alone is worth four stars. But we must be honest about Market: it says 8,000+ courses, but when our team actually went through it, maybe 900 are usable in German. Our warehouse and frontline colleagues will not sit through an English-language safety or compliance course, so a large part of that "8,000" is simply invisible to the people who need it the most. For a company selling into Germany, this is not a small gap.
+
+---
+
+**★★★☆☆ — "Support timezone (and language) is the real gap"**
+*Role: HR Business Partner, Maschinenbau · Company size: 800–1,000 · Source: Capterra · Date: 2026-06*
+The product itself, no complaints — Loop and Learn both do what was promised. My three stars are for everything around the product. Support tickets, documentation, even the admin help center: all English-only. Response times from Germany are noticeably slower than what our colleagues in the Netherlands describe; we think the support team is simply not built for our timezone, or our language, yet. Bigger topic: our Betriebsrat needed a real conversation about data processing and employee-monitoring concerns before we could roll out the skill tracking in Loop, and it took weeks to get someone on a call who could answer in a way our legal department would accept. Onboarding itself worked out fine in the end, but only because we built our own rollout plan instead of waiting for guidance from LearnLoop — nobody hands you a playbook for the German market. Good bones, but right now Germany feels like an afterthought.
+
+---
+
+**★★★★★ — "We called another German customer before we signed, and that call sold it"**
+*Role: Head of L&D, Medienhaus · Company size: 200–500 · Source: G2 · Date: 2026-07*
+Before we signed anything, we asked LearnLoop for a reference in Germany — not a case study PDF, an actual call. Ten minutes into that conversation with another L&D lead running Loop at roughly our size, we knew this was not another buzzword tool, and the deal basically closed itself from there. Loop delivers exactly what was promised: real skills visibility instead of course-completion theatre. One wish for the roadmap: a genuine German-language admin UI, not just translated course content — our admins still configure everything in an English backend, which is a small but constant friction. Five stars, and yes, we already agreed to be that reference call for the next German company that asks.
+
+---
+
 *Fictional reviews · GTM AI Workshop · all invented.*

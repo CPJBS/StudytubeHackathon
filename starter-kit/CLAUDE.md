@@ -9,7 +9,7 @@
 You picked one of three challenges for **LearnLoop**, a (fictional) B2B learning-enablement SaaS. Your job: **build a working fix with Claude** in the next 2–3 hours, then show it off.
 
 - Your challenge brief + data are in this folder — start with `README.md`.
-- The full LearnLoop company background is in `learnloop-company-bible.md`. Claude has already read it.
+- This folder also has LearnLoop's **shared world**: `learnloop-story-onepager.md` (the story — read this one first), `learnloop-company-bible.md`, `company-facts.json` (the numbers — every fact should trace back to this file), `icp-snapshot.md`, `rate-card.md`, `gtm-roster.md`, `win-loss-call-notes.md`, and `customer-quote-bank.md`. It's worth pointing Claude at these directly — they're what let your build reason about LearnLoop like an insider instead of guessing.
 - Your starter prompts are in `prompt-pack.md`. Paste one in to get moving.
 
 ---
@@ -25,7 +25,11 @@ You picked one of three challenges for **LearnLoop**, a (fictional) B2B learning
 
 ## The bar for the showcase
 
-You'll get ~3 minutes to show what you built. Aim for **something that runs / something you can see**: a working script, a generated set of assets, an HTML page, a rewrite loop, a briefing. Rough and real beats polished and hypothetical.
+You'll get ~3 minutes to show what you built. Aim for **something that runs / something you can see**: a working script, a generated set of assets, an HTML page, a rewrite loop, a briefing.
+
+## The reconnect — build for handover
+
+**In the last half hour, all three teams reconnect.** Your subsystem doesn't stand alone — SENSE, SPEAK, and REACH hand their output to each other and one account travels through the whole machine in front of the room. That means: **build so your output can be handed over**, not just demoed solo. Something the next team can actually open, read, paste into their own tool, or run live — not a one-off you'd need to explain from scratch.
 
 ---
 

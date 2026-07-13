@@ -78,3 +78,26 @@ A strong output lands **2–4 of these**, each with evidence and a confidence le
 ---
 
 *Mentor-only · fictional data · GTM AI Workshop.*
+
+---
+
+## Addendum (Jul 13) — the German beachhead thread
+
+**What changed:** 3 new reviews were added to `reviews.md` (18 → **21** total). All three are anonymized DACH customers, loosely aligned in size/industry to the named beachhead accounts in `company-facts.json` (logistics ~1,000+ employees, manufacturing ~800–1,000, media ~200–500) without naming any of them directly.
+
+**The discoverable pattern:** read together, the three additions aren't random extra noise — they're the beachhead already whispering what breaks when you try to scale DACH past the first 9 warm-network wins:
+1. **German catalogue thinness.** Market advertises 8,000+ courses; one customer's own count puts usable German-language content at roughly 900. Frontline/warehouse staff won't take English-language compliance training, so a meaningful slice of the "content moat" is invisible to exactly the workforce segment DACH mid-market buyers care most about.
+2. **English-only support/docs vs. works-council expectations.** Support tickets, docs, and the admin help center are English-only, and response times from Germany lag Benelux — an extension of the *existing* "support is slow post-sale" pattern (#5 above). But in Germany it collides with something structurally bigger: a **Betriebsrat (works council) conversation about data processing / employee monitoring** that the vendor was slow to support. That's not a support-ticket problem, it's a sales-cycle and legal-readiness problem.
+3. **Reference-driven buying as the real DACH GTM lesson.** The 5-star review is explicit: the deal closed on a peer-to-peer reference call with another German customer, not the demo. This is the sharpest insight in the addition — it says the warm-network/founder-intro motion that won the first 9 beachhead accounts (per `company-facts.json`) isn't a one-time bootstrap trick, it's *the* DACH sales mechanism, and it should be productized (a formal reference program) rather than treated as something to graduate away from.
+
+**Read against the existing key, not instead of it:** patterns #1 and #2 are the DACH-flavored expression of two patterns already in section 5 — the 3-star reviewer's "we built our own rollout plan" line echoes the DIY-onboarding pattern almost verbatim, and the slow-response complaint echoes the support pattern. They are not new complaints; the same structural gaps are showing up with a German accent. The catalogue-language gap is genuinely new and specific to DACH/Market — it wasn't present anywhere in the original 18.
+
+**Confidence trap to watch for:** unlike Loop-loved / onboarding-painful / mobile-weak / support-slow — each backed by 6+ mentions across the reviews — each DACH-specific complaint above currently has **n=1**. A team that treats "the German content gap" as a confirmed, quantified pattern the same way they'd treat the mobile-app complaint is overclaiming. The honest framing: this is early, directional signal from a small beachhead (9 named/unnamed customers, 3 of whom happened to leave reviews), worth flagging and worth instrumenting further — not yet a statistically established pattern. Naming that distinction is exactly the "honesty about confidence" tell described at the top of this document.
+
+**Updated math on the original counts:** section 5's frequencies were cited "out of 18." Against 21 they move roughly as follows (order-of-magnitude, not a re-count to enforce): Loop praised ~11/18 → ~13/21 (~62%, essentially unchanged); onboarding painful ~9/18 → ~10/21 (~48%, essentially unchanged); mobile weak ~7/18 → still ~7/21 (~33%, diluted — none of the German reviews mention mobile, itself worth a team noticing); support slow ~6/18 → ~7/21 (~33%, essentially unchanged). **The original four patterns still hold.** Nothing about the addition contradicts or overturns section 5 — it layers a fifth, DACH-specific thread on top.
+
+**How a good team uses this:** this thread is live objection-handling material for whichever team is working Brief 01 (the Account Penetration Machine / **REACH**) on the 50-account DACH outbound list — pre-empt the German-content question, pre-empt the works-council/data-processing question before Procurement or the works council raises it, and build the reference-call motion into the outreach sequence itself ("ask to speak to another German customer" is now a demand-side signal, not just a nice-to-have). It also feeds the org's expansion decision: before templating the DACH warm-network playbook onto Spain (`company-facts.json` → `markets.next`), a sharp team flags that the underlying structural gaps — localized content depth, language-matched support, works-council-ready sales process — need fixing first, or the same three complaints resurface with a Spanish accent next quarter.
+
+---
+
+*Addendum appended 2026-07-13 · mentor-only · fictional data · GTM AI Workshop.*

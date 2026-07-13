@@ -1,0 +1,7 @@
+month,channel,sessions,signups,activated,trial_to_paid_pct,churn_pct,notes
+2026-07,Organic Search,10420,224,108,8.3,2.6,partial month - data through Jul 15
+2026-07,Paid Search,5670,178,68,4.6,5.2,
+2026-07,Linkedin,2280,93,62,15.9,1.4,
+2026-07,Direct,3260,78,38,7.0,3.0,
+2026-07,Referral,1200,40,24,11.2,,
+2026-07,Email,1840,50,25,8.8,,
