@@ -25,7 +25,7 @@ Think: a modern LMS + skills-tracking + content marketplace, sold to HR/L&D team
 | Employees | ~280 |
 | ARR | €30M |
 | Growth | ~55% YoY (was 90% in 2024, 70% in 2025) |
-| Customers | ~750 mid-market companies, avg ACV ~€40k (range €15k–120k) |
+| Customers | ~750 mid-market companies, avg deal ~€3.3k MRR (range €1.3k–€10k MRR) |
 | Home market | Benelux (NL strongest) |
 | Beachhead | DACH: Berlin office + 9 customers won via warm network |
 | Next | Spain (next quarter, planning only) |
@@ -53,6 +53,7 @@ Three modules, sold together or standalone:
 **Company profile:** 200–2,000 employees, mid-market, in transformation (scaling, reorg, compliance pressure, or skills shortage).
 
 **Buying committee:**
+
 | Persona | Title examples | What they want | What they fear |
 |---------|---------------|----------------|----------------|
 | **Economic buyer** | CHRO, VP People, L&D Director | Provable ROI, board-ready impact numbers | Buying another tool nobody uses |
@@ -128,7 +129,7 @@ All three skills live in people's heads today: artisanal, undocumented, linear. 
 
 Keep these consistent across all briefs so the world holds together (authoritative source: `company-facts.json`):
 - ARR **€30M** · ~280 employees · **55%** YoY growth (down from 90%)
-- ~**750** mid-market customers · avg ACV ~€40k (€15k–120k)
+- ~**750** mid-market customers · avg deal ~**€3.3k MRR** (range €1.3k–€10k MRR; deals are always quoted in MRR, billed annually)
 - Board plan: **€200M by 2030**
 - DACH cold outbound reply rate: **0.4%** (3,200 emails, 13 replies — DACH list only; the home motion is warm and healthy)
 - Goal this quarter: **5 enterprise logos from 50 DACH accounts**, 3-person pod, zero new hires

@@ -17,7 +17,7 @@ LearnLoop is a B2B learning platform for the mid-market, founded 2019 in Amsterd
 | Funding | Series C, €45M (late 2025); €68M total |
 | Team | ~280 people |
 | ARR | **€30M**, growing ~55% (down from 90% two years ago) |
-| Customers | ~750 mid-market companies (200 to 2,000 employees), €15k to €120k ACV |
+| Customers | ~750 mid-market companies (200 to 2,000 employees), deals of €1.3k to €10k MRR |
 | Home markets | Benelux; DACH beachhead (Berlin office, first logos won warm) |
 | Expansion | **DACH: from beachhead to second home market. Spain next.** |
 | Board plan | **€200M ARR by 2030** |

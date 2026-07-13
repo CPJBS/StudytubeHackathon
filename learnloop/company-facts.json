@@ -30,8 +30,9 @@
     "growth_trajectory_pct": { "2024": 90, "2025": 70, "2026_run_rate": 55 },
     "customers_mid_market": 750,
     "customers_note": "Sales-led, mid-market (200-2,000 employees). Free-trial signups are product-led, mostly individual users and small teams, and are NOT counted in the 750.",
-    "avg_acv_eur_k": 40,
-    "acv_range_eur_k": [15, 120],
+    "deal_size_convention": "Internal convention: deal sizes are always quoted as MRR. Billing is annual; multiply by 12 for contract value.",
+    "avg_deal_mrr_eur": 3300,
+    "deal_mrr_range_eur": [1250, 10000],
     "nrr_pct": 112,
     "gross_margin_pct": 78,
     "blended_win_rate_pct": 24,
@@ -45,7 +46,7 @@
       "Loop": "The skills engine: maps who can actually do what, flags gaps, prescribes the learning that closes them. The moat.",
       "Market": "8,000+ courses from external providers, bought and administered in one place."
     },
-    "pricing_model": "Per-seat per year; Learn-only or Learn+Loop bundle; Market usage-based on top."
+    "pricing_model": "Per-seat per month, billed annually; Learn-only or Learn+Loop bundle; Market usage-based on top. Deal sizes quoted as MRR."
   },
   "markets": {
     "home": "Benelux (NL strongest)",
