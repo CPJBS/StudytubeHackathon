@@ -22,6 +22,8 @@ The backstory matters: the Berlin pod won LearnLoop's first 9 German customers t
 
 A scoping note that saves you an hour: **you own the relevance — who, why now, through which door.** The voice belongs to the SPEAK team (their checker meets your outreach at the reconnect); the bible's voice rules are all you need in the meantime. A team that spends the afternoon polishing sentences is doing another brief's job with worse tools.
 
+And one real-world constraint for your routing logic: **the pod is three people.** A human touch — a call, a personal LinkedIn note — costs roughly 100x an automated one, and Frieda can do maybe eight meaningful calls a day. So the machine's job includes deciding *which door for which account*: a hot Tier-A with a live signal deserves a call brief for a human, not another email; a burned or bounced contact (check `send-log.csv`) shouldn't get email at all. Routing an account to a person, with the research attached, is a valid output of your machine — arguably the most valuable one.
+
 **At the reconnect (last half hour) you hand over:** your tool, run live, plus one send-ready multi-threaded sequence — which gets passed through the SPEAK team's voice checker in front of the room. You'll also receive the SENSE team's read on which accounts, channels, and angles the data actually supports. Build so those hand-offs are easy.
 
 ---
@@ -59,9 +61,12 @@ The market you're entering plays by different rules than NL:
 | 2 | [`burned-templates.md`](./burned-templates.md) | The 4-touch sequence that produced 0.4%, with why-this-fails notes. The anti-patterns to beat. |
 | 3 | [`berlin-pod-call-notes.md`](./berlin-pod-call-notes.md) | 5 call notes from the pod: how the warm wins actually happened, and what killed the cold calls. The objections in here are your messaging map. |
 | 4 | [`accounts.csv`](./accounts.csv) | The 50 target accounts (DE/AT/CH): firmographics, tech signals, A/B/C tiers. Skim 10 rows, trust the rest — your tool reads them all. |
-| 5 | [`contacts.csv`](./contacts.csv) | ~130 contacts mapped to the buying committee. Joins on `account_id`. |
-| 6 | [`contact-signals.md`](./contact-signals.md) | Quotable public LinkedIn activity for 10 Tier-A contacts. Real personalisation raw material. |
-| 7 | [`baseline-and-targets.md`](./baseline-and-targets.md) | The funnel, the targets, and the dated intent-signals table (joins on `account_id`). |
+| 5 | [`signal-feed.md`](./signal-feed.md) | ~50 dated raw signals for those same 50 accounts: funding rounds, regulation (EU AI Act, NIS2…), headcount growth, full job-ad texts, subsidies. Press-snippet paragraphs, unscored — and some of it is noise. Joins on `account_id`. |
+| 6 | [`contacts.csv`](./contacts.csv) | ~130 contacts mapped to the buying committee. Joins on `account_id`. |
+| 7 | [`contact-signals.md`](./contact-signals.md) | Quotable public LinkedIn activity for 10 Tier-A contacts. Real personalisation raw material. |
+| 8 | [`warm-paths.md`](./warm-paths.md) | The pod's who-could-open-which-door note: beachhead customers, events, references, hearsay. The way-in raw material. |
+| 9 | [`send-log.csv`](./send-log.csv) | Last quarter's send history, one row per contact. Who's burned, who bounced, who's untouched — check before you send. Joins on `contact_id`. |
+| 10 | [`baseline-and-targets.md`](./baseline-and-targets.md) | The funnel, the targets, and the dated intent-signals table (joins on `account_id`). |
 
 Shared world (in the parent folder): the story one-pager, the bible, `company-facts.json`, `icp-snapshot.md`, `rate-card.md`, `win-loss-call-notes.md`, `customer-quote-bank.md`, `gtm-roster.md`. Your machine gets smarter with every one of them it reads.
 
