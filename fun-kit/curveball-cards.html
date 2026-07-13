@@ -1,10 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LearnLoop Curveball Cards — GTM AI Workshop</title>
+<style>
+  :root{
+    --navy:#0B0B2B; --blue:#0F4ABE; --purple:#7C5CFF; --ink:#1a1a2e;
+    --paper:#ffffff; --muted:#6b6b80; --line:#e7e7ef;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:#f2f2f7; color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    padding:32px;
+  }
+  header{max-width:1040px; margin:0 auto 24px;}
+  h1{font-size:26px; margin:0 0 6px; color:var(--navy); letter-spacing:-.02em;}
+  .sub{color:var(--muted); font-size:14px; margin:0;}
+  .toolbar{max-width:1040px; margin:0 auto 20px;}
+  .btn{
+    background:var(--navy); color:#fff; border:0; padding:10px 18px; border-radius:8px;
+    font-size:14px; font-weight:600; cursor:pointer;
+  }
+  .btn:hover{background:var(--blue);}
+  .grid{
+    max-width:1040px; margin:0 auto;
+    display:grid; grid-template-columns:repeat(2,1fr); gap:18px;
+  }
+  .card{
+    background:var(--paper); border-radius:14px; padding:22px 22px 20px;
+    border:1px solid var(--line); position:relative; overflow:hidden;
+    display:flex; flex-direction:column; min-height:210px;
+    box-shadow:0 1px 3px rgba(11,11,43,.06);
+  }
+  .card::before{
+    content:""; position:absolute; top:0; left:0; right:0; height:6px;
+    background:linear-gradient(90deg,var(--purple),var(--blue));
+  }
+  .tag{
+    display:inline-flex; align-items:center; gap:6px; align-self:flex-start;
+    font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em;
+    color:var(--purple); background:rgba(124,92,255,.1); padding:5px 10px; border-radius:20px;
+    margin-bottom:14px;
+  }
+  .tag svg{width:13px; height:13px;}
+  .num{position:absolute; top:18px; right:20px; font-size:13px; font-weight:700; color:var(--line);}
+  .quote{font-size:19px; line-height:1.35; font-weight:600; color:var(--navy); margin:0 0 12px;}
+  .quote .attr{display:block; font-size:12px; font-weight:600; color:var(--muted); margin-top:10px; font-style:normal;}
+  .why{font-size:13px; color:var(--muted); line-height:1.45; margin-top:auto; padding-top:12px; border-top:1px dashed var(--line);}
+  .why b{color:var(--ink);}
+  .section-label{
+    max-width:1040px; margin:28px auto 12px; font-size:12px; font-weight:700;
+    text-transform:uppercase; letter-spacing:.1em; color:var(--muted);
+  }
+  footer{max-width:1040px; margin:32px auto 0; color:var(--muted); font-size:12px; line-height:1.5;}
+  @media print{
+    body{background:#fff; padding:0;}
+    .toolbar{display:none;}
+    .grid{gap:0;}
+    .card{border-radius:0; box-shadow:none; break-inside:avoid; page-break-inside:avoid; min-height:250px; border:1px solid #ccc;}
+    header,.section-label,footer{break-inside:avoid;}
+  }
+</style>
 </head>
 <body>
+<header>
+  <h1>Curveball Cards</h1>
+  <p class="sub">GTM AI Workshop &middot; LearnLoop &middot; Drop one on a team ~60–90 min in, when the build-slump hits. Each is a message "from LearnLoop's VP GTM." Read it out loud for maximum chaos.</p>
+</header>
+<div class="toolbar"><button class="btn" onclick="window.print()">Print cards</button></div>
 
+<div class="section-label">Any team — pick by the room's energy</div>
+<div class="grid">
+  <div class="card"><span class="num">01</span>
+    <span class="tag">Any team</span>
+    <p class="quote">"Board meeting just got moved up. I need something I can <em>show</em> in 20 minutes — not explain. Make it visual, now."
+    <span class="attr">— VP GTM</span></p>
+    <p class="why"><b>Why:</b> forces a demoable artifact over a perfect one. Kills over-engineering exactly when it creeps in.</p>
+  </div>
+  <div class="card"><span class="num">02</span>
+    <span class="tag">Any team</span>
+    <p class="quote">"Legal killed our boldest claim. Whatever you're building can no longer rely on your single strongest assumption. Adapt."
+    <span class="attr">— VP GTM</span></p>
+    <p class="why"><b>Why:</b> real GTM whiplash. Rewards teams whose build is flexible, not brittle.</p>
+  </div>
+  <div class="card"><span class="num">03</span>
+    <span class="tag">Any team</span>
+    <p class="quote">"Our biggest competitor just shipped the exact thing you're building. So — what makes <em>ours</em> different? Bake it in before the demo."
+    <span class="attr">— VP GTM</span></p>
+    <p class="why"><b>Why:</b> pushes differentiation and sharper positioning under time pressure.</p>
+  </div>
+  <div class="card"><span class="num">04</span>
+    <span class="tag">Any team</span>
+    <p class="quote">"Budget's frozen. Your solution now has to run on tools LearnLoop already has — no new spend. Show me it still works."
+    <span class="attr">— VP GTM</span></p>
+    <p class="why"><b>Why:</b> constraint = creativity. Mirrors the real "make it work with what we've got."</p>
+  </div>
+</div>
+
+<div class="section-label">Brief 01 — Account penetration</div>
+<div class="grid">
+  <div class="card"><span class="num">05</span>
+    <span class="tag">Brief 01</span>
+    <p class="quote">"Our #1 target account just got acquired. Half your list's firmographics are now wrong. How does your machine handle stale data?"
+    <span class="attr">— VP GTM</span></p>
+    <p class="why"><b>Why:</b> tests whether the "machine" is robust or a one-shot demo. Great teams handle it gracefully.</p>
+  </div>
+  <div class="card"><span class="num">06</span>
+    <span class="tag">Brief 01</span>
+    <p class="quote">"The CHRO you were about to email just posted: 'if one more vendor sends me a personalised-but-obviously-AI email…' — go on. Beat that."
+    <span class="attr">— VP GTM</span></p>
+    <p class="why"><b>Why:</b> raises the bar past "mail-merge with AI" toward genuinely human, relevant outreach.</p>
+  </div>
+</div>
+
+<div class="section-label">Brief 02 — Brand voice</div>
+<div class="grid">
+  <div class="card"><span class="num">07</span>
+    <span class="tag">Brief 02</span>
+    <p class="quote">"Marketing lead quit. A brand-new hire publishes tomorrow and has never read the voice guide. Your system has to catch them cold."
+    <span class="attr">— VP GTM</span></p>
+    <p class="why"><b>Why:</b> the whole point of the brief — does the system hold without the humans who wrote it?</p>
+  </div>
+  <div class="card"><span class="num">08</span>
+    <span class="tag">Brief 02</span>
+    <p class="quote">"Sales says the German market finds our voice 'too casual to trust.' Prove your localisation actually handles that — don't just translate it."
+    <span class="attr">— VP GTM</span></p>
+    <p class="why"><b>Why:</b> forces adapt-don't-translate, the trap baked into the localisation pieces.</p>
+  </div>
+</div>
+
+<div class="section-label">Brief 03 — Signal room</div>
+<div class="grid">
+  <div class="card"><span class="num">09</span>
+    <span class="tag">Brief 03</span>
+    <p class="quote">"The CEO only reads <em>one</em> number. Which single metric do you put in front of her — and why that one?"
+    <span class="attr">— VP GTM</span></p>
+    <p class="why"><b>Why:</b> forces synthesis over dashboards. Separates "here's all the data" from "here's what matters."</p>
+  </div>
+  <div class="card"><span class="num">10</span>
+    <span class="tag">Brief 03</span>
+    <p class="quote">"Confession: one of those data sources is partly fake — a test import nobody cleaned. Can your synthesis survive bad data?"
+    <span class="attr">— VP GTM</span></p>
+    <p class="why"><b>Why:</b> rewards teams who question their inputs instead of trusting the pile (there really is a planted bug).</p>
+  </div>
+</div>
+
+<div class="section-label">Wildcards — use sparingly, for the lols</div>
+<div class="grid">
+  <div class="card"><span class="num">W1</span>
+    <span class="tag">Wildcard</span>
+    <p class="quote">"Swap one teammate with the table next to you for 10 minutes. Fresh eyes on both builds."
+    <span class="attr">— The Board</span></p>
+    <p class="why"><b>Why:</b> breaks tunnel vision, sparks cross-pollination, and it's just fun to watch.</p>
+  </div>
+  <div class="card"><span class="num">W2</span>
+    <span class="tag">Wildcard</span>
+    <p class="quote">"Speed round. 15 minutes to get ONE thing working end-to-end. Ring the bell when it does. Go."
+    <span class="attr">— The Board</span></p>
+    <p class="why"><b>Why:</b> injects urgency mid-build and drives bell-rings (energy on the leaderboard).</p>
+  </div>
+</div>
+
+<footer>
+  All scenarios fictional — LearnLoop isn't real. Facilitator tip: don't hand every card to every team. Read the room, pick 1–2 per team, and time them for the mid-build lull. Save the "Any team" cards for a synchronised drop across the whole room if energy dips at once.
+</footer>
 </body>
 </html>

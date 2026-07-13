@@ -1,0 +1,33 @@
+post_id,date,post_topic,format,impressions,reactions,comments,reshares,clicks
+LP-001,2025-09-04,Why most L&D dashboards are theater,opinion,8420,412,88,64,391
+LP-002,2025-09-11,LearnLoop Q3 product update,product,11200,96,7,3,58
+LP-003,2025-09-18,Completions are a vanity metric,opinion,7640,388,102,71,354
+LP-004,2025-09-25,New: Market marketplace hits 8000 courses,product,13400,74,4,2,41
+LP-005,2025-10-02,The skills gap nobody measures,opinion,6980,341,79,58,318
+LP-006,2025-10-09,Loop feature walkthrough video,product,9800,88,6,4,52
+LP-007,2025-10-16,Stop buying learning tools nobody uses,contrarian,9120,468,131,94,447
+LP-008,2025-10-23,LearnLoop named in industry report,product,10600,63,3,1,29
+LP-009,2025-10-30,Your LMS is lying to your board,contrarian,8870,441,118,83,412
+LP-010,2025-11-06,Webinar recap: skills-based orgs,event,5240,142,19,11,168
+LP-011,2025-11-13,Learn module gets mobile refresh,product,12100,81,5,2,47
+LP-012,2025-11-20,The training that costs the most is the training nobody uses,contrarian,7930,402,109,77,388
+LP-013,2025-11-27,Customer story: Nordwind Logistics,customer,6410,214,34,22,201
+LP-014,2025-12-04,Loop skills engine explained in 90 seconds,product,10900,79,6,3,44
+LP-015,2025-12-11,Why streaks don't equal skills,opinion,7210,357,91,66,331
+LP-016,2025-12-18,Year in review: LearnLoop 2025,product,9400,102,9,5,61
+LP-017,2026-01-08,The 2010 org chart is running your L&D stack,contrarian,8650,429,124,88,404
+LP-018,2026-01-15,New integrations announced,product,11800,71,4,2,38
+LP-019,2026-01-22,Most upskilling programs measure the wrong thing,opinion,6870,334,84,61,309
+LP-020,2026-01-29,LearnLoop expands to DACH,product,14200,118,12,7,73
+LP-021,2026-02-05,Compliance training is where good intentions go to die,contrarian,7480,411,106,79,379
+LP-022,2026-02-12,Loop v2 changelog,product,8900,58,3,1,26
+LP-023,2026-02-19,What we learned from 500 L&D leaders,opinion,7020,346,88,63,322
+LP-024,2026-02-26,Case study: Meridian Health cut ramp time 40%,customer,6680,231,38,26,214
+LP-025,2026-03-05,Your engagement metrics are a trap,contrarian,9040,455,127,91,431
+LP-026,2026-03-12,Market content library update,product,10300,67,4,2,33
+LP-027,2026-03-19,The skill your team has but can't prove,opinion,6790,338,82,59,314
+LP-028,2026-03-26,LearnLoop hiring in Berlin,product,7600,89,11,4,48
+LP-029,2026-04-02,Nobody was fired for buying the enterprise LMS. That's the problem,contrarian,8380,447,133,96,419
+LP-030,2026-04-09,Loop analytics deep-dive blog,product,9100,84,5,3,49
+LP-031,2026-04-16,Skills-based hiring is coming for L&D,opinion,7150,352,90,64,326
+LP-032,2026-04-23,LearnLoop + DACH partner announcement,product,15600,109,8,4,57

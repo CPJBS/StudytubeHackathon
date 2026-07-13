@@ -1,10 +1,233 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build Room — GTM AI Workshop</title>
+<style>
+  :root{
+    --navy:#0B0B2B; --navy2:#12123a; --blue:#0F4ABE; --blue-lite:#4d7fff;
+    --purple:#7C5CFF; --green:#32d296; --amber:#ffb020; --line:rgba(255,255,255,.1);
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    margin:0; background:radial-gradient(1200px 800px at 70% -10%,#1a1a4d 0%,var(--navy) 55%);
+    color:#fff; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    min-height:100vh; overflow-x:hidden;
+  }
+  .wrap{max-width:1400px; margin:0 auto; padding:28px 32px;}
+  .top{display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;}
+  .brand{font-size:15px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--blue-lite);}
+  .brand span{color:#fff;}
+  .controls{display:flex; gap:10px; align-items:center;}
+  button{font-family:inherit; cursor:pointer; border:0; border-radius:10px; font-weight:600;}
+  .ctl{background:rgba(255,255,255,.08); color:#fff; padding:9px 15px; font-size:13px; border:1px solid var(--line);}
+  .ctl:hover{background:rgba(255,255,255,.16);}
+  .ctl.primary{background:var(--blue); border-color:transparent;}
+  .ctl.primary:hover{background:var(--blue-lite);}
+
+  .timer-wrap{text-align:center; margin:14px 0 8px;}
+  .timer{font-size:clamp(80px,17vw,190px); font-weight:800; letter-spacing:-.03em; line-height:1;
+    font-variant-numeric:tabular-nums; text-shadow:0 4px 40px rgba(77,127,255,.4);}
+  .timer.low{color:var(--amber);}
+  .timer.done{color:var(--green);}
+  .timer-label{font-size:14px; text-transform:uppercase; letter-spacing:.2em; color:rgba(255,255,255,.55); margin-top:6px;}
+  .timer-ctls{display:flex; gap:10px; justify-content:center; margin-top:16px;}
+
+  .teams{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin:30px 0;}
+  .team{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+    border:1px solid var(--line); border-radius:16px; padding:20px; position:relative; overflow:hidden;
+    transition:transform .15s, box-shadow .15s;}
+  .team.rang{animation:pop .6s ease;}
+  @keyframes pop{0%{transform:scale(1);}30%{transform:scale(1.05); box-shadow:0 0 60px rgba(124,92,255,.7);}100%{transform:scale(1);}}
+  .team-name{font-size:20px; font-weight:700; margin-bottom:4px; background:transparent; border:0; color:#fff; width:100%; outline:none;}
+  .team-name:focus{border-bottom:1px dashed var(--line);}
+  .brief-tag{font-size:11px; color:rgba(255,255,255,.5); text-transform:uppercase; letter-spacing:.08em; margin-bottom:14px;}
+  .status{display:inline-flex; align-items:center; gap:7px; font-size:13px; font-weight:600; padding:6px 12px; border-radius:20px; cursor:pointer; user-select:none;}
+  .status .dot{width:8px; height:8px; border-radius:50%;}
+  .status[data-s="briefing"]{background:rgba(255,176,32,.15); color:var(--amber);} .status[data-s="briefing"] .dot{background:var(--amber);}
+  .status[data-s="building"]{background:rgba(77,127,255,.15); color:var(--blue-lite);} .status[data-s="building"] .dot{background:var(--blue-lite); animation:pulse 1.4s infinite;}
+  .status[data-s="shipped"]{background:rgba(50,210,150,.15); color:var(--green);} .status[data-s="shipped"] .dot{background:var(--green);}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
+  .bell-count{position:absolute; top:16px; right:16px; display:flex; align-items:center; gap:5px; font-size:14px; font-weight:700; color:var(--purple);}
+  .bell-count svg{width:16px; height:16px; stroke:var(--purple); fill:none; stroke-width:1.8;}
+  .bell-btn{margin-top:16px; width:100%; background:linear-gradient(90deg,var(--purple),var(--blue)); color:#fff; padding:11px; font-size:14px; display:flex; align-items:center; justify-content:center; gap:8px;}
+  .bell-btn:hover{filter:brightness(1.12);}
+  .bell-btn svg{width:17px; height:17px; stroke:#fff; fill:none; stroke-width:1.8;}
+
+  .log{background:rgba(0,0,0,.25); border:1px solid var(--line); border-radius:16px; padding:18px 22px; max-height:220px; overflow-y:auto;}
+  .log h2{margin:0 0 12px; font-size:13px; text-transform:uppercase; letter-spacing:.14em; color:rgba(255,255,255,.55); display:flex; align-items:center; gap:8px;}
+  .log h2 svg{width:15px; height:15px; stroke:var(--purple); fill:none; stroke-width:1.8;}
+  .log-item{padding:8px 0; border-bottom:1px solid rgba(255,255,255,.05); font-size:15px; display:flex; gap:12px;}
+  .log-item:last-child{border-bottom:0;}
+  .log-item .t{color:var(--purple); font-variant-numeric:tabular-nums; font-weight:600; flex:0 0 auto;}
+  .log-item .m{color:rgba(255,255,255,.85);}
+  .log-empty{color:rgba(255,255,255,.35); font-size:14px; font-style:italic;}
+
+  dialog{background:var(--navy2); color:#fff; border:1px solid var(--line); border-radius:16px; padding:26px; max-width:420px; width:90%;}
+  dialog::backdrop{background:rgba(0,0,0,.6);}
+  dialog h3{margin:0 0 16px; font-size:18px;}
+  .field{margin-bottom:14px;}
+  .field label{display:block; font-size:12px; color:rgba(255,255,255,.6); margin-bottom:5px; text-transform:uppercase; letter-spacing:.06em;}
+  .field input{width:100%; background:rgba(255,255,255,.06); border:1px solid var(--line); color:#fff; padding:9px 12px; border-radius:8px; font-size:14px; font-family:inherit;}
+  .dialog-actions{display:flex; gap:10px; justify-content:flex-end; margin-top:20px;}
+</style>
 </head>
 <body>
+<div class="wrap">
+  <div class="top">
+    <div class="brand">STUDYTUBE <span>&times;</span> UNMUTED &middot; <span>BUILD ROOM</span></div>
+    <div class="controls">
+      <button class="ctl" onclick="openSettings()">Settings</button>
+      <button class="ctl" onclick="toggleFullscreen()">Fullscreen</button>
+    </div>
+  </div>
 
+  <div class="timer-wrap">
+    <div class="timer" id="timer">00:00</div>
+    <div class="timer-label" id="timerLabel">Build time</div>
+    <div class="timer-ctls">
+      <button class="ctl primary" id="startBtn" onclick="toggleTimer()">Start</button>
+      <button class="ctl" onclick="resetTimer()">Reset</button>
+    </div>
+  </div>
+
+  <div class="teams" id="teams"></div>
+
+  <div class="log">
+    <h2><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg> Bell log</h2>
+    <div id="logList"><div class="log-empty">No bells yet. First team to ship, ring it.</div></div>
+  </div>
+</div>
+
+<dialog id="settings">
+  <h3>Settings</h3>
+  <div class="field"><label>Build duration (minutes)</label><input type="number" id="durInput" min="1" max="600"></div>
+  <div class="field"><label>Team names (one per line)</label><textarea id="teamsInput" rows="6" style="width:100%; background:rgba(255,255,255,.06); border:1px solid var(--line); color:#fff; padding:9px 12px; border-radius:8px; font-size:14px; font-family:inherit; resize:vertical;"></textarea></div>
+  <div class="dialog-actions">
+    <button class="ctl" onclick="document.getElementById('settings').close()">Cancel</button>
+    <button class="ctl primary" onclick="saveSettings()">Save</button>
+  </div>
+</dialog>
+
+<script>
+const DEFAULTS = {
+  durationMin: 150,
+  teams: ["Pod 1","Pod 2","Pod 3","Pod 4","Pod 5"]
+};
+const STATUSES = ["briefing","building","shipped"];
+const STATUS_LABEL = {briefing:"Briefing", building:"Building", shipped:"Shipped"};
+
+let state = load();
+
+function load(){
+  try{
+    const s = JSON.parse(localStorage.getItem("buildroom"));
+    if(s && s.teams) return s;
+  }catch(e){}
+  return {
+    durationMin: DEFAULTS.durationMin,
+    remaining: DEFAULTS.durationMin*60,
+    running:false,
+    teams: DEFAULTS.teams.map(n=>({name:n, status:"briefing", bells:0})),
+    log:[]
+  };
+}
+function save(){ localStorage.setItem("buildroom", JSON.stringify(state)); }
+
+// ---- Timer ----
+let tick=null;
+function fmt(s){ const m=Math.floor(s/60), sec=s%60; return String(m).padStart(2,"0")+":"+String(sec).padStart(2,"0"); }
+function renderTimer(){
+  const el=document.getElementById("timer");
+  el.textContent=fmt(state.remaining);
+  el.classList.toggle("low", state.remaining<=300 && state.remaining>0 && state.running);
+  el.classList.toggle("done", state.remaining===0);
+  document.getElementById("timerLabel").textContent = state.remaining===0 ? "Time!" : (state.running?"Building…":"Build time");
+  document.getElementById("startBtn").textContent = state.running?"Pause":"Start";
+}
+function toggleTimer(){
+  state.running=!state.running;
+  if(state.running){ tick=setInterval(()=>{ if(state.remaining>0){state.remaining--; if(state.remaining===0){state.running=false; clearInterval(tick); chime(true);} renderTimer(); save();} },1000); }
+  else{ clearInterval(tick); }
+  renderTimer(); save();
+}
+function resetTimer(){ state.running=false; clearInterval(tick); state.remaining=state.durationMin*60; renderTimer(); save(); }
+
+// ---- Teams ----
+function renderTeams(){
+  const c=document.getElementById("teams"); c.innerHTML="";
+  state.teams.forEach((t,i)=>{
+    const d=document.createElement("div"); d.className="team"; d.id="team"+i;
+    d.innerHTML=`
+      <div class="bell-count"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span>${t.bells}</span></div>
+      <input class="team-name" value="${t.name.replace(/"/g,'&quot;')}" onchange="renameTeam(${i}, this.value)">
+      <div class="brief-tag">Tap status to advance</div>
+      <span class="status" data-s="${t.status}" onclick="cycleStatus(${i})"><span class="dot"></span>${STATUS_LABEL[t.status]}</span>
+      <button class="bell-btn" onclick="ringBell(${i})"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>Ring the bell</button>`;
+    c.appendChild(d);
+  });
+}
+function renameTeam(i,v){ state.teams[i].name=v.trim()||("Pod "+(i+1)); save(); }
+function cycleStatus(i){
+  const cur=STATUSES.indexOf(state.teams[i].status);
+  state.teams[i].status=STATUSES[(cur+1)%STATUSES.length];
+  renderTeams(); save();
+}
+function ringBell(i){
+  state.teams[i].bells++;
+  if(state.teams[i].status!=="shipped") state.teams[i].status="shipped";
+  const stamp = state.running||state.remaining<state.durationMin*60 ? fmt(state.durationMin*60-state.remaining) : "—";
+  state.log.unshift({team:state.teams[i].name, time:stamp});
+  renderTeams(); renderLog(); save();
+  const el=document.getElementById("team"+i); el.classList.add("rang"); setTimeout(()=>el.classList.remove("rang"),600);
+  chime(false);
+}
+
+// ---- Log ----
+function renderLog(){
+  const l=document.getElementById("logList");
+  if(!state.log.length){ l.innerHTML='<div class="log-empty">No bells yet. First team to ship, ring it.</div>'; return; }
+  l.innerHTML=state.log.map(e=>`<div class="log-item"><span class="t">${e.time}</span><span class="m"><b>${e.team}</b> rang the bell</span></div>`).join("");
+}
+
+// ---- Sound ----
+function chime(big){
+  try{
+    const ctx=new (window.AudioContext||window.webkitAudioContext)();
+    const notes = big?[523,659,784,1047]:[784,1047];
+    notes.forEach((f,i)=>{
+      const o=ctx.createOscillator(), g=ctx.createGain();
+      o.type="sine"; o.frequency.value=f; o.connect(g); g.connect(ctx.destination);
+      const t=ctx.currentTime+i*0.12;
+      g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(0.3,t+0.02); g.gain.exponentialRampToValueAtTime(0.0001,t+0.5);
+      o.start(t); o.stop(t+0.5);
+    });
+  }catch(e){}
+}
+
+// ---- Settings ----
+function openSettings(){
+  document.getElementById("durInput").value=state.durationMin;
+  document.getElementById("teamsInput").value=state.teams.map(t=>t.name).join("\n");
+  document.getElementById("settings").showModal();
+}
+function saveSettings(){
+  const dur=Math.max(1,parseInt(document.getElementById("durInput").value)||DEFAULTS.durationMin);
+  const names=document.getElementById("teamsInput").value.split("\n").map(s=>s.trim()).filter(Boolean);
+  state.durationMin=dur;
+  if(!state.running) state.remaining=dur*60;
+  const old=state.teams;
+  state.teams=names.map((n,i)=>({name:n, status:old[i]?old[i].status:"briefing", bells:old[i]?old[i].bells:0}));
+  document.getElementById("settings").close();
+  renderTimer(); renderTeams(); save();
+}
+function toggleFullscreen(){ if(!document.fullscreenElement) document.documentElement.requestFullscreen(); else document.exitFullscreen(); }
+
+// init
+renderTimer(); renderTeams(); renderLog();
+if(state.running){ state.running=false; renderTimer(); } // don't auto-resume on reload
+</script>
 </body>
 </html>

@@ -1,0 +1,51 @@
+account_id,company,country,city,industry,employees,revenue_band,tech_signals,priority_tier
+ACC-001,Brauwald Maschinenbau GmbH,DE,Stuttgart,Manufacturing,1400,€250M-500M,"uses SkillForge; hiring 8 L&D roles; recent reorg into 4 divisions",A
+ACC-002,Hanseatic Assekuranz AG,DE,Hamburg,Insurance,1800,€500M-1B,"legacy LMS end-of-life 2026; new CHRO started Q1; compliance training mandate",A
+ACC-003,Alpspitz Logistik AG,DE,Munich,Logistics,950,€100M-250M,"no LMS; 3 acquisitions in 18 months; posting for Head of Talent Development",A
+ACC-004,Nordlicht Retail Group SE,DE,Cologne,Retail,2000,€1B+,"uses Cognita for content only; frontline upskilling initiative announced",A
+ACC-005,Vitalpharm Deutschland GmbH,DE,Frankfurt,Pharma,1200,€250M-500M,"GxP compliance pressure; hiring 5 L&D roles; digital transformation program",A
+ACC-006,Federweg Engineering GmbH,DE,Dortmund,Engineering,600,€100M-250M,"uses Traida HR suite; skills-gap post by VP People on LinkedIn",B
+ACC-007,Rheinstahl Komponenten AG,DE,Essen,Manufacturing,1600,€500M-1B,"apprenticeship program expansion; Works Council digitalisation talks",B
+ACC-008,Sonnfeld Energie GmbH,DE,Leipzig,Energy,750,€100M-250M,"new People Ops Lead hired; wind division growing 40%",B
+ACC-009,Kranich Möbelwerke GmbH,DE,Bielefeld,Manufacturing,480,€50M-100M,"no formal L&D function; Series-B-style growth; hiring spree",C
+ACC-010,Silberbach Finanz AG,DE,Düsseldorf,Financial Services,1100,€250M-500M,"BaFin compliance audit findings; uses SkillForge legacy",B
+ACC-011,Auerhaus Möbel & Living GmbH,DE,Nuremberg,Retail,820,€100M-250M,"seasonal workforce; onboarding backlog; new VP HR from enterprise",B
+ACC-012,Talwind Aerospace GmbH,DE,Bremen,Aerospace,1350,€250M-500M,"safety certification training; ITAR data-residency concerns",A
+ACC-013,Eschenbach Chemie AG,DE,Ludwigshafen,Chemicals,1900,€500M-1B,"REACH compliance training; reorg; L&D Director role open 60+ days",A
+ACC-014,Waldperle Naturkosmetik GmbH,DE,Freiburg,Consumer Goods,320,€50M-100M,"B-Corp; scaling fast; no LMS; engagement-first culture",C
+ACC-015,Meridian Software Solutions GmbH,DE,Karlsruhe,Technology,540,€50M-100M,"uses Bloomwork; low adoption complaints; RevOps hire",B
+ACC-016,Steinadler Bau AG,DE,Hannover,Construction,880,€100M-250M,"site-safety training mandate; distributed workforce; no mobile learning",B
+ACC-017,Blumberg Medizintechnik GmbH,DE,Tuttlingen,MedTech,690,€100M-250M,"MDR compliance; hiring L&D Manager; export-heavy",B
+ACC-018,Frostmann Kältetechnik GmbH,DE,Kassel,Manufacturing,410,€50M-100M,"family-owned modernising; new external CHRO",C
+ACC-019,Lindenhof Versicherung AG,DE,Stuttgart,Insurance,1450,€250M-500M,"agent-network training; uses SkillForge; NPS-driven L&D KPIs",A
+ACC-020,Habichtsberg Präzision GmbH,DE,Chemnitz,Engineering,720,€100M-250M,"Industry 4.0 upskilling grant; hiring 4 L&D roles",B
+ACC-021,Sturmvogel Reederei GmbH,DE,Kiel,Logistics,560,€100M-250M,"maritime certification tracking; fleet expansion",C
+ACC-022,Goldregen Handelsgruppe SE,DE,Berlin,Retail,1700,€500M-1B,"omnichannel reskilling; new Chief People Officer; uses Cognita",A
+ACC-023,Wieselburg Getränke GmbH,AT,Vienna,Food & Beverage,640,€100M-250M,"HACCP compliance; DACH-wide rollout; no unified LMS",B
+ACC-024,Alpenrose Tourismus AG,AT,Innsbruck,Hospitality,1100,€100M-250M,"seasonal onboarding at scale; language-diverse workforce",B
+ACC-025,Grünwald Immobilien AG,AT,Vienna,Real Estate,380,€50M-100M,"regulatory training; scaling into DE; new People Ops Lead",C
+ACC-026,Donaustahl Industrie AG,AT,Linz,Manufacturing,1600,€500M-1B,"uses SkillForge; safety + skills mandate; reorg into BUs",A
+ACC-027,Bergkristall Pharma GmbH,AT,Graz,Pharma,780,€100M-250M,"GMP training; expansion into Spain announced; L&D Director hiring",A
+ACC-028,Salzach Logistik GmbH,AT,Salzburg,Logistics,520,€50M-100M,"cross-border compliance; warehouse automation reskilling",C
+ACC-029,Edelweiss Finanzdienste AG,AT,Vienna,Financial Services,890,€100M-250M,"FMA compliance findings; legacy LMS; new VP HR",B
+ACC-030,Steirereck Lebensmittel GmbH,AT,Graz,Food & Beverage,450,€50M-100M,"food-safety training; frontline mobile learning gap",C
+ACC-031,Tauern Energie AG,AT,Klagenfurt,Energy,700,€100M-250M,"grid-transition skills; hiring Head of Talent Development",B
+ACC-032,Habsburg Versicherungsgruppe AG,AT,Vienna,Insurance,1300,€250M-500M,"agent training platform RFP; uses Traida bolt-on LMS",A
+ACC-033,Wörthersee Hotels & Resorts AG,AT,Klagenfurt,Hospitality,820,€100M-250M,"high seasonal churn; onboarding pain; engagement-first culture",B
+ACC-034,Kaiserblick Maschinen GmbH,AT,Wels,Engineering,590,€50M-100M,"apprenticeship digitalisation; family-owned; new CHRO",C
+ACC-035,Matterhorn Präzision AG,CH,Zurich,Manufacturing,1250,€500M-1B,"multilingual DE/FR/IT training need; uses SkillForge; reorg",A
+ACC-036,Helvetia Assurance Group AG,CH,Basel,Insurance,1900,€1B+,"FINMA compliance; three-language workforce; L&D Director open role",A
+ACC-037,Rhône Biotech SA,CH,Geneva,Pharma,860,€100M-250M,"GxP + Swissmedic training; scaling into DACH; hiring L&D Manager",A
+ACC-038,Bernina Präzisionstechnik AG,CH,Bern,MedTech,540,€100M-250M,"MDR/IVDR compliance; export training; low LMS adoption",B
+ACC-039,Léman Logistics SA,CH,Lausanne,Logistics,470,€50M-100M,"customs + dangerous-goods certification; cross-border teams",C
+ACC-040,Alpina Private Bank AG,CH,Zurich,Financial Services,720,€250M-500M,"wealth-advisor certification; uses Cognita content only",B
+ACC-041,Gotthard Bau AG,CH,Lucerne,Construction,980,€100M-250M,"site-safety in 3 languages; distributed sites; no mobile LMS",B
+ACC-042,Zürisee Detailhandel AG,CH,Zurich,Retail,1550,€500M-1B,"frontline reskilling; new Chief People Officer; omnichannel push",A
+ACC-043,Emmental Nahrung AG,CH,Bern,Food & Beverage,610,€100M-250M,"food-safety + export compliance; family-to-corporate transition",C
+ACC-044,Basilisk Chemie AG,CH,Basel,Chemicals,1400,€500M-1B,"REACH + Swiss compliance; reorg; uses SkillForge legacy",A
+ACC-045,Jungfrau Tourismus AG,CH,Interlaken,Hospitality,690,€100M-250M,"seasonal multilingual onboarding; high turnover",B
+ACC-046,Aargau Präzision GmbH,CH,Aarau,Engineering,430,€50M-100M,"Industry 4.0 grant; hiring L&D Manager; no formal L&D",C
+ACC-047,Furka Energie AG,CH,Sion,Energy,560,€100M-250M,"hydro-transition reskilling; new People Ops Lead",C
+ACC-048,Rigi Versicherung AG,CH,Lucerne,Insurance,1050,€250M-500M,"agent-network training; FINMA-driven; uses Traida",B
+ACC-049,Säntis MedTech AG,CH,St. Gallen,MedTech,750,€100M-250M,"MDR compliance; export-heavy; L&D Director role open 90 days",A
+ACC-050,Genève Consulting Partners SA,CH,Geneva,Professional Services,360,€50M-100M,"billable-hours training pressure; scaling into DE; no LMS",C
