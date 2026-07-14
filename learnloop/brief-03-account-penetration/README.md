@@ -9,6 +9,7 @@
 - **Build:** a system that takes prioritized accounts and **reaches them at the right time through the right door** — outbound email, LinkedIn, a call brief, a reference, an event, even a physical gift — orchestrated across the buying committee.
 - **The market:** 50 named DACH accounts, well-researched, barely penetrated; a 3-person pod; a 0.4% reply baseline to beat.
 - **Success looks like:** hand it one hot account and its signal → a complete attack plan out: the play, the committee, the channels, the timing, and the asset briefs. Then the next account, live.
+- **Not your task:** writing the message. The Brand Voice Machine (Brief 02) already writes it — you *order* it (an asset brief: audience, signal, angle, format, language) and you **distribute** it: right channel, right person, right moment.
 
 ---
 
@@ -30,7 +31,7 @@ The backstory matters: the Berlin pod won LearnLoop's first 9 German customers t
 
 **Your inputs and outputs:** you consume a prioritized account and its signal — work from the **starter signals** in `baseline-and-targets.md`; they stand in for the live triage a Signal Room (Brief 01) keeps running. You produce the play *and the asset briefs* — content orders precise enough that a production line (Brief 02) could fill them without a conversation. Your brief stands alone and is judged alone. But it's one part of a full system — so make each input and output one clean screen, not a lecture.
 
-A scoping note that saves you an hour: **you own the action — the play, the doors, the orchestration.** Signal capture and triage belong to the Signal Room; the words belong to the Brand Voice team (order them with an asset brief — audience, signal, angle, format, language). A team that spends the afternoon writing copy or hunting signals is doing another brief's job with worse tools.
+A scoping note that saves you an hour: **you own distribution — the play, the doors, the orchestration. The message itself already exists; your machine decides where, to whom, and when it lands.** Signal capture and triage belong to the Signal Room; the words belong to the Brand Voice team (order them with an asset brief — audience, signal, angle, format, language). A team that spends the afternoon writing copy or hunting signals is doing another brief's job with worse tools.
 
 And one real-world constraint for your routing logic: **the pod is three people.** A human touch — a call, a personal LinkedIn note — costs roughly 100x an automated one, and Frieda can do maybe eight meaningful calls a day. So the machine's job includes deciding *which door for which account*: a hot Tier-A with a live signal deserves a call brief for a human, not another email; a burned or bounced contact (check `send-log.csv`) shouldn't get email at all. Routing an account to a person, with the research attached, is a valid output of your machine — arguably the most valuable one.
 
