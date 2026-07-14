@@ -1,4 +1,4 @@
-# ⚠️ MENTOR-ONLY — Answer Key for Brief 03 (The Signal Room)
+# ⚠️ MENTOR-ONLY — Answer Key for Brief 01 (The Signal Room)
 
 > **DO NOT SHARE WITH PARTICIPANTS.** This is the answer key. It lists every deliberate contradiction and red herring planted in the data, plus the real insights buried underneath — so you can tell whether a team *found signal* or *pattern-matched noise*.
 >
@@ -101,3 +101,15 @@ A strong output lands **2–4 of these**, each with evidence and a confidence le
 ---
 
 *Addendum appended 2026-07-13 · mentor-only · fictional data · GTM AI Workshop.*
+
+---
+
+## Addendum v3 (Jul 13) — the triage re-scope (mentor briefing)
+
+Brief 01's core deliverable is now **signal triage**: which of the 50 target accounts is hot, which is not, why, and who to contact right now. The funnel/LinkedIn/reviews mess above is the **calibration layer** (what "hot for LearnLoop" means). Everything earlier in this key stays valid — as calibration and depth material, no longer the core.
+
+**New ground truth for `signal-feed.md`:**
+- **Noise decoys** — 8 accounts whose *only* feed item is a decoy: **ACC-021, ACC-024, ACC-029, ACC-031, ACC-034, ACC-039, ACC-040, ACC-046** (capex-earmarked funding, non-L&D hiring sprees, irrelevant expansions, ML "training data" red herring). A triage that ranks any of these hot has been fooled.
+- **Signal-quiet accounts** — zero feed items: **ACC-001, ACC-010, ACC-023, ACC-041, ACC-043, ACC-045**. Good teams deprioritise them *with reasoning*. Sharp teams notice ACC-001 is feed-quiet but signal-rich in `accounts.csv` and the Berlin pod call notes — the feed is not the only source.
+- **The pod's hand-tagged appendix** (end of the feed) is their judgment, not ground truth — teams may verify or dispute it; both are good analysis.
+- **Live test:** `../../learnloop/mentor-kit/late-signal-drop.md` at ~15:30 — ACC-010 must move UP (new CHRO + BaFin audit), ACC-023 must NOT move (bottling capex), ACC-043 → "watch, don't act" (governance freeze).

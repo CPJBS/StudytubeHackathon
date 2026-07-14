@@ -1,32 +1,25 @@
-# Prompt Pack — Brief 01: The Account Penetration Machine
+# Prompt Pack — Brief 01: The Signal Room
 
-Paste these into Claude Code to get moving. They escalate from "understand the data" to "build the machine." Adapt freely — these are starters, not a script.
+Paste these into Claude Code to get moving. They escalate from "first triage" to "a living system the room can interrogate." Heads up: **the data is messy and contradictory on purpose** — your job is to find the signal in it. Adapt freely.
 
 ---
 
-**1. Understand what you're working with**
-> Read `accounts.csv`, `contacts.csv`, `contact-signals.md`, and `burned-templates.md` in this folder. Give me a quick read: what's in the account list, who the contacts are, what real public signal exists on the Tier-A ones, and why you think the current outbound is only getting a 0.4% reply rate.
+**1. First triage of the 50**
+> Read `signal-feed.md` and `accounts.csv`. Rank the 50 accounts hot / warm / cold. For every hot account, cite the exact signal(s) and why they matter for a learning platform. Flag any feed item you suspect is noise — something that looks like a trigger but isn't — and say why.
 
-**2. Mine the calls for real objections and triggers**
-> Read `berlin-pod-call-notes.md` and the shared `win-loss-call-notes.md`. List every objection and buying trigger German buyers actually voiced — including anything about the works council or "who else uses you in Germany." Turn them into a messaging map: what to lead with, what to never say, what proof to attach.
+**2. Adjudicate the org**
+> Read `what-the-org-believes.md` — five leaders, five theories, at most one of them right. For each claim, use the calibration data (`funnel-analytics.csv`, `linkedin-engagement.csv`, `reviews.md`) to rule: right, wrong, or half-right, with evidence and a confidence level. Where the data can't rule, say so and name what you'd instrument.
 
-**3. Find the accounts worth attacking first**
-> From `accounts.csv`, rank the 50 accounts by how promising they are for LearnLoop right now. Use the tech signals and firmographics. Give me the top 10 with a one-line reason each, and flag which have a clear trigger to reach out about.
+**3. Calibrate the heat score**
+> From `funnel-analytics.csv`, `linkedin-engagement.csv` and `reviews.md`: what does a good-fit, likely-to-convert account look like for LearnLoop specifically? Reconcile the channel-naming mess first, don't treat blank as zero, and be suspicious of the loudest month. Then fold what you learned back into the triage from prompt 1 — what re-ranks, and why?
 
-**4. Build the research → signal step**
-> For the top 5 accounts, pull together what we know from the data (the account row + its contacts + any signal from `contact-signals.md` or the intent-signals table) into a short "account brief" for each — the angle, the person to hit first, and the reason-to-believe. Write it to a file I can open.
-
-**5. Write outreach that beats the burned templates**
-> For account [pick one], write a 3-touch outreach sequence to the champion and a separate one to the economic buyer. It has to be specific to their situation and it must NOT sound like `burned-templates.md`. Short, human, one clear reason to reply.
-
-**6. Turn it into a repeatable machine**
-> Now make this repeatable: given any account_id, produce the account brief + a personalised multi-thread sequence automatically. Show me it working on 3 different accounts so I can demo it.
+**4. Make it live**
+> Build the triage as a living system: the ranked accounts with their why up top, the noise quarantined with reasons, and a question box — "why is this account hot?", "who should Frieda call first tomorrow?" — answered with evidence. When I paste new signals, the ranking updates and explains what moved.
 
 ---
 
 **Stretch goals if you're flying:**
-- Score every contact for who to approach first across the whole list
-- Generate a one-page "war room" HTML view of your top 10 accounts
-- A/B two different angles for the same account and argue which will land
+- A signal-type playbook: which kinds of signal — funding, headcount, regulation, job ads — historically matter most for a learning platform, and which look like triggers but aren't
+- A one-screen handover: top accounts, the why, and the hook — ready for an outbound team (Brief 03) to act on cold
 
-**Demo target:** outreach so specific the room forgets it was AI-assisted — then prove it does the next one too.
+**Demo target:** feed it a fresh signal → who moved up and why. Then let the room interrogate it.

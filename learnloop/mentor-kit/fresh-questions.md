@@ -1,4 +1,4 @@
-# Fresh Questions — Brief 03 (The Signal Room)
+# Fresh Questions — Brief 01 (The Signal Room)
 
 > **MENTOR-ONLY.** Fire these at a team's "living read" tool live during demos. They're designed to be un-Googleable from the tool's own output — they force the tool (and the team) to reason on the spot rather than replay a canned insight. Cross-reference `contradictions-and-redherrings.md` for full detail on each trap.
 
@@ -33,3 +33,14 @@ Correct answer: the data can't say. There's no UTM or shared join key between th
 
 **8. "Was the March traffic spike bots, a paid promo, or a genuine organic surge?"**
 Correct answer: the data can't say. The CSV shows the symptom (sessions/signups doubling while activation stays flat) but not the cause — that requires raw source/referrer logs or ad platform data that isn't in this pack. The `notes` field literally says "source unclear." Good teams name this as the one thing they'd instrument next, rather than guessing a cause.
+
+---
+
+## Addendum v3 (Jul 13) — triage questions (the new core)
+
+Fire these first; the original questions above remain valid as calibration-depth probes.
+
+1. **"Why is ACC-X ranked above ACC-Y?"** — good: cites specific signals + fit reasoning for both. Bad: vibes, or signal *count*.
+2. **"Which feed item almost fooled you?"** — good: names a noise decoy (capex-earmarked funding, call-center hiring spree) and the tell that gave it away.
+3. **"What would move [pick a cold account] to hot?"** — good: a concrete signal type and why it matters for a learning platform specifically.
+4. **"Who should Frieda call first tomorrow morning, and what does she say in sentence one?"** — good: one name, one signal, one angle. (This bridges straight into REACH's demo.)

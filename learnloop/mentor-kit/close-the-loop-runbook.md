@@ -1,6 +1,7 @@
-# MENTOR-ONLY — Close the Loop: Finale Runbook
+# MENTOR-ONLY — Close the Loop: Finale Runbook · canon v3
 
-> For Chiel / Casper / Dimitri / Lennart. Not for participants. This choreographs the last ~40 minutes: the T-30 reconnect and the live chain-run before demos.
+> For Chiel / Casper / Dimitri / Lennart. Not for participants. This choreographs the last ~45 minutes: the T-45 reconnect — a **curveball**; participants don't know it's coming, the briefs only hint "it's a full system" — and the live chain-run before demos.
+> v3 chain: **SENSE (triage) → REACH (motion + asset brief) → SPEAK (produced asset) → send → replies back to SENSE.**
 
 ---
 
@@ -8,9 +9,9 @@
 
 | When | What |
 |---|---|
-| T-40 | Two-minute warning: "finish the piece you're on; the reconnect is coming." |
-| T-30 | **The reconnect.** Hand each team its handover sheet (below). Same-brief teams pair up for 5 minutes first: compare builds, pick the stronger artifact for the chain-run (both still demo individually later). |
-| T-25 | Cross-brief handovers happen (see sheets). Mentors ferry outputs between tables if teams don't self-organise. |
+| T-47 | Two-minute warning: "finish the piece you're on." **Don't reveal what's coming.** |
+| T-45 | **The reconnect — the curveball, announced now for the first time.** Build time stops. Merge teams into **cross-brief groups**: with 5 teams, one group of three (one per brief) + one group of two (different briefs); with 6, two full groups of three. Hand each team its handover sheet (below). If a group has two teams on the same brief, they pick the stronger artifact for the chain-run (both still demo individually later). |
+| T-35 | Cross-brief handovers happen inside each merge group (see sheets). Mentors ferry outputs between tables if teams don't self-organise. |
 | T-10 | **The chain-run** (below), projected, narrated by a mentor. |
 | T-0 | Demos begin (3-4 min each, no slides). |
 
@@ -18,25 +19,23 @@
 
 ## Handover sheets (print/paste one per team)
 
-### To the SENSE team(s)
-Your machine speaks first. Deliver to the room, in one screen or one page:
-1. **The play:** which channel deserves the DACH budget, which content type does the pulling, where the product leaks (and what that means for entering Germany).
-2. **The verdicts** on the five beliefs in `what-the-org-believes.md` — who was right?
-3. Hand REACH: your top-3 "attack now" accounts from their list if you can support them, or your channel/angle guidance if you can't.
-4. Hand SPEAK: your read on what content actually performs.
+### To the SENSE team(s) — you go first
+Your triage decides where everyone's effort goes. Deliver, in one screen:
+1. **The triage:** your hot list — top 3-5 accounts with the why (signals cited), the noise you quarantined, and who to contact first.
+2. Hand REACH: your #1 hot account + its signals. That's their live input for the chain-run.
+3. Hand SPEAK: your read on which content actually pulls (from the calibration data).
+4. Be ready for the room to ask "why is X above Y?"
 
-### To the SPEAK team(s)
-Your machine is the quality gate. Deliver:
-1. Your checker, ready to run live on text handed to you (paste in → verdict + rewrite + explanation).
-2. One German transcreation you're proud of (the de-launch-memo exhibit is the natural flex).
-3. Receive from SENSE: the content-performance read. One sentence back to the room: does the data agree with the voice guide? (It does — let them discover how.)
+### To the REACH team(s) — you turn signal into action
+1. Take SENSE's #1 hot account (fallback if needed: ACC-013 from the starter signals).
+2. Produce the attack plan live: the play, the committee (who gets which door), the timing — show the send-log respected and at least one human routing (a call brief).
+3. Hand SPEAK **one asset brief** from the plan: audience, signal, angle, format, language.
+4. When SPEAK hands the asset back: slot it into the plan. That's the machine, assembled.
 
-### To the REACH team(s)
-Your machine closes. Deliver:
-1. Your tool, ready to run live on an account.
-2. One send-ready multi-threaded sequence for a real account from the list.
-3. Send that sequence through SPEAK's checker in front of the room. Fix what it flags, live if you can.
-4. Receive from SENSE: targeting/angle guidance. One sentence: does it change your account choice?
+### To the SPEAK team(s) — you arm the play
+1. Receive REACH's asset brief live.
+2. Your production line makes the asset — on-voice, in German if the brief says so — with the quality gate explaining its decisions on screen.
+3. Hand it back to REACH. One sentence to the room: which voice rules did the gate enforce, and does SENSE's content-read agree with the voice guide? (It does — let them say how.)
 
 ---
 
@@ -44,12 +43,12 @@ Your machine closes. Deliver:
 
 One account travels the whole machine. Mentor narrates; teams drive.
 
-1. **SENSE nominates.** "Based on the data: this account, this channel, this angle." (If SENSE built account-level output, use theirs; otherwise they justify a pick from REACH's tiering — ACC-013 Eschenbach Chemie is a reliable default: reorg + L&D vacancy + rich signals.)
-2. **SPEAK arms.** REACH's draft sequence for that account goes through SPEAK's checker live. The room watches the verdict and the fix.
-3. **REACH fires.** The final, checked, multi-threaded sequence on screen. Mentor asks the room: "Would you reply to this?"
-4. **Close the loop.** Mentor: "In the real world, the replies land in the CRM, and SENSE reads them next Monday. That's the loop — sense, speak, reach, learn. LearnLoop just entered a market. That took three tools and zero new hires."
+1. **SENSE nominates.** "The data says: this account, these signals, now." (Fallback default: ACC-013 Eschenbach Chemie — reorg + long-vacant L&D role.)
+2. **REACH plans.** The attack plan on screen: play, committee, channels, timing — and the asset brief it just ordered.
+3. **SPEAK produces.** The asset comes off the line, on-voice, in German, decisions explained.
+4. **Close the loop.** Mentor: "The send goes out tonight. The replies land in the CRM, and SENSE reads them Monday — the ranking moves, the next play gets picked. That's the loop: sense, act, speak, learn. LearnLoop just entered a market. That took three machines and zero new hires."
 
-**Escalations if time allows:** run REACH's tool on a holdout account (`accounts-holdout.csv`) cold; run SPEAK's checker on `unseen-drafts.md`; fire a `fresh-questions.md` curveball at SENSE.
+**Escalations if time allows:** hand SENSE `late-signal-drop.md` cold ("three signals just landed — who moved?"); run REACH's machine on a holdout account (`accounts-holdout.csv`); give SPEAK an unseen draft (`unseen-drafts.md`) or an improvised curveball brief from the room.
 
 **If a team's build isn't demo-ready:** their handover becomes verbal ("what would your machine say here?") — the chain still runs, mentors bridge the gap. Never skip a subsystem; the story is that the machine only works whole.
 
@@ -57,4 +56,4 @@ One account travels the whole machine. Mentor narrates; teams drive.
 
 ## The keystone (say it only at the end)
 
-No single brief explains the 0.4%. The full truth assembles only across all three: the *wrong voice* (drifted, template-flavoured) reached the *wrong person* (single-threaded, no committee) at the *wrong moment* (no signal, no timing) — and nothing that happened ever fed back into what the company knew. Wrong voice × wrong person × wrong moment, open loop. The three machines fix one failure each; together they fix the motion. If a team says a version of this out loud before you do, give them the trophy energy they've earned.
+No single brief explains the 0.4%. The full truth assembles only across all three: **no signal** (nobody knew why now — SENSE), **wrong motion** (one template through one door, single-threaded — REACH), **no voice** (words that could have come from any vendor — SPEAK) — and nothing that happened ever fed back into what the company knew. The three machines fix one failure each; together they fix the motion. If a team says a version of this out loud before you do, give them the trophy energy they've earned.

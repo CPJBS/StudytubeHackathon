@@ -1,71 +1,46 @@
 # Starter Kit — Facilitator Guide
 
-Created: 2026-07-07
+Created: 2026-07-07 · Reworked Jul 14 (canon v4: new brief order 01=Signal Room / 02=Brand Voice / 03=Account Penetration, reconnect is now an unannounced curveball)
 **Audience:** organizers (Chiel / Casper / Dimitri). Not for participants.
 
-This kit is what each team opens in Claude Code. Assemble one folder per team based on the brief they pick.
+**Distribution model: one identical Assets pack for every team.** No per-team assembly, no brief-matching on the day. Everyone gets the same zip; their chosen brief's folder is their assignment, the rest is the same company.
 
 ---
 
 ## What's in here
 
-| File | Goes to | Purpose |
-|------|---------|---------|
-| `CLAUDE.md` | Every team | Primer Claude auto-reads: how to drive it + the shared-world files worth pointing it at. Generic — same for all teams. |
-| `prompt-pack-brief-01.md` | Teams on Brief 01 | Escalating starter prompts (understand → build the machine) |
-| `prompt-pack-brief-02.md` | Teams on Brief 02 | Escalating starter prompts (learn voice → build the system) |
-| `prompt-pack-brief-03.md` | Teams on Brief 03 | Escalating starter prompts (make sense of mess → synthesis layer) |
+| File | Purpose |
+|------|---------|
+| `CLAUDE.md` | Primer Claude auto-reads in every team's workspace: how to drive it, the shared world, folder etiquette, and the full-system hint. **It never announces the reconnect — that's a curveball.** |
+| `prompt-pack-brief-01.md` / `-02.md` / `-03.md` | Escalating starter prompts per brief (01 = triage, 02 = production line, 03 = motion). All three ship in the pack; teams use the one matching their assigned brief. |
+| `build-assets-zip.sh` | Builds the participant pack from `../learnloop/`: excludes all mentor material, **strips hidden HTML comments** (they carry mentor labels), zips. Run it, verify, done. |
 
----
-
-## How to build a team folder (on the day, once they've picked a brief)
-
-Every team folder — regardless of brief — is assembled from three layers:
+## Building the pack
 
 ```
-team-{name}/
-├── CLAUDE.md                          ← from this kit (same for everyone)
-├── prompt-pack.md                     ← rename the matching prompt-pack-brief-0X.md
-├── learnloop-story-onepager.md        ← shared world, from ../learnloop/
-├── learnloop-company-bible.md         ← shared world, from ../learnloop/
-├── company-facts.json                 ← shared world, from ../learnloop/
-├── icp-snapshot.md                    ← shared world, from ../learnloop/
-├── rate-card.md                       ← shared world, from ../learnloop/
-├── gtm-roster.md                      ← shared world, from ../learnloop/
-├── win-loss-call-notes.md             ← shared world, from ../learnloop/
-├── customer-quote-bank.md             ← shared world, from ../learnloop/
-└── (their brief's data pack)          ← everything in ../learnloop/brief-0X-*/, minus exclusions below
+./build-assets-zip.sh          # produces dist/learnloop-assets.zip
 ```
 
-**1. Shared world (trunk) — every team gets all 8 files, no exceptions.** These live at the top level of `../learnloop/` and are what let a team's tool reason about LearnLoop beyond its own brief (pricing in `rate-card.md`, who's who in `gtm-roster.md`, real buyer language in `customer-quote-bank.md` and `win-loss-call-notes.md`). Copy them in flat, same filenames.
+What the script does, and why each step matters:
+1. Copies `../learnloop/` **minus** `mentor-kit/` and `brief-01-signal-room/contradictions-and-redherrings.md` (the answer key).
+2. Copies in `CLAUDE.md` + the three prompt packs from this kit.
+3. **Strips all `<!-- ... -->` HTML comments from every .md** — the author samples and off-brand stack carry hidden mentor labels (`voice status: drifted`) that any participant's Claude would read instantly. Ground truth lives in `mentor-kit/mentor-cards.md`, so nothing is lost.
+4. Verifies: no mentor files present, zero `voice status` strings, zero `reconnect`/`curveball` mentions (the merge must stay a surprise), then zips.
 
-**2. Kit layer** — `CLAUDE.md` (identical for every team) plus the matching prompt pack, renamed to `prompt-pack.md` so participants don't have to figure out which one is theirs.
+The result is fully participant-safe: hand the same zip to every team (or load it as a claude.ai Project for the browser-fallback).
 
-**3. Brief layer — the full contents of their brief's folder, with two standing exclusions:**
-- **Never include anything from `../learnloop/mentor-kit/`** in a team folder, regardless of brief. That folder (mentor cards, the close-the-loop runbook, holdout accounts/drafts, fresh questions, the late data drop) is for mentors only.
-- **For Brief 03 specifically, also drop `contradictions-and-redherrings.md`** — the mentor-only answer key. Everything else in `brief-03-signal-room/` goes in.
+## Provisioning checklist
 
-So, concretely:
-- **Brief 01 team** = trunk (8 files) + kit layer + all of `brief-01-account-penetration/` (README, `accounts.csv`, `contacts.csv`, `burned-templates.md`, `baseline-and-targets.md`, `berlin-pod-call-notes.md`, `contact-signals.md`).
-- **Brief 02 team** = trunk (8 files) + kit layer + all of `brief-02-brand-voice/` (README, `voice-guide.md`, `gold-standard.md`, `on-brand-corpus.md`, `off-brand-stack.md`, `author-samples/`, `de-launch-memo.md`, `localisation-pieces.md`).
-- **Brief 03 team** = trunk (8 files) + kit layer + all of `brief-03-signal-room/` **except** `contradictions-and-redherrings.md` (README, `what-the-org-believes.md`, `funnel-analytics.csv`, `linkedin-engagement.csv`, `reviews.md`).
+- [ ] `dist/learnloop-assets.zip` built with the script (never hand-assembled) and spot-checked: no `mentor-kit/`, no answer key, `grep -r "voice status"` comes back empty
+- [ ] Zip distributed via **Google Drive** link, identical for all (GitHub access on request via Casper)
+- [ ] API key + credit cap issued per team — **created on the day itself, never shared in advance** — handed at kickoff
+- [ ] Browser fallback ready (claude.ai Project with the same assets) for any broken install
+- [ ] Mentor-kit printed/at hand for mentors (`mentor-cards.md` + `close-the-loop-runbook.md`) — teams never see it
+- [ ] Demo-time holdouts ready: `accounts-holdout.csv` (REACH), `unseen-drafts.md` (SPEAK), `late-signal-drop.md` + `late-data-drop.csv` + `fresh-questions.md` (SENSE)
 
-## Two ways to distribute (decide before the day)
+## Plan the room for the reconnect (curveball — participants don't know)
 
-1. **Pre-zipped folders** — build all 3 brief-variants as zip files in advance; hand a team the zip matching their pick. Fastest on the day.
-2. **Git repo per brief** — teams clone. Cleaner if participants are comfortable with git, but adds a step. Given mixed technical levels, **lean option 1.**
-
-## Provisioning checklist (per team)
-- [ ] Team folder assembled (trunk + kit layer + correct brief pack, no mentor-kit content, no `contradictions-and-redherrings.md` for Brief 03)
-- [ ] API key + credit cap issued (sealed, handed at kickoff)
-- [ ] `CLAUDE.md` present so Claude loads context automatically
-- [ ] Browser fallback ready (claude.ai Project with the same data pack) for any broken install
-- [ ] Mentor-kit printed/at hand for mentors (`mentor-cards.md` + `close-the-loop-runbook.md`) — this is the coaching reference and finale choreography, mentors carry it, teams never see it
-- [ ] Holdout files ready for demo time (`accounts-holdout.csv`, `unseen-drafts.md`, `late-data-drop.csv`, `fresh-questions.md`) — mentors use these to stress-test a team's tool live, on an account/draft/question it hasn't seen
-
-## Plan the room for the reconnect
-
-**The last 30 minutes are not free-build time.** Per the mentor runbook, teams stop building at T-30, hand off to the other two subsystems, and a single account travels the whole machine (SENSE → SPEAK → REACH) in a live chain-run before demos begin. Facilitators should plan the physical room for this: same-brief teams need to cluster for a quick pairing at T-30, and there needs to be a clear path (and a projector) for cross-brief handovers at T-25. Don't schedule this as an afterthought — it's the finale, not a wrap-up.
+**The last ~45 minutes are not free-build time — and the teams don't know that yet.** Build time is ~2 hours; the reconnect is announced as a curveball at T-45, never before. The briefs only carry the hint "it's a full system." Per the mentor runbook: at T-45 teams merge into **cross-brief groups** (with 5 teams: one group of three — one per brief — and one group of two; with 6: two full groups), hand off along the chain, and a single account travels the whole machine (**SENSE → REACH → SPEAK → send**) in a live chain-run before demos begin. Plan the physical room: merge groups need tables at T-45, handovers need a clear path, the chain-run at T-10 needs the projector. It's the finale, not a wrap-up.
 
 ---
 

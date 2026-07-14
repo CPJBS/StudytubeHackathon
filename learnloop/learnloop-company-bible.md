@@ -61,7 +61,7 @@ Three modules, sold together or standalone:
 | **Blocker** | IT / Security, Procurement, works council (DE) | Integration, data security, no new risk | Shadow tools, SSO/compliance gaps, employee-monitoring concerns |
 | **End user** | Employees, team leads | Relevant, short, mobile learning | Boring mandatory training |
 
-**Primary target titles for outbound (Brief 01):** CHRO, VP People/HR, L&D Director, Head of Talent Development, People Ops Lead.
+**Primary target titles for outbound (Brief 03):** CHRO, VP People/HR, L&D Director, Head of Talent Development, People Ops Lead.
 
 Deeper, in buyer language: `icp-snapshot.md`.
 
@@ -98,7 +98,7 @@ LearnLoop's voice *should* be: direct, confident, a little contrarian, human. Sh
 
 - **Sales:** 12 AEs, 6 SDRs (home markets) + the 3-SDR Berlin pod (Lukas Brandt, Frieda Sommer, Joris van Dam). The pod's cold outbound: 0.4% reply — see Brief 01.
 - **Marketing:** 10 people, 6 of whom publish (Marcus de Wit, Priya Sharma, Daniel Okafor, Sofia Marchetti, Tom Willems, Hannah Berg). Output 4x'd this year — the source of Brief 02's voice drift. Led by Nora Bakker (VP Marketing).
-- **RevOps:** Mila Verhoeven, team of one; owns four data sources nobody agrees on (Brief 03).
+- **RevOps:** Mila Verhoeven, team of one; owns four data sources nobody agrees on (Brief 01).
 - **Leadership:** Daan Vermeulen (CEO), Bram Hoekstra (CRO), Iris Chen (Head of Product). All under board pressure; each has their own theory of what's wrong (see Brief 03's `what-the-org-believes.md`).
 
 Full roster with faces and quirks: `gtm-roster.md`.
@@ -111,17 +111,17 @@ Watch any great marketer or SDR work. Three skills, running from their head:
 
 ```
    ┌─────────┐      ┌─────────┐      ┌─────────┐
-   │  SENSE  │ ───▶ │  SPEAK  │ ───▶ │  REACH  │
+   │  SENSE  │ ───▶ │  REACH  │ ◀──▶ │  SPEAK  │
    └─────────┘      └─────────┘      └─────────┘
-        ▲                                  │
-        └───────────── replies ◀───────────┘
+        ▲                │
+        └── replies ◀────┘   (REACH sends; what comes back feeds SENSE)
 ```
 
-- **SENSE** (Brief 03 · The Signal Room): who is worth it, what changed, why now, what actually works. Produces **the play** — consumed by REACH (targeting, channel, angles) and SPEAK (what content does the pulling).
-- **SPEAK** (Brief 02 · The Brand Voice Machine): what to say, to which persona, in whose voice — in any language. Produces **the voice system** — consumed by REACH (every outbound piece passes the check) and the six authors.
-- **REACH** (Brief 01 · The Account Penetration Machine): land it, thread the account, earn the reply. Produces **the outreach engine** — and its replies feed back into SENSE. That's the loop, closed.
+- **SENSE** (Brief 03 · The Signal Room): captures the market's signals and runs the triage — which account is hot, which is not, why, and who to contact right now. Produces **the triage** — consumed by REACH. The company's own messy data (funnel, reviews, LinkedIn) is its calibration: what "hot for LearnLoop" even means.
+- **REACH** (Brief 01 · The Account Penetration Machine): turns a hot account and its signal into the motion — the play, the committee, the channels, the timing — and writes **the asset briefs**: exactly what content the play needs. Hands those to SPEAK; sends what comes back.
+- **SPEAK** (Brief 02 · The Brand Voice Machine): the production line. Makes the assets REACH ordered — on-voice, in the ICP's language, in EN/DE/ES and whatever language comes next — and guards the voice on everything the company ships. REACH fires the assets; the replies flow back into SENSE. That's the loop, closed.
 
-All three skills live in people's heads today: artisanal, undocumented, linear. Heads don't multiply. Systems do. The workshop builds the three subsystems; the final half hour reconnects them.
+All three skills live in people's heads today: artisanal, undocumented, linear. Heads don't multiply. Systems do. The workshop builds the three subsystems. One machine — remember that.
 
 ---
 

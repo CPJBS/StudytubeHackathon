@@ -2,7 +2,7 @@
 
 > **Purpose:** everything needed to present the LearnLoop story in 10 minutes, tops.
 > Presenter copy: bullet points to say, context per beat, slide cues for the deck.
-> **Public-safe:** contains no mentor answer keys, no planted-trap spoilers, nothing internal.
+> **Public-safe:** contains no mentor answer keys, no planted-trap spoilers, nothing internal. **And no announcement of the T-45 reconnect** — that's a curveball; Beat 6 only plants the hint.
 > Companion handout: `learnloop-story-onepager.md` (the participant-facing version of this story).
 
 Total talk time: ~9.5 minutes across 8 beats.
@@ -64,7 +64,7 @@ Total talk time: ~9.5 minutes across 8 beats.
 - Your job today: externalize them. Turn head-knowledge into systems. That's go-to-market engineering.
 - To be precise about what we automate: not the conversation. Everything that stands BETWEEN marketing and a booked conversation. The people keep the judgment and the talking. The machine does the rest. We're not replacing anyone; we're multiplying them.
 
-**Slide cue:** SENSE → SPEAK → REACH as three boxes in one machine.
+**Slide cue:** three boxes in one machine — SENSE feeds REACH, REACH orders from SPEAK, the replies flow back to SENSE.
 
 ---
 
@@ -72,29 +72,26 @@ Total talk time: ~9.5 minutes across 8 beats.
 
 *Context: connect the machine to the briefs they already read online. Each brief is one subsystem. Pitch all three as equally heroic; the room skews demand-gen, so give SPEAK and SENSE deliberate love. End with where Germany fits: proving ground, not theme.*
 
-- Each team takes one subsystem of the same machine. You've seen these briefs; here's how they connect:
-  - **The Signal Room = SENSE.** Four messy data sources, no shared truth. Build the synthesis layer — not more charts: the reading. What's actually working, what's noise, what to do, short enough that a VP acts on it. Winning demo: something LearnLoop would open again on Monday and interrogate.
-  - **The Brand Voice Machine = SPEAK.** Six authors, drifting voice, hand-editing that can't scale, and next quarter it must survive German and Spanish. Build the tool that checks, rewrites, explains, and travels. Winning demo: prove it travels to Madrid and Berlin.
-  - **The Account Penetration Machine = REACH.** 50 named DACH accounts, 5 logos wanted this quarter, 0.4% baseline. Don't write a clever email; build the machine that writes them — and in that machine, the writing is the last step. Research, signal, committee, way in: account research on steroids. Winning demo: outreach so specific the room forgets it was AI-assisted, then prove it does the next account too.
+- Each team takes one subsystem of the same machine. (If you read the briefs online: we've sharpened the scopes since publishing — today's version wins.)
+  - **Brief 01 — The Signal Room = SENSE.** The market is emitting signals — funding rounds, new CHROs, regulation, job ads — and LearnLoop isn't catching them. Build the triage: which of the 50 accounts is hot, which is not, why, who to contact *right now*, and with what hook. Not a dashboard — a living triage you can interrogate. Winning demo: feed it a fresh signal and ask "who moved up, and why?"
+  - **Brief 02 — The Brand Voice Machine = SPEAK.** Output 4x'd, six authors, the voice going beige — and LearnLoop is entering Germany and Spain, so "on-brand" now has to survive new languages and markets. Build the production line: brief in, on-voice asset out, in the ICP's language. Winning demo: ship the German asset — then add a language you have no guide for.
+  - **Brief 03 — The Account Penetration Machine = REACH.** 5 logos wanted from 50 accounts, 0.4% baseline. Build the motion machine: prioritized account + signal in → the play out — channels (email, LinkedIn, phone, even a gift), committee, timing, and the asset briefs the play needs. Winning demo: one complete attack plan, then the next account, live.
 - Why Germany? Because that's where the artisanal way ran out first. If the machine works where LearnLoop is nearly nobody, it works anywhere. Germany is the exam, not the syllabus.
 
 **Slide cue:** the three brief names mapped onto the SENSE/SPEAK/REACH machine diagram.
 
 ---
 
-## Beat 6 — Close the loop (1 min)
+## Beat 6 — One machine (45 sec)
 
-*Context: plant the finale NOW so teams build with the handover in mind all afternoon. The product-tagline irony is the memorable beat; deliver it as a reveal.*
+*Context: plant the SYSTEM FRAME without announcing the finale — the T-45 merge is a curveball and this beat is the embedded hint that makes prepared teams look brilliant later. The product-tagline irony is the memorable line; deliver it, drop the hint, move on. Do NOT mention merging, handovers, a chain-run, or "the last half hour".*
 
 - One more thing about LearnLoop. Their product's whole promise is closing the loop between learning and doing.
 - Their own pipeline machine? Runs open-loop. Nothing it does feeds back into what it knows.
-- So in the last half hour, we close it. Live:
-  - SENSE hands over the play: which accounts, which channel, which story.
-  - SPEAK arms it: the voice, checked, in the right language.
-  - REACH fires: one real account from the list travels the whole machine, end to end.
-- If one account can travel the full machine, LearnLoop just learned how to enter a market. That's what you'll have built. Together.
+- Your three briefs are the three subsystems of that machine. You build yours standalone — but the best builds behave like real subsystems: clean input, clean output, something another team could pick up cold.
+- So while you build, remember: it's a full system. (Smile. Say nothing else about it.)
 
-**Slide cue:** the loop diagram: SENSE → SPEAK → REACH → (replies) → back to SENSE.
+**Slide cue:** the machine diagram: SENSE → REACH → SPEAK — one machine, three rooms.
 
 ---
 
@@ -102,13 +99,13 @@ Total talk time: ~9.5 minutes across 8 beats.
 
 *Context: fast logistics; the wall behind you does the remembering. Keep momentum, don't linger.*
 
-- Teams of 3. Pick the brief closest to your day job.
+- Teams of 3. **Briefs are assigned by team number — no choosing.** (Everyone would pick the voice brief; the machine needs all three.)
 - Every team gets: the data pack, the LearnLoop one-pager, an API key with plenty of credits, and a starter prompt pack.
 - Mentors from Studytube and Unmuted roam all afternoon. Stuck for more than a few minutes? Wave.
 - 17:30: demos. 3 to 4 minutes, live, no slides. Rough and real beats polished and hypothetical.
 - The room votes: the trophy goes to "closest to ship-ready".
 
-**Slide cue:** timeline bar: build → close the loop → demos → drinks.
+**Slide cue:** timeline bar: build → demos → drinks. (No "close the loop" phase on the slide — it would telegraph the curveball.)
 
 ---
 
@@ -116,18 +113,18 @@ Total talk time: ~9.5 minutes across 8 beats.
 
 *Context: one closing line, then release them. No summary, no repetition; end on identity plus permission to start.*
 
-- "LearnLoop doesn't need a new playbook. It needs the playbook to stop living in six people's heads. You have three hours. Go build the machine."
+- "LearnLoop doesn't need a new playbook. It needs the playbook to stop living in six people's heads. You have two hours. Go build the machine."
 
-**Slide cue:** "Go build the machine." + brief pick instructions.
+**Slide cue:** "Go build the machine." + team ↔ brief assignments.
 
 ---
 
 ## Presenter FAQ (if asked from the room)
 
 - **"Is LearnLoop based on Studytube?"** — "We built the fiction in a domain we know deeply, so the data and the pain are realistic. The company, its numbers, and its situation are invented. That's what makes it safe to be brutal about the problems."
-- **"Why is my brief's data German?"** (Brief 01) — "Because that's the market in the story where the old way ran out. The machine you build is market-agnostic; Germany is just its first exam."
+- **"Why is my brief's data German?"** (Brief 03) — "Because that's the market in the story where the old way ran out. The machine you build is market-agnostic; Germany is just its first exam."
 - **"Do I need to be technical?"** — "No. If you can describe what you want in plain language, you can build it. That's the point of the day."
 
 ---
 
-*Prepared Jul 13 for the Jul 16 workshop. Input for Lennart's deck. Story canon: `learnloop-story-onepager.md` (v2).*
+*Prepared Jul 13, revised Jul 14 (assigned briefs, 2-hr build, unannounced reconnect) for the Jul 16 workshop. Input for Lennart's deck. Story canon: `learnloop-story-onepager.md` (v3).*

@@ -1,32 +1,26 @@
-# Prompt Pack — Brief 03: The Signal Room
+# Prompt Pack — Brief 03: The Account Penetration Machine
 
-Paste these into Claude Code to get moving. They escalate from "make sense of the mess" to "build a synthesis layer." Heads up: **the data is messy and contradictory on purpose** — your job is to find the signal in it. Adapt freely.
+Paste these into Claude Code to get moving. They escalate from "stand-in triage" to "a machine that plans the whole attack — and orders the words for it." Adapt freely — these are starters, not a script.
 
 ---
 
-**1. Adjudicate the five beliefs**
-> Read `what-the-org-believes.md` — five leaders, five theories about what's wrong, at most one of them right. For each belief, use the other files in this folder to rule: right, wrong, or half-right, with the evidence and a confidence level. Where the data can't rule, say so.
+**1. Stand-in triage**
+> Read the starter signals in `baseline-and-targets.md` and `accounts.csv`. Pick the 3 hottest accounts and say why. (The Signal Room, Brief 01, owns the real triage — these starter signals are your machine's stand-in input.)
 
-**2. Survey the pile**
-> Read `funnel-analytics.csv`, `reviews.md`, and `linkedin-engagement.csv` in this folder. Give me a first read of what each source contains and where the data looks messy, inconsistent, or contradictory. Don't clean it yet — just map it.
+**2. Mine the calls for play rules**
+> Read `berlin-pod-call-notes.md` and the shared `win-loss-call-notes.md`. List every objection and buying trigger German buyers actually voiced. Turn them into motion rules: which doors work in DACH, what proof has to be in the room, and when a human call beats any email.
 
-**3. Clean and reconcile**
-> The data has problems on purpose — inconsistent naming, missing values, at least one misleading outlier. Find and fix the issues in `funnel-analytics.csv` so the numbers can be trusted, and tell me every problem you found and how you handled it.
+**3. Build one full attack plan**
+> For [pick an account]: map the buying committee from `contacts.csv`. Choose the play — who gets email, who gets a call brief for the pod, who we reach via a reference (`warm-paths.md`) or an event. Check `send-log.csv` first — no email to burned or bounced contacts. Sequence and time the touches. Then write the asset brief for each touch: audience, signal, angle, format, language — NOT the copy itself; that's the Brand Voice Machine's job.
 
-**4. Find the real patterns**
-> Now dig for signal. What's actually happening with the funnel, the reviews, and the LinkedIn engagement? Separate the real patterns from the noise and red herrings, tie it back to the beliefs you just adjudicated, and be explicit about what you're confident in vs. guessing.
-
-**5. Synthesize the briefing**
-> Turn your findings into a one-page briefing for LearnLoop's leadership: "what the data means + what to do about it." Lead with the 2-4 things that matter most. Write it to a file I can open and present.
-
-**6. Build the signal room**
-> Make this repeatable and interactive: build an HTML "signal room" that pulls the cleaned data into the key insights plus a question box, so RevOps could open it any week, ask "what happened here?" about any channel or month, and get a grounded answer. Demo it.
+**4. Turn it into a repeatable machine**
+> Now make this repeatable: any account_id in → attack plan + asset briefs out, respecting `send-log.csv` suppression and the German rules in the README. Show me where a human reviews, and run it on a second account to prove it.
 
 ---
 
 **Stretch goals if you're flying:**
-- Quantify the LinkedIn pattern you found and recommend a content mix
-- Rank the review themes by how much they're likely costing in churn
-- Flag which single metric leadership is probably misreading, and why
+- A routing policy that scores all 50 accounts for which door — email, call, reference, event — they get, and why
+- A one-page "war room" HTML view of your top plays
+- A call-brief generator the pod could actually hand to Frieda before she dials
 
-**Demo target:** something LearnLoop would open again on Monday — a living view they can interrogate, not a screenshot.
+**Demo target:** one hot account + signal in → a complete attack plan out — the play, the committee, the channels, the timing, the asset briefs. Then the next account, live.

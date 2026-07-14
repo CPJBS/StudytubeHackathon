@@ -157,3 +157,37 @@ Compiled by the Berlin pod (Lukas Brandt, Frieda Sommer, Joris van Dam) from pre
 **2026-07-02 · ACC-048 · headcount_growth** — Rigi Versicherung AG, the 1,050-employee Lucerne insurer, grew its agent-network headcount 12% over the past year, a Swiss insurance-trade bulletin reported, adding pressure to the FINMA-driven competency-training backlog its L&D Manager flagged earlier this year. (Swiss insurance trade bulletin)
 
 **2026-07-06 · ACC-050 · funding** — Genève Consulting Partners SA, the 360-employee Geneva consultancy, took on growth investment to fund its planned expansion into the German market, a professional-services trade bulletin reported. The Managing Partner overseeing People said training consultants without hurting billable-hours targets "is the whole problem we haven't solved yet," with no LMS currently in place. (professional-services trade bulletin)
+
+---
+
+## Appendix — the pod's hand-tagged shortlist
+
+Before this feed existed, the pod kept their own typed-and-dated shortlist of trigger events. It's **their judgment, not ground truth** — they tagged what they noticed, not everything that matters, and not everything they tagged matters.
+
+| account_id | company | signal_type | signal (fictional) | freshness | so-what for outreach |
+|-----------|---------|-------------|--------------------|-----------|----------------------|
+| ACC-002 | Hanseatic Assekuranz | leadership_hire | New CHRO (Thorsten Lindqvist) started Q1 with a mandate to modernise learning | 8 weeks | New buyer + explicit mandate = rare open window; lead with the mandate |
+| ACC-002 | Hanseatic Assekuranz | tech_change | Legacy LMS goes end-of-life 2026 | ongoing | Forced evaluation; be in the consideration set before the RFP |
+| ACC-003 | Alpspitz Logistik | job_post | Hiring "Head of Talent Development" (open) | 2 weeks | Priority hire signals L&D is now a board topic; onboarding-post-M&A pain |
+| ACC-003 | Alpspitz Logistik | m_and_a | 3 acquisitions in 18 months | recent | Integration pain — no shared learning system across merged entities |
+| ACC-004 | Nordlicht Retail | announcement | Public frontline-upskilling initiative for 2026 | 4 weeks | Named priority from the CPO; tie the pitch to the announced initiative |
+| ACC-004 | Nordlicht Retail | competitor | Uses Cognita (content-only) | ongoing | "A library, not a loop" — champion frustrated it proves nothing |
+| ACC-005 | Vitalpharm | job_post | Hiring 5 L&D roles simultaneously | 3 weeks | L&D team scaling under GxP pressure; automation angle for the champion |
+| ACC-012 | Talwind Aerospace | compliance | Safety-cert training with ITAR data-residency constraints | ongoing | Lead the blocker (CISO) with data-residency proof, not features |
+| ACC-013 | Eschenbach Chemie | job_post | L&D Director role open 60+ days | 9 weeks | VP People covering the gap and overwhelmed — sell relief, not software |
+| ACC-013 | Eschenbach Chemie | reorg | Company-wide reorg underway | recent | Skills-mapping need spikes during reorg; time it now |
+| ACC-015 | Meridian Software | competitor | Uses Bloomwork; internal complaints about low adoption | ongoing | "Great streaks, no skills" — champion + new RevOps hire want data |
+| ACC-019 | Lindenhof Versicherung | tech_signal | L&D KPIs tied to NPS; SkillForge reporting too slow | ongoing | Champion needs faster reporting cadence — that's the wedge |
+| ACC-022 | Goldregen Handelsgruppe | leadership_hire | New Chief People Officer; omnichannel reskilling is her flagship | 6 weeks | New CPO building a legacy program — align to her flagship |
+| ACC-026 | Donaustahl Industrie | reorg | Reorg into business units; SkillForge not keeping up | recent | Multi-BU skills view is the story; SkillForge displacement angle |
+| ACC-027 | Bergkristall Pharma | expansion | Announced expansion into Spain | 5 weeks | Mirrors LearnLoop's own DACH+Spain push — scalable multi-market learning |
+| ACC-032 | Habsburg Versicherung | rfp | Running an agent-training platform RFP; Traida bolt-on failing | 3 weeks | Get into the RFP now; "learning as an afterthought" line lands here |
+| ACC-035 | Matterhorn Präzision | tech_signal | Needs DE/FR/IT multilingual training; SkillForge English-only pain | ongoing | Multilingual capability is a concrete SkillForge gap to attack |
+| ACC-036 | Helvetia Assurance | job_post | L&D Director role open; FINMA compliance + 3-language workforce | 7 weeks | Buyer gap + hard compliance = urgency; lead the blocker (CISO) on FINMA |
+| ACC-037 | Rhône Biotech | funding_expansion | Scaling into DACH; hiring L&D Manager | 4 weeks | Growth + new champion role = greenfield; GxP + Swissmedic proof needed |
+| ACC-042 | Zürisee Detailhandel | leadership_hire | New CPO; frontline reskilling flagship; omnichannel push | 6 weeks | Same play as ACC-022 — align to the new CPO's flagship program |
+| ACC-044 | Basilisk Chemie | reorg | Reorg + REACH/Swiss compliance; SkillForge legacy struggling | recent | Post-reorg skills mapping + audit-ready compliance; displace SkillForge |
+| ACC-049 | Säntis MedTech | job_post | L&D Director role open 90 days; MDR compliance | 13 weeks | Long-vacant role = acute pain; MDR traceability is the blocker's hook |
+
+**Signal-type legend:** `leadership_hire`, `job_post`, `m_and_a`, `reorg`, `tech_change`, `competitor`, `compliance`, `announcement`, `expansion`, `rfp`, `funding_expansion`.
+

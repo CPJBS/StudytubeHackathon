@@ -1,6 +1,6 @@
 # LearnLoop — the story in one page
 
-> **Workshop canon v2** (Jul 13). Fictional company, built for the GTM AI Workshop.
+> **Workshop canon v3** (Jul 14). Fictional company, built for the GTM AI Workshop.
 > Where this contradicts the company bible, this page wins until the bible is synced.
 > Market statistics marked ◆ are **real and citable**. Everything about LearnLoop itself is invented.
 
@@ -65,19 +65,19 @@ You are LearnLoop's **marketing engineering task force**. Three subsystems, one 
 
 | Brief | Subsystem | You build |
 |---|---|---|
-| The Signal Room | **SENSE** | The layer that turns four messy data sources into "what it means and what to do" |
-| The Brand Voice Machine | **SPEAK** | The system that holds the voice across six authors and three languages |
-| The Account Penetration Machine | **REACH** | The workflow that turns research and live signals into outreach that earns replies |
+| **01 — The Signal Room** | **SENSE** | The triage: which of the 50 target accounts is hot, which is not, why — and who to contact right now, with what hook |
+| **02 — The Brand Voice Machine** | **SPEAK** | The production line: on-voice content in the ICP's language — EN, DE, ES, and whatever language comes next |
+| **03 — The Account Penetration Machine** | **REACH** | The motion: turn a hot account and its signal into the play — channels, committee, timing — and the asset briefs |
 
 Proving ground: **50 named DACH accounts. 5 logos this quarter. A 3-person pod. Zero new hires.**
 
 We are not automating the conversation. We are automating everything that stands *between* marketing and a booked conversation. The people keep the judgment and the talking. The machine does the rest.
 
-## The finale — close the loop
+## One machine
 
-LearnLoop's product closes the loop between learning and doing. Its own pipeline machine runs open-loop: nothing it does feeds back into what it knows. In the last half hour, the three subsystems reconnect: **SENSE finds the play. SPEAK arms it. REACH lands it. The replies flow back.** If one account can travel the whole machine, LearnLoop just learned a new market.
+LearnLoop's product closes the loop between learning and doing. Its own pipeline machine runs open-loop: nothing it does feeds back into what it knows. The three briefs are the three subsystems that fix that: **SENSE names who and why now. REACH picks the play. SPEAK makes the words.** Yours is one of them. Build it standalone — and build it like the other two exist, because in LearnLoop's world they do: clean inputs, clean outputs, a screen the next subsystem could read cold.
 
-Close the loop.
+It's a full system. Remember that.
 
 ---
 
