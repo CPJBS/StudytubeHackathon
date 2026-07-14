@@ -43,7 +43,7 @@ Bucket by `format`/topic:
 - **product posts:** ~60–120 reactions, **~25–75 clicks** each — despite often the *highest* impressions (the DACH/partner announcements hit 14k–15.6k impressions and still under 75 clicks).
 - **Click ratio:** contrarian/opinion posts out-click product posts roughly **6–8x** (report "~5x+" as the discoverable pattern; anything in that range is correct).
 - **Trap:** team ranks posts by impressions → concludes the big product announcements are the "top posts." They're the *loudest* and the *deadest*.
-- **Signal:** LearnLoop's LinkedIn engine runs on **point-of-view content**, not product news. Note this rhymes with Brief 02's "voice has gone beige" problem — the contrarian voice is exactly what's working and exactly what's being diluted.
+- **Signal:** LearnLoop's LinkedIn engine runs on **point-of-view content**, not product news. Note this rhymes with Brief 02's "voice has gone generic" problem — the contrarian voice is exactly what's working and exactly what's being diluted.
 
 ### 5. Reviews: the pattern is not the extremes (reviews.md)
 18 reviews, mixed ratings. Individual 5-stars and 1-stars are noise; the **recurring themes** are the signal. Frequency across the 18:

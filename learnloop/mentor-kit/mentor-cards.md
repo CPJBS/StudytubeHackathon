@@ -56,7 +56,7 @@
 
 **Common traps → nudges**
 - Checker-only build → "Has your line actually *shipped* an asset from a brief yet? That's the job."
-- Banned-word grep as the checker → "Run it on stack draft #8. Zero banned words. Still beige. Why?"
+- Banned-word grep as the checker → "Run it on stack draft #8. Zero banned words. Still generic. Why?"
 - Literal translation → "Back-translate your German. Does the claim still lead? Did the aside survive?"
 - Ignoring the ICP's language → "The quote bank is how buyers actually talk. Does your asset sound like it's for them?"
 

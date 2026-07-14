@@ -54,41 +54,41 @@ L&D leaders, People/HR directors, People Ops managers at mid-market companies (2
 
 ---
 
-## Tone examples — beige → on-voice
+## Tone examples — generic → on-voice
 
 ### Example 1 — blog opener
-**Beige:** "In today's fast-paced business world, organizations are increasingly looking for solutions that empower their teams and drive results through seamless learning experiences."
+**Generic:** "In today's fast-paced business world, organizations are increasingly looking for solutions that empower their teams and drive results through seamless learning experiences."
 
 **On-voice:** "Your people finished the training. Can any of them do the job differently now? Most learning tools can't answer that. That's the whole problem."
 
-*Why: the beige version is four banned phrases in one sentence and says nothing. The on-voice version leads with the reader's real, unanswered question — the pain — and lands the thesis in three short beats.*
+*Why: the generic version is four banned phrases in one sentence and says nothing. The on-voice version leads with the reader's real, unanswered question — the pain — and lands the thesis in three short beats.*
 
 ---
 
 ### Example 2 — product line
-**Beige:** "Our robust, best-in-class platform leverages powerful analytics to unlock the full potential of your workforce."
+**Generic:** "Our robust, best-in-class platform leverages powerful analytics to unlock the full potential of your workforce."
 
 **On-voice:** "Loop maps who can actually do what, flags the gaps, and tells you which learning closes them. No adjectives — just the skills you have and the ones you don't."
 
-*Why: beige stacks adjectives and banned words around zero mechanism. On-voice names the mechanism (map → flag → recommend) and even calls out its own restraint as an aside.*
+*Why: the generic version stacks adjectives and banned words around zero mechanism. On-voice names the mechanism (map → flag → recommend) and even calls out its own restraint as an aside.*
 
 ---
 
 ### Example 3 — email nurture line
-**Beige:** "We wanted to reach out and share how LearnLoop can help you potentially improve engagement and elevate your L&D strategy going forward."
+**Generic:** "We wanted to reach out and share how LearnLoop can help you potentially improve engagement and elevate your L&D strategy going forward."
 
 **On-voice:** "Quick one: your last training had a 92% completion rate and — by your own admission on our call — changed nothing. Completion isn't the metric. Here's the one that is."
 
-*Why: beige hedges twice ("can help," "potentially") and reaches out to say nothing. On-voice opens with a specific, slightly uncomfortable callback and reframes the metric — the contrarian move.*
+*Why: the generic version hedges twice ("can help," "potentially") and reaches out to say nothing. On-voice opens with a specific, slightly uncomfortable callback and reframes the metric — the contrarian move.*
 
 ---
 
 ### Example 4 — competitor line
-**Beige:** "Unlike other solutions on the market, LearnLoop offers a comprehensive, integrated approach to learning and development."
+**Generic:** "Unlike other solutions on the market, LearnLoop offers a comprehensive, integrated approach to learning and development."
 
 **On-voice:** "Cognita gives you 8,000 courses and no idea if a single one landed. A library isn't a loop."
 
-*Why: beige claims differentiation without naming it. On-voice names the competitor's actual failure mode as a mechanism and lands it with the brand's core metaphor.*
+*Why: the generic version claims differentiation without naming it. On-voice names the competitor's actual failure mode as a mechanism and lands it with the brand's core metaphor.*
 
 ---
 
@@ -103,7 +103,7 @@ The DACH and Spain launch is the real test. A literal translation of an English 
 - **Claims need harder proof.** The German market is more skeptical of a bold unbacked claim than the NL/UK reader. Keep the confidence; attach the number. A claim that flies in English ("Completion is a vanity metric") wants a source or a mechanism behind it in German.
 - **Contrarian, but earned.** The contrarian edge stays — but back it immediately. German readers accept a provocative claim once it's substantiated, not before.
 - **Formatting: space before the percent sign** (`92 %`), and watch compound nouns — precision beats cleverness.
-- **What survives:** proof over hype, naming the real pain, no banned corporate-filler (there's a German version of beige too — `ganzheitlich`, `nahtlos`, `maßgeschneiderte Lösungen` — ban those equivalents).
+- **What survives:** proof over hype, naming the real pain, no banned corporate-filler (there is German filler too — `ganzheitlich`, `nahtlos`, `maßgeschneiderte Lösungen` — ban those equivalents).
 
 ### Spanish (ES) — Spain launch
 
@@ -111,6 +111,6 @@ The DACH and Spain launch is the real test. A literal translation of an English 
 - **Usted vs. tú:** default to a warm-professional register — Spanish B2B increasingly uses `tú` for approachability, but for an HR/L&D director audience, lean `usted` or a neutral impersonal construction. Pick one per market and hold it.
 - **Rhythm can breathe.** The English short-sentence staccato can feel curt in Spanish. Let sentences connect. Keep them tight, not clipped.
 - **Contrarian stays, delivered with a lighter touch.** The "say the uncomfortable thing" move works — but framed as a shared observation ("todos lo sabemos, pero nadie lo dice") rather than a blunt accusation.
-- **What survives:** the claim leads, proof beats adjectives, and the Spanish beige-words are banned too (`potenciar`, `soluciones integrales`, `sin fisuras`, `en el mundo actual`).
+- **What survives:** the claim leads, proof beats adjectives, and the Spanish filler-words are banned too (`potenciar`, `soluciones integrales`, `sin fisuras`, `en el mundo actual`).
 
 **The test for any localized piece:** if you back-translate it, does it still lead with a claim, name a real pain, and prove instead of promise? If yes, the voice survived. If it went flat or generic, it's a translation, not a transcreation.

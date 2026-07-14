@@ -29,13 +29,13 @@ Analytics, funnel drop-off, reviews, LinkedIn engagement — LearnLoop is drowni
 ## Brief 02 — The brand voice machine
 **Owner (prep):** TBD
 
-Content output 4x'd this year, six people now publish in the company's name, and the brand voice is drifting into beige. Now LearnLoop is expanding to **Spain and Germany** too. Hand-editing doesn't scale.
+Content output 4x'd this year, six people now publish in the company's name, and the writing is drifting into generic SaaS filler (copy that could have come from any vendor). Now LearnLoop is expanding to **Spain and Germany** too. Hand-editing doesn't scale.
 
 **The build (v4):** the content production line — asset brief in, on-voice asset out, across authors, formats, markets, and languages (EN → DE/ES, extensible to any). Assume the accounts are already picked (Brief 01's job). The codified voice + check/rewrite loop is its quality gate.
 
 **Data pack needs:**
 - LearnLoop brand voice guide (POVs, tone rules, banned phrases)
-- 6 sample pieces from 6 "authors" showing the drift (some on-voice, some beige)
+- 6 sample pieces from 6 "authors" showing the drift (some on-voice, some generic filler)
 - 2–3 pieces needing DE/ES localisation (not just translation — transcreation)
 - A "gold standard" reference piece
 

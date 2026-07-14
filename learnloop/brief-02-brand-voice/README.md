@@ -14,7 +14,7 @@
 
 ## The brief
 
-LearnLoop **4x'd its content output** this year. **Six people** now publish in the company's name, and the brand voice is drifting into beige. On top of that, LearnLoop is expanding into **Spain and Germany** — so "on-brand" now has to survive new markets too. Editing everything by hand doesn't scale.
+LearnLoop **4x'd its content output** this year. **Six people** now publish in the company's name, and the writing is drifting into **generic SaaS filler** — copy that could have come from any vendor. On top of that, LearnLoop is expanding into **Spain and Germany** — so "on-brand" now has to survive new markets too. Editing everything by hand doesn't scale.
 
 **What you'll build:** the production line — **brief in, on-voice asset out.** A system that produces the content the motion machine (Brief 03) orders — emails, LinkedIn posts, landing sections, one-pagers — consistently in LearnLoop's voice and the ICP's own language, across EN, DE and ES. Its quality gate is a checker/rewriter that catches drift and explains every fix. And it's built as a *system*, not a prompt: the next language (French is already whispered for 2027) should be configuration, not a rebuild. A machine that knows **who we write for, what we write about, how we write, and how we sound — in any language.**
 

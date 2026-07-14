@@ -82,7 +82,7 @@ Deeper, in buyer language: `icp-snapshot.md`.
 
 LearnLoop's voice *should* be: direct, confident, a little contrarian, human. Short sentences. Proof over hype. Talks to L&D leaders as peers, not prospects.
 
-**But it has drifted to beige.** Six people now publish under the brand and the writing has become generic SaaS mush: "empower," "unlock," "seamless," "in today's fast-paced world," "solutions that drive results." The voice that made early content stand out is gone. And next quarter it also has to work in German and Spanish — with no native editor on staff.
+**But it has drifted into generic SaaS filler.** Six people now publish under the brand and the writing has become generic SaaS mush: "empower," "unlock," "seamless," "in today's fast-paced world," "solutions that drive results." The voice that made early content stand out is gone. And next quarter it also has to work in German and Spanish — with no native editor on staff.
 
 **Voice rules (the standard the check-loop should enforce):**
 - DO: lead with a claim or a number; short sentences; name the real pain; talk like a peer
