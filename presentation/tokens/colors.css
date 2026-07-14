@@ -1,0 +1,95 @@
+/* ─────────────────────────────────────────────────────────────
+   Studytube — Brand color system (curated, semantically named)
+   Source of truth: Figma "Marketing Assets NL". Raw Figma variables
+   live in fig-tokens.css; this layer is the clean, human API used by
+   components, kits and specimen cards.
+   ───────────────────────────────────────────────────────────── */
+:root {
+  /* ── Primary blue ─────────────────────────────────────────── */
+  --blue-025: #F5FAFF;
+  --blue-050: #EDF6FF;
+  --blue-100: #D7EBFF;
+  --blue-200: #B9DCFF;
+  --blue-250: #7ABDFF;
+  --blue-300: #50A7FF;
+  --blue-400: #288CFF;
+  --blue-500: #056DFF;   /* core brand blue */
+  --blue-600: #0A5CEB;
+  --blue-700: #0F4ABE;
+  --blue-800: #133E95;
+  --blue-900: #11295A;   /* deep navy — titles */
+
+  /* ── Accent: purple ───────────────────────────────────────── */
+  --purple-400: #BA91FC;
+  --purple-500: #9456FB;
+
+  /* ── Accent: light blue / cyan ────────────────────────────── */
+  --cyan-050: #EFFDFF;
+  --cyan-100: #DEFBFF;
+  --cyan-200: #C2F7FF;
+  --cyan-250: #99EEFF;
+  --cyan-400: #05D5FF;
+  --cyan-500: #00B8E5;
+
+  /* ── Accent: green / pink / orange ────────────────────────── */
+  --green-500: #00E57A;
+  --pink-500: #FB55AF;
+  --orange-400: #FFA05C;
+  --orange-500: #FF8229;
+
+  /* ── Neutral gray ramp ────────────────────────────────────── */
+  --gray-050: #FCFDFD;
+  --gray-075: #F5F7F9;
+  --gray-100: #F9FAFB;
+  --gray-200: #F2F5F8;
+  --gray-250: #E9EDF1;
+  --gray-300: #D1D9E0;
+  --gray-400: #AFBBC6;
+  --gray-500: #8694A2;
+  --gray-600: #545E69;
+  --gray-700: #434A51;
+  --gray-800: #2C3135;
+  --gray-900: #1A1C1E;
+
+  --white: #FFFFFF;
+  --black: #000000;
+
+  /* ── Feedback ─────────────────────────────────────────────── */
+  --error-fg: #E7364B;
+  --error-bg: #FFFAFB;
+  --success-fg: #057A55;
+  --success-bg: #DEF7EC;
+  --warning-fg: #EA580C;
+  --warning-bg: #FFEDD5;
+  --info-fg: #056DFF;
+  --info-bg: #EDF6FF;
+
+  /* ─────────────────────────────────────────────────────────────
+     SEMANTIC ALIASES — reach for these in components.
+     ───────────────────────────────────────────────────────────── */
+  --brand: var(--blue-500);
+  --brand-hover: var(--blue-600);
+  --brand-pressed: var(--blue-700);
+
+  --text-title: var(--blue-900);
+  --text-body: var(--gray-600);
+  --text-strong: var(--gray-900);
+  --text-muted: var(--gray-500);
+  --text-on-brand: var(--white);
+  --text-link: var(--blue-500);
+
+  --surface: var(--white);
+  --surface-subtle: var(--gray-075);
+  --surface-sunken: var(--gray-200);
+  --surface-blue: var(--blue-050);
+  --surface-brand: var(--blue-500);
+  --surface-navy: var(--blue-900);
+
+  --border: var(--gray-250);
+  --border-strong: var(--gray-300);
+  --border-focus: var(--blue-500);
+
+  --icon: var(--gray-500);
+  --icon-strong: var(--gray-700);
+  --icon-brand: var(--blue-500);
+}

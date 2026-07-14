@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTM AI Workshop — Event Deck</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  html,body{margin:0;height:100%;background:#07071a;}
+  /* ---- Deck harness ---- */
+  #stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .slide{width:1280px;height:720px;overflow:hidden;font-family:var(--font-body);position:absolute;
+    display:none;transform-origin:center center;box-shadow:0 30px 80px rgba(0,0,0,.5);}
+  .slide.active{display:block;}
+  .slide.active.s-content{display:grid;}
+  .slide.active.s-quote{display:flex;}
+  .slide.active.s-brain{display:grid;}
+  .slide.active.s-repo{display:grid;}
+  .nav{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:50;display:flex;gap:14px;align-items:center;
+    background:rgba(255,255,255,.08);backdrop-filter:blur(8px);padding:8px 14px;border-radius:999px;color:#fff;font-family:var(--font-body);font-size:13px;}
+  .nav button{background:rgba(255,255,255,.14);color:#fff;border:0;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .nav button:hover{background:rgba(255,255,255,.28);}
+  .nav .count{font-variant-numeric:tabular-nums;min-width:52px;text-align:center;}
+  .hint{position:fixed;top:16px;right:18px;z-index:50;color:rgba(255,255,255,.5);font-family:var(--font-body);font-size:12px;}
+
+  /* shared slide primitives (from Twan templates) */
+  .blob{position:absolute;border-radius:50%;filter:blur(8px);}
+  .logo-br{position:absolute;bottom:44px;right:96px;height:22px;}
+  .kicker{color:var(--blue-500);font-size:17px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;}
+
+  /* TITLE / navy */
+  .s-title{background:var(--blue-900);}
+  .s-title .b1{top:-160px;right:-120px;width:560px;height:560px;background:radial-gradient(circle,rgba(5,109,255,.55),transparent 68%);}
+  .s-title .b2{bottom:-220px;left:-160px;width:620px;height:620px;background:radial-gradient(circle,rgba(0,184,229,.40),transparent 70%);}
+  .s-title .b3{top:40%;left:38%;width:360px;height:360px;background:radial-gradient(circle,rgba(148,86,251,.30),transparent 70%);}
+  .s-title .content{position:relative;height:100%;box-sizing:border-box;padding:88px 96px;display:flex;flex-direction:column;}
+  .s-title .eyebrow{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;padding:8px 16px;border-radius:var(--radius-full);background:rgba(255,255,255,.12);color:#fff;font-size:16px;font-weight:600;}
+  .s-title h1{font-family:var(--font-display);font-size:88px;font-weight:800;line-height:1.02;letter-spacing:-.03em;color:#fff;margin:auto 0 0;max-width:1040px;}
+  .s-title .accent{color:var(--cyan-400);}
+  .s-title .foot{display:flex;align-items:center;justify-content:space-between;margin-top:36px;}
+  .s-title .sub{font-size:22px;color:rgba(255,255,255,.75);}
+
+  /* SECTION / blue */
+  .s-section{background:var(--blue-500);}
+  .s-section .b1{bottom:-200px;right:-120px;width:540px;height:540px;background:radial-gradient(circle,rgba(0,184,229,.5),transparent 70%);}
+  .s-section .content{position:relative;height:100%;box-sizing:border-box;padding:96px;display:flex;flex-direction:column;justify-content:center;}
+  .s-section .num{font-family:var(--font-display);font-size:30px;font-weight:700;color:rgba(255,255,255,.6);letter-spacing:.08em;}
+  .s-section .rule{width:72px;height:5px;border-radius:3px;background:var(--cyan-400);margin:24px 0 28px;}
+  .s-section h1{font-family:var(--font-display);font-size:76px;font-weight:800;line-height:1.05;letter-spacing:-.025em;color:#fff;margin:0;max-width:940px;}
+  .s-section p{font-size:24px;line-height:1.5;color:rgba(255,255,255,.88);margin:28px 0 0;max-width:720px;}
+  .s-section .logo-br{bottom:56px;height:26px;}
+
+  /* CONTENT / white split */
+  .s-content{background:var(--white);grid-template-columns:1.05fr .95fr;}
+  .s-content .left{padding:84px 60px 60px 96px;display:flex;flex-direction:column;}
+  .s-content h1{font-family:var(--font-display);font-size:50px;font-weight:800;line-height:1.08;letter-spacing:-.02em;color:var(--text-title);margin:14px 0 0;}
+  .s-content ul{list-style:none;padding:0;margin:36px 0 0;display:flex;flex-direction:column;gap:20px;}
+  .s-content li{display:flex;gap:16px;align-items:flex-start;}
+  .s-content .ic{flex:none;width:40px;height:40px;border-radius:var(--radius-l);background:var(--blue-050);color:var(--blue-500);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;}
+  .s-content .li-t{font-size:21px;font-weight:600;color:var(--text-title);}
+  .s-content .li-b{font-size:16px;color:var(--text-body);margin-top:2px;line-height:1.45;}
+  .s-content .right{position:relative;background:linear-gradient(160deg,var(--cyan-100),var(--blue-100));}
+  .s-content .right .photo{position:absolute;bottom:0;left:50%;transform:translateX(-50%);height:92%;filter:drop-shadow(0 20px 40px rgba(17,41,90,.2));}
+  .s-content .stat{position:absolute;top:64px;left:36px;background:#fff;border-radius:var(--radius-2xl);box-shadow:var(--shadow-lg);padding:16px 20px;}
+  .s-content .stat b{font-family:var(--font-display);font-size:30px;color:var(--text-title);display:block;}
+  .s-content .stat span{font-size:13px;color:var(--text-muted);}
+  .s-content .logo-br{bottom:40px;left:96px;right:auto;}
+
+  /* DATA / cards */
+  .s-data{background:var(--white);padding:84px 96px;box-sizing:border-box;}
+  .s-data h1{font-family:var(--font-display);font-size:46px;font-weight:800;letter-spacing:-.02em;color:var(--text-title);margin:12px 0 44px;}
+  .s-data .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .s-data .card{border-radius:var(--radius-4xl);padding:38px 34px;}
+  .s-data .big{font-family:var(--font-display);font-weight:800;font-size:72px;line-height:1;letter-spacing:-.03em;}
+  .s-data .lbl{font-size:18px;line-height:1.4;margin-top:14px;}
+  .s-data .c1{background:var(--blue-050);}.s-data .c1 .big{color:var(--blue-500);}.s-data .c1 .lbl{color:var(--blue-900);}
+  .s-data .c2{background:var(--blue-900);}.s-data .c2 .big{color:var(--cyan-400);}.s-data .c2 .lbl{color:rgba(255,255,255,.85);}
+  .s-data .c3{background:#F1E9FE;}.s-data .c3 .big{color:var(--purple-500);}.s-data .c3 .lbl{color:var(--blue-900);}
+
+  /* BRIEFS (custom, 3 cards) */
+  .s-briefs{background:var(--blue-050);padding:80px 96px;box-sizing:border-box;}
+  .s-briefs h1{font-family:var(--font-display);font-size:50px;font-weight:800;letter-spacing:-.02em;color:var(--text-title);margin:12px 0 40px;}
+  .s-briefs .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .s-briefs .b{background:#fff;border-radius:var(--radius-4xl);box-shadow:var(--shadow-card);padding:32px 28px;display:flex;flex-direction:column;position:relative;overflow:hidden;}
+  .s-briefs .b::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--purple-500),var(--blue-500));}
+  .s-briefs .bn{font-family:var(--font-display);font-size:15px;font-weight:700;color:var(--blue-500);letter-spacing:.06em;}
+  .s-briefs .bt{font-family:var(--font-display);font-size:26px;font-weight:800;color:var(--text-title);margin:8px 0 12px;line-height:1.1;}
+  .s-briefs .bd{font-size:15.5px;color:var(--text-body);line-height:1.5;}
+
+  /* SPEAKERS */
+  .s-speakers{background:var(--blue-050);padding:84px 96px;box-sizing:border-box;}
+  .s-speakers h1{font-family:var(--font-display);font-size:52px;font-weight:800;letter-spacing:-.02em;color:var(--text-title);margin:12px 0 48px;}
+  .s-speakers .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .s-speakers .sp{background:#fff;border-radius:var(--radius-4xl);box-shadow:var(--shadow-card);padding:32px 24px;text-align:center;}
+  .s-speakers .ava{width:120px;height:120px;border-radius:50%;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:42px;color:#fff;}
+  .s-speakers .name{font-size:21px;font-weight:700;color:var(--text-title);}
+  .s-speakers .role{font-size:15px;color:var(--text-muted);margin-top:4px;line-height:1.35;}
+
+  /* QUOTE */
+  .s-quote{background:var(--gray-075);align-items:center;}
+  .s-quote .content{padding:0 120px;}
+  .s-quote .mark{font-family:var(--font-display);font-size:160px;line-height:.6;color:var(--blue-200);height:80px;}
+  .s-quote blockquote{margin:0;font-family:var(--font-display);font-size:52px;font-weight:700;line-height:1.2;letter-spacing:-.015em;color:var(--text-title);max-width:1000px;}
+  .s-quote .hl{color:var(--blue-500);}
+  .s-quote .by{font-size:20px;color:var(--text-muted);margin-top:40px;}
+
+  /* LOOP (Performance Marketing Agent) */
+  .s-loop{background:var(--white);padding:72px 88px;box-sizing:border-box;}
+  .s-loop .tag{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--purple-500);background:#F1E9FE;padding:6px 14px;border-radius:999px;}
+  .s-loop h1{font-family:var(--font-display);font-size:44px;font-weight:800;letter-spacing:-.02em;color:var(--text-title);margin:14px 0 34px;}
+  .s-loop .flow{display:flex;align-items:stretch;}
+  .s-loop .stage{flex:1;background:var(--blue-050);border-radius:var(--radius-2xl);padding:24px 20px;}
+  .s-loop .stage .st-n{font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--blue-500);}
+  .s-loop .stage .st-t{font-family:var(--font-display);font-size:22px;font-weight:800;color:var(--text-title);margin:6px 0 8px;line-height:1.08;}
+  .s-loop .stage .st-b{font-size:14px;color:var(--text-body);line-height:1.42;}
+  .s-loop .arrow{flex:0 0 40px;display:flex;align-items:center;justify-content:center;color:var(--blue-300);font-size:26px;font-weight:700;}
+  .s-loop .feedback{margin-top:20px;display:flex;align-items:center;gap:16px;background:var(--blue-900);border-radius:var(--radius-2xl);padding:18px 28px;font-size:18px;color:rgba(255,255,255,.9);}
+  .s-loop .feedback .rc{font-size:26px;color:var(--cyan-400);}
+  .s-loop .feedback b{color:var(--cyan-400);font-weight:700;}
+  .s-loop .logo-br{bottom:34px;}
+
+  /* BRAIN graph */
+  .s-brain{background:var(--blue-900);grid-template-columns:1fr 1fr;}
+  .s-brain .left{padding:72px 32px 60px 96px;display:flex;flex-direction:column;justify-content:center;}
+  .s-brain .kicker2{color:var(--cyan-400);font-size:17px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;}
+  .s-brain h1{font-family:var(--font-display);font-size:54px;font-weight:800;letter-spacing:-.02em;color:#fff;margin:12px 0 26px;}
+  .s-brain ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:18px;}
+  .s-brain li{display:flex;gap:14px;align-items:flex-start;color:rgba(255,255,255,.82);font-size:18px;line-height:1.45;}
+  .s-brain li b{color:#fff;font-weight:700;}
+  .s-brain .dot{flex:none;width:10px;height:10px;border-radius:50%;background:var(--cyan-400);margin-top:8px;}
+  .s-brain .right{position:relative;display:flex;align-items:center;justify-content:center;padding:36px;}
+  .s-brain .right svg{width:96%;height:auto;}
+
+  /* REPO / what you're solving */
+  .s-repo{background:var(--white);grid-template-columns:.92fr 1.08fr;}
+  .s-repo .left{padding:72px 44px 60px 96px;display:flex;flex-direction:column;justify-content:center;}
+  .s-repo h1{font-family:var(--font-display);font-size:46px;font-weight:800;letter-spacing:-.02em;color:var(--text-title);margin:12px 0 20px;}
+  .s-repo .job{font-size:19px;line-height:1.5;color:var(--text-body);margin:0;}
+  .s-repo .job b{color:var(--text-title);}
+  .s-repo .proving{margin-top:22px;padding:16px 18px;background:var(--blue-050);border-radius:var(--radius-l);font-size:15px;color:var(--blue-900);line-height:1.45;}
+  .s-repo .right{background:var(--blue-900);padding:56px 60px;display:flex;flex-direction:column;justify-content:center;}
+  .s-repo .right h2{font-family:var(--font-display);font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan-400);margin:0 0 18px;}
+  .s-repo .doc{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08);}
+  .s-repo .doc:last-of-type{border-bottom:0;}
+  .s-repo .path{display:block;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13.5px;color:var(--cyan-400);margin-bottom:3px;}
+  .s-repo .desc{display:block;font-size:14.5px;color:rgba(255,255,255,.8);line-height:1.35;}
+
+  @media print{
+    @page{size:1280px 720px;margin:0;}
+    html,body{background:#fff;}
+    #stage{position:static;display:block;}
+    .nav,.hint{display:none;}
+    .slide{display:block!important;position:relative;transform:none!important;page-break-after:always;box-shadow:none;margin:0;}
+  }
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <!-- 1 · TITLE -->
+  <section class="slide s-title active">
+    <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+    <div class="content">
+      <span class="eyebrow">● AI Build Day · 16 July 2026</span>
+      <h1>GTM &times; AI.<br><span class="accent">Let's build.</span></h1>
+      <div class="foot">
+        <span class="sub">A hands-on build day · Studytube &times; Unmuted</span>
+        <img src="assets/logos/studytube-wordmark-white.svg" alt="Studytube" style="height:28px;">
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · SECTION — opening frame -->
+  <section class="slide s-section">
+    <div class="blob b1"></div>
+    <div class="content">
+      <span class="num">OPENING</span>
+      <div class="rule"></div>
+      <h1>Not a workshop.<br>A build room.</h1>
+      <p>No slides you'll forget by lunch. Today you pick a real GTM problem and ship a working fix with AI — with us in the room.</p>
+    </div>
+    <img class="logo-br" src="assets/logos/studytube-wordmark-white.svg" alt="Studytube">
+  </section>
+
+  <!-- 3 · SECTION — proof thesis -->
+  <section class="slide s-section">
+    <div class="blob b1"></div>
+    <div class="content">
+      <span class="num">PROOF · WHAT WE'VE BUILT</span>
+      <div class="rule"></div>
+      <h1>We don't build tools.<br>We build loops.</h1>
+      <p>The stuff we wrestle with every day — real systems, running on a schedule. Each one connects, creates, measures and feeds itself, so it sharpens every cycle. Your brief today is lap one of a loop like these.</p>
+    </div>
+    <img class="logo-br" src="assets/logos/studytube-wordmark-white.svg" alt="Studytube">
+  </section>
+
+  <!-- CASE 1 · Performance Marketing Signal Room (combined) -->
+  <section class="slide s-data">
+    <span class="kicker">Case 1 · live, running weekly</span>
+    <h1>The Performance Marketing Signal Room</h1>
+    <div class="grid">
+      <div class="card c1"><div class="big">Ads</div><div class="lbl">Meta + GA4 wired in. It reads which creatives are tiring out twice a week and drafts fresh variants — each built on a winning angle from real results.</div></div>
+      <div class="card c2"><div class="big">SoM</div><div class="lbl">Share-of-Model watch: how often our brand shows up in AI answers (Perplexity, ChatGPT), every Monday — automatically.</div></div>
+      <div class="card c3"><div class="big">1/wk</div><div class="lbl">Competitor + answer-engine watch: diffs rivals, finds the widest gap, and drafts one fix a week to win it.</div></div>
+    </div>
+    <img class="logo-br" src="assets/logos/studytube-wordmark-navy.svg" alt="Studytube">
+  </section>
+
+  <!-- 6 · CONTENT — Voice at scale -->
+  <section class="slide s-content">
+    <div class="left">
+      <span class="kicker">Case 2 · our SPEAK — live</span>
+      <h1>Voice that holds at scale</h1>
+      <ul>
+        <li><span class="ic">◇</span><div><div class="li-t">A positioning library</div><div class="li-b">Every claim written once, agreed on, and reused — so six people write with one voice.</div></div></li>
+        <li><span class="ic">◇</span><div><div class="li-t">A voice engine</div><div class="li-b">Write on-brand, then strip the beige automatically — a check-and-rewrite loop.</div></div></li>
+        <li><span class="ic">◇</span><div><div class="li-t">Localized per market</div><div class="li-b">Adapts the voice for each market — not word-for-word translation — so it reads native in Dutch, German and beyond.</div></div></li>
+      </ul>
+      <img class="logo-br" src="assets/logos/studytube-wordmark-navy.svg" alt="Studytube">
+    </div>
+    <div class="right">
+      <div class="stat"><b>6 authors → 1 voice</b><span>exactly Brief 02, already solved</span></div>
+      <img class="photo" src="assets/images/brand-hero.png" alt="">
+    </div>
+  </section>
+
+  <!-- 7 · BRAIN -->
+  <section class="slide s-brain">
+    <div class="left">
+      <span class="kicker2">Case 3 · the substrate</span>
+      <h1>The Brain</h1>
+      <ul>
+        <li><span class="dot"></span><div>One <b>shared memory</b> every system reads from — so nothing starts from a blank page.</div></li>
+        <li><span class="dot"></span><div>Ask it anything we've <b>built or learned</b>, and it answers — with the source.</div></li>
+        <li><span class="dot"></span><div>The more we build, <b>the smarter the next build starts.</b> The loops feed the Brain; the Brain compounds.</div></li>
+      </ul>
+    </div>
+    <div class="right">
+      <svg viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="brainGrad" cx="50%" cy="42%" r="62%">
+            <stop offset="0%" stop-color="#05D5FF"/>
+            <stop offset="100%" stop-color="#056DFF"/>
+          </radialGradient>
+        </defs>
+        <g stroke="rgba(255,255,255,0.28)" stroke-width="2">
+          <line x1="260" y1="260" x2="260" y2="60"/>
+          <line x1="260" y1="260" x2="450" y2="198"/>
+          <line x1="260" y1="260" x2="378" y2="422"/>
+          <line x1="260" y1="260" x2="142" y2="422"/>
+          <line x1="260" y1="260" x2="70" y2="198"/>
+        </g>
+        <g font-family="Aeonik, sans-serif" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">
+          <g><circle cx="260" cy="60" r="46" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/><text x="260" y="66">Ads</text></g>
+          <g><circle cx="450" cy="198" r="46" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/><text x="450" y="204">Signals</text></g>
+          <g><circle cx="378" cy="422" r="46" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/><text x="378" y="428">Pages</text></g>
+          <g><circle cx="142" cy="422" r="46" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/><text x="142" y="428">Voice</text></g>
+          <g><circle cx="70" cy="198" r="46" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/><text x="70" y="204">Digests</text></g>
+        </g>
+        <circle cx="260" cy="260" r="66" fill="url(#brainGrad)"/>
+        <text x="260" y="267" font-family="Aeonik, sans-serif" font-size="22" font-weight="800" fill="#11295A" text-anchor="middle">BRAIN</text>
+      </svg>
+    </div>
+    <img class="logo-br" src="assets/logos/studytube-wordmark-white.svg" alt="Studytube" style="z-index:2;">
+  </section>
+
+  <!-- SECTION — the setup -->
+  <section class="slide s-section">
+    <div class="blob b1"></div>
+    <div class="content">
+      <span class="num">THE SETUP</span>
+      <div class="rule"></div>
+      <h1>Today, you work<br>for LearnLoop.</h1>
+      <p>A B2B learning platform that's winning — €30M ARR, ~750 customers, Series C in the bank. The board wants €200M by 2030. The catch: every euro of new pipeline still scales with headcount. (LearnLoop is fictional. The problems are not.)</p>
+    </div>
+    <img class="logo-br" src="assets/logos/studytube-wordmark-white.svg" alt="Studytube">
+  </section>
+
+  <!-- 5 · DATA — meet LearnLoop -->
+  <section class="slide s-data">
+    <span class="kicker">Meet LearnLoop</span>
+    <h1>A company that's winning</h1>
+    <div class="grid">
+      <div class="card c1"><div class="big">€30M</div><div class="lbl">ARR, growing 55% a year. Series C in the bank, ~750 mid-market customers.</div></div>
+      <div class="card c2"><div class="big">9</div><div class="lbl">first German logos — won the old-fashioned way: founder intros, warm network, feet on the ground.</div></div>
+      <div class="card c3"><div class="big">€200M</div><div class="lbl">by 2030 — the number the board wrote down. The old answer: hire 6× the people.</div></div>
+    </div>
+    <img class="logo-br" src="assets/logos/studytube-wordmark-navy.svg" alt="Studytube">
+  </section>
+
+  <!-- REPO — what you're solving + what's in the repo -->
+  <section class="slide s-repo">
+    <div class="left">
+      <span class="kicker">Your starting kit</span>
+      <h1>What you're solving</h1>
+      <p class="job">You're LearnLoop's <b>marketing-engineering task force</b>. Take what lives in people's heads — the sensing, the writing, the outreach — and turn your room's part into a <b>system that runs without them</b>.</p>
+      <div class="proving">Proving ground: <b>50 named DACH accounts · 5 logos this quarter · a 3-person pod · zero new hires.</b></div>
+      <img class="logo-br" src="assets/logos/studytube-wordmark-navy.svg" alt="Studytube">
+    </div>
+    <div class="right">
+      <h2>Everything's in the repo</h2>
+      <div class="doc"><span class="path">brief-0X/README.md</span><span class="desc">Start here — your challenge, the data, and starter prompts.</span></div>
+      <div class="doc"><span class="path">learnloop-story-onepager.md</span><span class="desc">The whole company story on one page.</span></div>
+      <div class="doc"><span class="path">company-facts.json · learnloop-company-bible.md</span><span class="desc">Who LearnLoop is — numbers, product, market, competitors.</span></div>
+      <div class="doc"><span class="path">icp-snapshot · customer-quote-bank · win-loss-call-notes</span><span class="desc">Shared context to mine — mix it into your build.</span></div>
+      <div class="doc"><span class="path">brief-0X/ &nbsp;(your data pack)</span><span class="desc">The CSVs and docs for your room. Some of it contradicts itself — on purpose.</span></div>
+    </div>
+  </section>
+
+  <!-- BRIEFS -->
+  <section class="slide s-briefs">
+    <span class="kicker">Pick your room</span>
+    <h1>Your challenge</h1>
+    <div class="grid">
+      <div class="b"><span class="bn">SENSE · The signal room</span><span class="bt">Turn the mess into the move</span><span class="bd">Four data sources, zero agreement. Build the reading — not more charts — short enough a VP acts on it Monday.</span></div>
+      <div class="b"><span class="bn">SPEAK · The brand voice machine</span><span class="bt">One voice, every market</span><span class="bd">Six writers, one drifting voice, hand-editing that won't scale — and next quarter it must survive German and Spanish. Build the tool that checks, rewrites and travels.</span></div>
+      <div class="b"><span class="bn">REACH · Account penetration</span><span class="bt">Build the machine, not the email</span><span class="bd">50 DACH accounts, 5 logos wanted, 3,200 emails → 13 replies. Don't write a clever email — build the machine that writes them, then proves it on the next account.</span></div>
+    </div>
+  </section>
+
+  <!-- ONE MACHINE — SENSE / SPEAK / REACH -->
+  <section class="slide s-loop">
+    <span class="tag">◈ One machine, three rooms</span>
+    <h1>Heads don't multiply. Systems do.</h1>
+    <div class="flow">
+      <div class="stage"><div class="st-n">SENSE</div><div class="st-t">Read the market</div><div class="st-b">Who's worth it, what changed, why now — four messy sources into one reading a VP acts on.</div></div>
+      <div class="arrow">→</div>
+      <div class="stage"><div class="st-n">SPEAK</div><div class="st-t">Say it right</div><div class="st-b">The right message, in the right voice, in the right language — checked, travelling to Berlin and Madrid.</div></div>
+      <div class="arrow">→</div>
+      <div class="stage"><div class="st-n">REACH</div><div class="st-t">Land it</div><div class="st-b">Research, signal, committee, the way in — the writing is the last step. Earn the reply.</div></div>
+    </div>
+    <div class="feedback"><span class="rc">↻</span><span><b>Replies feed back to SENSE.</b> LearnLoop's product closes the loop between learning and doing — its own pipeline runs open-loop. Today you close it.</span></div>
+    <img class="logo-br" src="assets/logos/studytube-wordmark-navy.svg" alt="Studytube">
+  </section>
+
+  <!-- 7 · CONTENT — how the day runs -->
+  <section class="slide s-content">
+    <div class="left">
+      <span class="kicker">How the day runs</span>
+      <h1>Build. Ring. Show.</h1>
+      <ul>
+        <li><span class="ic">◷</span><div><div class="li-t">~2 hours on the clock</div><div class="li-b">The timer's on the big screen. Small loops beat one giant plan.</div></div></li>
+        <li><span class="ic">♪</span><div><div class="li-t">Ring the bell when it works</div><div class="li-b">First thing runs? Ring it. The room celebrates every ship.</div></div></li>
+        <li><span class="ic">★</span><div><div class="li-t">3-minute demos, then awards</div><div class="li-b">Show something running. Rough and real beats polished and hypothetical.</div></div></li>
+      </ul>
+      <img class="logo-br" src="assets/logos/studytube-wordmark-navy.svg" alt="Studytube">
+    </div>
+    <div class="right">
+      <div class="stat" style="max-width:236px"><b style="font-size:20px;line-height:1.2">Expect a curveball</b><span>the brief may shift mid-build</span></div>
+      <img class="photo" src="assets/images/brand-hero.png" alt="">
+    </div>
+  </section>
+
+  <!-- 8 · CONTENT — build with Claude -->
+  <section class="slide s-content" style="grid-template-columns:1fr;">
+    <div class="left" style="padding-right:96px;">
+      <span class="kicker">Your co-builder</span>
+      <h1>How to drive Claude</h1>
+      <ul style="display:grid;grid-template-columns:1fr 1fr;gap:22px 40px;">
+        <li><span class="ic">A</span><div><div class="li-t">Talk in plain language</div><div class="li-b">Describe the outcome, not the code.</div></div></li>
+        <li><span class="ic">B</span><div><div class="li-t">Point it at your files</div><div class="li-b">It works from your real data, not guesses.</div></div></li>
+        <li><span class="ic">C</span><div><div class="li-t">Go one step at a time</div><div class="li-b">Build a piece, look, then ask for the next.</div></div></li>
+        <li><span class="ic">D</span><div><div class="li-t">Make something you can see</div><div class="li-b">An artifact to demo beats an answer in the chat.</div></div></li>
+      </ul>
+      <p style="margin-top:36px;font-size:18px;color:var(--text-body);">Your starter kit has a prompt pack for each brief. No coding experience needed.</p>
+      <img class="logo-br" src="assets/logos/studytube-wordmark-navy.svg" alt="Studytube">
+    </div>
+  </section>
+
+  <!-- 9 · SPEAKERS — mentors -->
+  <section class="slide s-speakers">
+    <span class="kicker">In the room with you</span>
+    <h1>Your mentors</h1>
+    <div class="grid">
+      <div class="sp"><div class="ava" style="background:var(--blue-500)">CM</div><div class="name">Chiel</div><div class="role">GTM &amp; AI · Studytube</div></div>
+      <div class="sp"><div class="ava" style="background:var(--purple-500)">CS</div><div class="name">Casper</div><div class="role">Marketing Ops &amp; automation · Studytube</div></div>
+      <div class="sp"><div class="ava" style="background:var(--cyan-500)">DO</div><div class="name">Dimitri</div><div class="role">Unmuted</div></div>
+    </div>
+    <img class="logo-br" src="assets/logos/studytube-wordmark-navy.svg" alt="Studytube">
+  </section>
+
+  <!-- 10 · SECTION — build -->
+  <section class="slide s-section">
+    <div class="blob b1"></div>
+    <div class="content">
+      <span class="num">2.5 HOURS ON THE CLOCK</span>
+      <div class="rule"></div>
+      <h1>Go build<br>the machine.</h1>
+      <p>Grab a mentor the moment you're stuck for more than a few minutes. That's what we're here for.</p>
+    </div>
+    <img class="logo-br" src="assets/logos/studytube-wordmark-white.svg" alt="Studytube">
+  </section>
+
+  <!-- 11 · QUOTE — closing thesis -->
+  <section class="slide s-quote">
+    <div class="content">
+      <div class="mark">&ldquo;</div>
+      <blockquote>Rough and real beats <span class="hl">polished and hypothetical</span>.</blockquote>
+      <div class="by">The only rule for the showcase.</div>
+    </div>
+    <img class="logo-br" src="assets/logos/studytube-wordmark-navy.svg" alt="Studytube" style="position:absolute;bottom:48px;right:96px;height:24px;">
+  </section>
+
+  <!-- 12 · TITLE — employer-brand close -->
+  <section class="slide s-title">
+    <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+    <div class="content">
+      <span class="eyebrow">● We're hiring across GTM</span>
+      <h1>We build this<br><span class="accent">for real, every day.</span></h1>
+      <div class="foot">
+        <span class="sub">Liked today? Come build with us. Talk to any mentor.</span>
+        <img src="assets/logos/studytube-wordmark-white.svg" alt="Studytube" style="height:28px;">
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="hint">← → to navigate · F fullscreen · P print</div>
+<div class="nav">
+  <button onclick="go(-1)" aria-label="Previous">‹</button>
+  <span class="count" id="count">1 / 12</span>
+  <button onclick="go(1)" aria-label="Next">›</button>
+</div>
+
+<script>
+  const slides=[...document.querySelectorAll('.slide')];
+  let i=0;
+  const stage=document.getElementById('stage');
+  function fit(){
+    const s=Math.min(window.innerWidth/1280, window.innerHeight/720);
+    slides.forEach(sl=>sl.style.transform=`scale(${s})`);
+  }
+  function show(n){
+    i=(n+slides.length)%slides.length;
+    slides.forEach((sl,x)=>sl.classList.toggle('active',x===i));
+    document.getElementById('count').textContent=`${i+1} / ${slides.length}`;
+  }
+  function go(d){show(i+d);}
+  window.addEventListener('resize',fit);
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key===' '){go(1);e.preventDefault();}
+    else if(e.key==='ArrowLeft'){go(-1);}
+    else if(e.key.toLowerCase()==='f'){if(!document.fullscreenElement)document.documentElement.requestFullscreen();else document.exitFullscreen();}
+    else if(e.key.toLowerCase()==='p'){window.print();}
+  });
+  stage.addEventListener('click',e=>{ if(!e.target.closest('.nav')) go(1); });
+  fit(); show(0);
+</script>
+</body>
+</html>

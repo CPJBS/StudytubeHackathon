@@ -1,0 +1,75 @@
+/* ─────────────────────────────────────────────────────────────
+   Studytube — Webfonts (self-hosted, real brand faces)
+   Euclid Circular B (body/UI) — Light/SemiBold/Bold available.
+   Aeonik (display)            — Light/Regular/Medium/Bold/Black + italic.
+   Files in ../assets/fonts/. Paths are relative to this CSS file.
+   ───────────────────────────────────────────────────────────── */
+
+/* ── Euclid Circular B ────────────────────────────────────────
+   Only Light/SemiBold/Bold were provided, so 300/400 map to Light
+   and 500/600 to SemiBold to keep UI text readable. */
+@font-face {
+  font-family: "Euclid Circular B";
+  src: url("../assets/fonts/EuclidCircularB-Light.ttf") format("truetype");
+  font-weight: 300 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Euclid Circular B";
+  src: url("../assets/fonts/EuclidCircularB-SemiBold.ttf") format("truetype");
+  font-weight: 500 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Euclid Circular B";
+  src: url("../assets/fonts/EuclidCircularB-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Aeonik ───────────────────────────────────────────────────── */
+@font-face {
+  font-family: "Aeonik";
+  src: url("../assets/fonts/Aeonik-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("../assets/fonts/Aeonik-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("../assets/fonts/Aeonik-RegularItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("../assets/fonts/Aeonik-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("../assets/fonts/Aeonik-Bold.otf") format("opentype");
+  font-weight: 600 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("../assets/fonts/Aeonik-Black.otf") format("opentype");
+  font-weight: 800 900;
+  font-style: normal;
+  font-display: swap;
+}
