@@ -57,7 +57,7 @@ So, concretely:
 
 ## Provisioning checklist (per team)
 - [ ] Team folder assembled (trunk + kit layer + correct brief pack, no mentor-kit content, no `contradictions-and-redherrings.md` for Brief 03)
-- [ ] API key + credit cap issued (sealed, handed at kickoff)
+- [ ] Team Claude account (login) handed out at kickoff — own-login noted as backup
 - [ ] `CLAUDE.md` present so Claude loads context automatically
 - [ ] Browser fallback ready (claude.ai Project with the same data pack) for any broken install
 - [ ] Mentor-kit printed/at hand for mentors (`mentor-cards.md` + `close-the-loop-runbook.md`) — this is the coaching reference and finale choreography, mentors carry it, teams never see it
