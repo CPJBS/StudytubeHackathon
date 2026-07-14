@@ -1,4 +1,3 @@
-<!-- voice status: on-voice -->
 # Author: Marcus — Blog intro
 *Content type: Blog post opener*
 

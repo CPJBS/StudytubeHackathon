@@ -8,8 +8,6 @@
 
 ## 1. 2026-05-04 — Marcus de Wit — Blog post intro
 
-<!-- voice status: drifted | severity: obvious | broken rules: windup (principle 1), banned words, adjective stacking, AI-cadence -->
-
 **Status:** Awaiting review
 
 **Title: The future of workplace learning is here**
@@ -23,8 +21,6 @@ Whether you're scaling a team or navigating change, LearnLoop's comprehensive, a
 ---
 
 ## 2. 2026-05-12 — Tom Willems — Blog post intro
-
-<!-- voice status: drifted | severity: medium | broken rules: windup (principle 1), banned phrase (today's-world variant), hedging, feature soup -->
 
 **Status:** Awaiting review
 
@@ -45,8 +41,6 @@ LearnLoop is designed to help close that gap by giving teams better visibility i
 
 ## 3. 2026-05-18 — Priya Sharma — LinkedIn thought-leadership post
 
-<!-- voice status: drifted | severity: obvious | broken rules: windup (principle 1), banned words, adjective stacking, corporate-neutral tone -->
-
 **Status:** Awaiting review
 
 In today's ever-evolving world of work, one thing is clear: organizations that fail to empower their people will get left behind. 🚀
@@ -64,8 +58,6 @@ Ready to revolutionize your L&D strategy? Let's connect. 💡
 ---
 
 ## 4. 2026-05-27 — Sofia Marchetti — Landing-page hero
-
-<!-- voice status: drifted | severity: obvious | broken rules: banned words, adjective stacking, windup (principle 1), corporate-neutral tone -->
 
 **Status:** Awaiting review
 
@@ -87,8 +79,6 @@ See how LearnLoop can help you empower your people, today.
 ---
 
 ## 5. 2026-06-02 — Daniel Okafor — Mid-funnel nurture email
-
-<!-- voice status: drifted | severity: medium | broken rules: hedging, banned words, feature soup, corporate-neutral tone -->
 
 **Status:** Awaiting review
 
@@ -114,8 +104,6 @@ Daniel
 
 ## 6. 2026-06-10 — Tom Willems — Customer case-study introduction
 
-<!-- voice status: drifted | severity: medium | broken rules: hedging, banned words, no proof (principle 3), corporate-neutral tone -->
-
 **Status:** Awaiting review
 
 **How Falkenrode Logistik streamlined L&D across four warehouses**
@@ -131,8 +119,6 @@ Falkenrode continues to expand its use of the platform as its Hamburg operations
 ---
 
 ## 7. 2026-06-19 — Hannah Berg — Webinar invite email
-
-<!-- voice status: drifted | severity: medium | broken rules: hedging, banned words, feature soup, corporate-neutral tone -->
 
 **Status:** Awaiting review
 
@@ -158,8 +144,6 @@ Hannah
 
 ## 8. 2026-06-25 — Marcus de Wit — Mid-funnel nurture email
 
-<!-- voice status: drifted | severity: subtle | broken rules: windup (principle 1), hedging, no proof (principle 3), missing human aside (principle 4), corporate-neutral tone -->
-
 **Status:** Awaiting review
 
 Hi {{first_name}},
@@ -179,8 +163,6 @@ Marcus
 
 ## 9. 2026-07-02 — Priya Sharma — Customer case-study introduction
 
-<!-- voice status: drifted | severity: subtle | broken rules: windup (principle 1), hedging, no proof (principle 3), missing human aside (principle 4) -->
-
 **Status:** Awaiting review
 
 **Meridian Logistics and the search for a better learning approach**
@@ -196,8 +178,6 @@ Meridian's experience reflects a broader shift many organizations are navigating
 ---
 
 ## 10. 2026-07-08 — Sofia Marchetti — Webinar invite email
-
-<!-- voice status: drifted | severity: subtle | broken rules: windup (principle 1), hedging, no proof (principle 3), missing human aside (principle 4) -->
 
 **Status:** Awaiting review
 
@@ -218,4 +198,4 @@ Sofia
 
 ---
 
-*Fictional pack. Ten drafts, six authors, zero of these have been approved. If your checker can't tell 8, 9, and 10 apart from something that could ship, it isn't done yet.*
+*Fictional pack. Ten drafts, six authors, zero of these have been approved. If your checker waves any of them through unchanged, it isn't done yet.*

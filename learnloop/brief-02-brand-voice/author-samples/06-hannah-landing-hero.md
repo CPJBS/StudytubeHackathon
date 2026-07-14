@@ -1,4 +1,3 @@
-<!-- voice status: drifted -->
 # Author: Hannah — Landing-page hero
 *Content type: Homepage / landing-page hero section (headline + subhead + CTA)*
 
@@ -21,4 +20,4 @@ Discover how LearnLoop can help you unlock the full potential of your people.
 
 ---
 
-*Note from Hannah: went a bit heavy on the buzzwords here, wasn't sure how punchy we're allowed to be on the actual homepage vs the blog. Flagging for voice review.*
+*Note from Hannah: wrote this against a deadline and haven't had a second pair of eyes on it — can someone give it a look before it ships?*

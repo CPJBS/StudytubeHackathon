@@ -11,7 +11,7 @@
 1. **Noise caught.** Ground truth: 8 accounts have *only* a noise decoy in the feed — **ACC-021, 024, 029, 031, 034, 039, 040, 046** (capex funding, call-center hiring sprees, irrelevant expansions). A triage ranking any of these hot got fooled.
 2. **Quiet accounts handled.** **ACC-001, 010, 023, 041, 043, 045** have zero feed items — deprioritised *with reasoning*, not forgotten. (Sharp teams notice ACC-001 is feed-quiet but rich in `tech_signals` and the call notes — the feed isn't the only source.)
 3. **Hot list justified.** Every hot account cites its signals and the why-for-LearnLoop. The pod's hand-tagged appendix treated as judgment to verify, not truth.
-4. **Calibration depth (the old traps, now bonus material).** Channel-name chaos, the March outlier, review patterns — teams that fold "what converts for us" into the heat logic have gone deeper. Answer key: `../brief-01-signal-room/contradictions-and-redherrings.md`.
+4. **Calibration depth (the old traps, now bonus material).** Channel-name chaos, the March outlier, review patterns — teams that fold "what converts for us" into the heat logic have gone deeper. Answer key: `contradictions-and-redherrings.md`.
 5. **It's alive.** At ~15:30 hand them `late-signal-drop.md`: ACC-010 must move UP, ACC-023 must NOT move, ACC-043 → "watch, don't act." And it answers "why is X above Y?" with evidence.
 
 **Common traps → nudges**
@@ -52,7 +52,7 @@
 4. **Travels.** DE/ES are transcreations (register, proof-hunger, warmth) — beats the flat translation in `de-launch-memo.md`. Stretch: derives French register rules from how the guide adapts DE/ES, states its assumptions, ships one asset.
 5. **Consistent.** Same input twice → same output judgment. A system, not a dice roll.
 
-**Ground truth (do not reveal):** author-samples: Marcus + Sofia on-voice; Priya, Daniel, Tom, Hannah drifted. Off-brand stack: all 10 drifted (3 obvious / 4 medium / 3 subtle — labels in HTML comments, which are STRIPPED from participant copies). `unseen-drafts.md` holdouts: 1 (Hannah) + 2 (Daniel) on-voice; 3 (Sofia, medium) + 4 (Tom, subtle) drifted.
+**Ground truth (do not reveal):** author-samples: Marcus + Sofia on-voice; Priya, Daniel, Tom, Hannah drifted. Off-brand stack: all 10 drifted (3 obvious / 4 medium / 3 subtle — labels formerly lived in HTML comments in the source files; those are now removed entirely — this line is the only ground truth). `unseen-drafts.md` holdouts: 1 (Hannah) + 2 (Daniel) on-voice; 3 (Sofia, medium) + 4 (Tom, subtle) drifted.
 
 **Common traps → nudges**
 - Checker-only build → "Has your line actually *shipped* an asset from a brief yet? That's the job."

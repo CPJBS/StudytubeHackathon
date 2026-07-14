@@ -1,4 +1,3 @@
-<!-- voice status: drifted -->
 # Author: Priya — LinkedIn post
 *Content type: LinkedIn thought-leadership post*
 

@@ -22,7 +22,7 @@ Created: 2026-07-07 · Reworked Jul 14 (canon v4: new brief order 01=Signal Room
 ```
 
 What the script does, and why each step matters:
-1. Copies `../learnloop/` **minus** `mentor-kit/` and `brief-01-signal-room/contradictions-and-redherrings.md` (the answer key).
+1. Copies `../learnloop/` **minus** `mentor-kit/` — which now holds **all** mentor/organizer material: the answer key (`contradictions-and-redherrings.md`), the kickoff presentation brief, the runbook, the cards, and the demo-time holdouts.
 2. Copies in `CLAUDE.md` + the three prompt packs from this kit.
 3. **Strips all `<!-- ... -->` HTML comments from every .md** — the author samples and off-brand stack carry hidden mentor labels (`voice status: drifted`) that any participant's Claude would read instantly. Ground truth lives in `mentor-kit/mentor-cards.md`, so nothing is lost.
 4. Verifies: no mentor files present, zero `voice status` strings, zero `reconnect`/`curveball` mentions (the merge must stay a surprise), then zips.

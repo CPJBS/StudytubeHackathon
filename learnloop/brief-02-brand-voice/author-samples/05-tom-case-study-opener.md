@@ -1,4 +1,3 @@
-<!-- voice status: drifted -->
 # Author: Tom — Case study opener
 *Content type: Customer case-study introduction*
 

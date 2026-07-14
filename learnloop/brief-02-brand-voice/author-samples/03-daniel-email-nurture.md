@@ -1,4 +1,3 @@
-<!-- voice status: drifted -->
 # Author: Daniel — Email nurture
 *Content type: Mid-funnel nurture email (trial signup, no activity for 10 days)*
 

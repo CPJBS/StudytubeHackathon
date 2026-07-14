@@ -96,10 +96,10 @@ LearnLoop's voice *should* be: direct, confident, a little contrarian, human. Sh
 
 ## 7. The GTM team (the machine's operators)
 
-- **Sales:** 12 AEs, 6 SDRs (home markets) + the 3-SDR Berlin pod (Lukas Brandt, Frieda Sommer, Joris van Dam). The pod's cold outbound: 0.4% reply — see Brief 01.
+- **Sales:** 12 AEs, 6 SDRs (home markets) + the 3-SDR Berlin pod (Lukas Brandt, Frieda Sommer, Joris van Dam). The pod's cold outbound: 0.4% reply — see Brief 03.
 - **Marketing:** 10 people, 6 of whom publish (Marcus de Wit, Priya Sharma, Daniel Okafor, Sofia Marchetti, Tom Willems, Hannah Berg). Output 4x'd this year — the source of Brief 02's voice drift. Led by Nora Bakker (VP Marketing).
 - **RevOps:** Mila Verhoeven, team of one; owns four data sources nobody agrees on (Brief 01).
-- **Leadership:** Daan Vermeulen (CEO), Bram Hoekstra (CRO), Iris Chen (Head of Product). All under board pressure; each has their own theory of what's wrong (see Brief 03's `what-the-org-believes.md`).
+- **Leadership:** Daan Vermeulen (CEO), Bram Hoekstra (CRO), Iris Chen (Head of Product). All under board pressure; each has their own theory of what's wrong (see Brief 01's `what-the-org-believes.md`).
 
 Full roster with faces and quirks: `gtm-roster.md`.
 
@@ -117,8 +117,8 @@ Watch any great marketer or SDR work. Three skills, running from their head:
         └── replies ◀────┘   (REACH sends; what comes back feeds SENSE)
 ```
 
-- **SENSE** (Brief 03 · The Signal Room): captures the market's signals and runs the triage — which account is hot, which is not, why, and who to contact right now. Produces **the triage** — consumed by REACH. The company's own messy data (funnel, reviews, LinkedIn) is its calibration: what "hot for LearnLoop" even means.
-- **REACH** (Brief 01 · The Account Penetration Machine): turns a hot account and its signal into the motion — the play, the committee, the channels, the timing — and writes **the asset briefs**: exactly what content the play needs. Hands those to SPEAK; sends what comes back.
+- **SENSE** (Brief 01 · The Signal Room): captures the market's signals and runs the triage — which account is hot, which is not, why, and who to contact right now. Produces **the triage** — consumed by REACH. The company's own messy data (funnel, reviews, LinkedIn) is its calibration: what "hot for LearnLoop" even means.
+- **REACH** (Brief 03 · The Account Penetration Machine): turns a hot account and its signal into the motion — the play, the committee, the channels, the timing — and writes **the asset briefs**: exactly what content the play needs. Hands those to SPEAK; sends what comes back.
 - **SPEAK** (Brief 02 · The Brand Voice Machine): the production line. Makes the assets REACH ordered — on-voice, in the ICP's language, in EN/DE/ES and whatever language comes next — and guards the voice on everything the company ships. REACH fires the assets; the replies flow back into SENSE. That's the loop, closed.
 
 All three skills live in people's heads today: artisanal, undocumented, linear. Heads don't multiply. Systems do. The workshop builds the three subsystems. One machine — remember that.
@@ -134,7 +134,7 @@ Keep these consistent across all briefs so the world holds together (authoritati
 - DACH cold outbound reply rate: **0.4%** (3,200 emails, 13 replies — DACH list only; the home motion is warm and healthy)
 - Goal this quarter: **5 enterprise logos from 50 DACH accounts**, 3-person pod, zero new hires
 - Content output up **4x** this year, 6 publishers (Brief 02)
-- ~2,100 free-trial signups/quarter (product-led, user-level; excluded from the 750 count) — trial→paid is the disputed metric (Brief 03)
+- ~2,100 free-trial signups/quarter (product-led, user-level; excluded from the 750 count) — trial→paid is the disputed metric (Brief 01)
 
 ---
 

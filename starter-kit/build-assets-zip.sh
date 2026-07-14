@@ -16,9 +16,7 @@ mkdir -p "$OUT"
 # 1. Copy the LearnLoop world, excluding mentor material and OS junk
 rsync -a \
   --exclude 'mentor-kit/' \
-  --exclude 'contradictions-and-redherrings.md' \
   --exclude '.DS_Store' \
-  --exclude 'kickoff-presentation-brief.md' \
   "$SRC/" "$OUT/"
 
 # 2. Add the kit layer: CLAUDE.md + all three prompt packs
@@ -33,7 +31,7 @@ done
 # 4. Verify participant-safety
 fail=0
 if [ -d "$OUT/mentor-kit" ]; then echo "FAIL: mentor-kit present"; fail=1; fi
-if [ -f "$OUT/brief-01-signal-room/contradictions-and-redherrings.md" ]; then echo "FAIL: answer key present"; fail=1; fi
+if [ -n "$(find "$OUT" -name 'contradictions-and-redherrings.md' -o -name 'kickoff-presentation-brief.md' -o -name 'close-the-loop-runbook.md' -o -name 'mentor-cards.md')" ]; then echo "FAIL: mentor file present in pack"; fail=1; fi
 if grep -rq "voice status" "$OUT"; then echo "FAIL: hidden labels survived"; grep -rl "voice status" "$OUT"; fail=1; fi
 if grep -rqi "mentor-only\|MENTOR ONLY" "$OUT"; then echo "FAIL: mentor-only strings found"; grep -rli "mentor-only" "$OUT"; fail=1; fi
 # The T-45 merge is an unannounced curveball — participant docs must never mention it

@@ -1,4 +1,3 @@
-<!-- voice status: on-voice -->
 # Author: Sofia — Product announcement
 *Content type: Feature launch / product update post*
 
