@@ -11,7 +11,7 @@
 1. **Noise caught.** Ground truth: 8 accounts have *only* a noise decoy in the feed — **ACC-021, 024, 029, 031, 034, 039, 040, 046** (capex funding, call-center hiring sprees, irrelevant expansions). A triage ranking any of these hot got fooled.
 2. **Quiet accounts handled.** **ACC-001, 010, 023, 041, 043, 045** have zero feed items — deprioritised *with reasoning*, not forgotten. (Sharp teams notice ACC-001 is feed-quiet but rich in `tech_signals` and the call notes — the feed isn't the only source.)
 3. **Hot list justified.** Every hot account cites its signals and the why-for-LearnLoop. The pod's hand-tagged appendix treated as judgment to verify, not truth.
-4. **Calibration depth (the old traps, now bonus material).** Channel-name chaos, the March outlier, review patterns — teams that fold "what converts for us" into the heat logic have gone deeper. Calibration notes (not a grading key): `contradictions-and-redherrings.md`.
+4. **Calibration depth (the old traps, now bonus material).** Channel-name chaos, the March outlier, review patterns — teams that fold "what converts for us" into the heat logic have gone deeper. Calibration notes (not a grading key): `contradictions-and-redherrings.md` Paths + stuck-team hints: `paths-and-hints.md`..
 5. **It's alive.** At ~15:30 hand them `late-signal-drop.md`: ACC-010 must move UP, ACC-023 must NOT move, ACC-043 → "watch, don't act." And it answers "why is X above Y?" with evidence.
 
 **Common traps → nudges**
