@@ -1,0 +1,19 @@
+/* ═══════════════════════════════════════════════════════════════
+   STUDYTUBE DESIGN SYSTEM — global stylesheet entry point.
+   Consumers link THIS one file. Keep it as @import lines only.
+   ═══════════════════════════════════════════════════════════════ */
+@import './tokens/fonts.css';
+@import './tokens/colors.css';
+@import './tokens/typography.css';
+@import './tokens/fig-tokens.css';   /* raw Figma variables (complete) */
+
+/* Base element defaults so foundation cards & kits inherit the brand. */
+:root {
+  color-scheme: light;
+}
+body {
+  font-family: var(--font-body);
+  color: var(--text-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
