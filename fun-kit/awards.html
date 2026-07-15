@@ -7,86 +7,82 @@
 <style>
   :root{
     --navy:#0B0B2B; --blue:#0F4ABE; --purple:#7C5CFF; --ink:#1a1a2e;
-    --paper:#ffffff; --muted:#6b6b80; --line:#e7e7ef; --gold:#C9A227;
+    --paper:#ffffff; --muted:#6b6b80; --line:#e7e7ef;
   }
   *{box-sizing:border-box;}
   body{margin:0; background:#f2f2f7; color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; padding:32px;}
-  header{max-width:960px; margin:0 auto 8px;}
+  header{max-width:1000px; margin:0 auto 8px;}
   h1{font-size:26px; margin:0 0 6px; color:var(--navy); letter-spacing:-.02em;}
   .sub{color:var(--muted); font-size:14px; margin:0;}
-  .toolbar{max-width:960px; margin:16px auto 20px;}
+  .toolbar{max-width:1000px; margin:16px auto 20px;}
   .btn{background:var(--navy); color:#fff; border:0; padding:10px 18px; border-radius:8px; font-size:14px; font-weight:600; cursor:pointer;}
   .btn:hover{background:var(--blue);}
-  .grid{max-width:960px; margin:0 auto; display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
-  .award{background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:20px 22px;
-    display:flex; gap:16px; align-items:flex-start; box-shadow:0 1px 3px rgba(11,11,43,.06); break-inside:avoid;}
-  .ic{flex:0 0 44px; width:44px; height:44px; border-radius:11px; background:rgba(124,92,255,.1);
-    display:flex; align-items:center; justify-content:center;}
-  .ic svg{width:24px; height:24px; stroke:var(--purple); fill:none; stroke-width:1.8;}
-  .body h3{margin:0 0 4px; font-size:17px; color:var(--navy); letter-spacing:-.01em;}
-  .body .pill{font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--blue);
-    background:rgba(15,74,190,.08); padding:3px 8px; border-radius:12px; margin-left:6px; vertical-align:middle;}
-  .body p{margin:6px 0 0; font-size:13.5px; color:var(--muted); line-height:1.45;}
-  .lede{max-width:960px; margin:0 auto 20px; background:linear-gradient(90deg,var(--purple),var(--blue));
-    color:#fff; border-radius:14px; padding:18px 22px; font-size:14.5px; line-height:1.5;}
-  .lede b{font-weight:700;}
-  footer{max-width:960px; margin:28px auto 0; color:var(--muted); font-size:12px; line-height:1.5;}
-  @media print{ body{background:#fff; padding:0;} .toolbar{display:none;} .award{box-shadow:none;} }
+  .grid{max-width:1000px; margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+  .award{background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:26px 24px;
+    box-shadow:0 1px 3px rgba(11,11,43,.06); break-inside:avoid; position:relative; overflow:hidden;}
+  .award::before{content:""; position:absolute; top:0; left:0; right:0; height:6px; background:linear-gradient(90deg,var(--purple),var(--blue));}
+  .ic{width:52px; height:52px; border-radius:13px; background:rgba(124,92,255,.1);
+    display:flex; align-items:center; justify-content:center; margin-bottom:16px;}
+  .ic svg{width:28px; height:28px; stroke:var(--purple); fill:none; stroke-width:1.8;}
+  .award h3{margin:0 0 8px; font-size:20px; color:var(--navy); letter-spacing:-.01em;}
+  .award p{margin:0; font-size:14px; color:var(--muted); line-height:1.5;}
+  .award .how{display:block; margin-top:12px; font-size:12.5px; color:var(--muted); font-style:italic;}
+  .lede{max-width:1000px; margin:0 auto 20px; background:#fff; border:1px solid var(--line);
+    border-radius:14px; padding:18px 22px; font-size:14px; line-height:1.55; color:var(--ink);}
+  .lede b{font-weight:700; color:var(--navy);}
+  .everyone{max-width:1000px; margin:16px auto 0; background:linear-gradient(120deg,var(--navy),var(--blue));
+    color:#fff; border-radius:14px; padding:20px 24px; display:flex; gap:16px; align-items:flex-start;}
+  .everyone .ic2{flex:0 0 46px; width:46px; height:46px; border-radius:12px; background:rgba(255,255,255,.14); display:flex; align-items:center; justify-content:center;}
+  .everyone .ic2 svg{width:25px; height:25px; stroke:#fff; fill:none; stroke-width:1.8;}
+  .everyone h3{margin:0 0 5px; font-size:18px;}
+  .everyone p{margin:0; font-size:14px; color:rgba(255,255,255,.85); line-height:1.5;}
+  footer{max-width:1000px; margin:28px auto 0; color:var(--muted); font-size:12px; line-height:1.55;}
+  @media print{ body{background:#fff; padding:0;} .toolbar{display:none;} .award,.everyone{box-shadow:none;} }
 </style>
 </head>
 <body>
 <header>
   <h1>The Awards</h1>
-  <p class="sub">GTM AI Workshop &middot; Every team should be able to win <em>something</em> — so nobody leaves empty-handed and everyone leaves photographed.</p>
+  <p class="sub">GTM AI Workshop &middot; Three awards, chosen live. Not about winning — about celebrating what got built (and everyone leaves with something).</p>
 </header>
 <div class="toolbar"><button class="btn" onclick="window.print()">Print</button></div>
 
-<div class="lede"><b>Facilitator note:</b> announce these at the showcase, most-fun-last. Aim to give every team at least one. Trophies should be silly and physical — people photograph trophies, and those photos are your post-event LinkedIn recap.</div>
+<div class="lede"><b>How this works.</b> This isn't a leaderboard. After the demos the room votes (Mentimeter) and the mentors add their call — three awards, one build each. The point of the day is building and the network you leave with, so keep it light and loud. Every team also gets a goody bag regardless.</div>
 
 <div class="grid">
+
   <div class="award">
-    <div class="ic"><svg viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 0 12 0V4H6z"/><path d="M9 20h6M12 15v5M4 5h2M18 5h2a2 2 0 0 1 0 4h-1"/></svg></div>
-    <div class="body"><h3>The Closer</h3><p>Best actual fix — the build we'd genuinely ship on Monday. The grand prize.</p></div>
+    <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/><circle cx="12" cy="12" r="3.5"/></svg></div>
+    <h3>Made Claude Do What?!</h3>
+    <p>The most surprising, creative or downright unexpected use of Claude — the "I didn't know you could do that" moment of the day.</p>
+    <span class="how">Mentors' call — the build that made the room lean in.</span>
   </div>
-  <div class="award">
-    <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M5 12H2M22 12h-3M6 6l-2-2M20 20l-2-2M6 18l-2 2M20 4l-2 2"/><circle cx="12" cy="12" r="3.5"/></svg></div>
-    <div class="body"><h3>Made Claude Do WHAT?!</h3><p>Most creative or unexpected use of Claude — the "I didn't know you could do that" moment.</p></div>
-  </div>
+
   <div class="award">
     <div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div>
-    <div class="body"><h3>Beautiful Disaster</h3><p>Best thing that broke gloriously. Celebrates ambition and risk — the opposite of playing it safe.</p></div>
+    <h3>Beautiful Disaster</h3>
+    <p>The boldest swing — reached for the ambitious thing instead of the safe one. Celebrated whether or not it fully landed. Very on-brand for a hackathon.</p>
+    <span class="how">Who tried the hardest thing in the room? Nerve over polish.</span>
   </div>
-  <div class="award">
-    <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v4H4zM4 12h10M4 17h7"/><path d="M17 13l4 4-4 4M21 17h-7"/></svg></div>
-    <div class="body"><h3>The Reply Guy <span class="pill">Brief 03</span></h3><p>Outreach we'd actually answer — the sequence that beats the 0.4% baseline for real.</p></div>
-  </div>
-  <div class="award">
-    <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h9"/><path d="M18 16l4 4M22 16l-4 4"/></svg></div>
-    <div class="body"><h3>Filler Killer <span class="pill">Brief 02</span></h3><p>Most ruthless kill of corporate mush — the system that best held the voice across authors and languages.</p></div>
-  </div>
-  <div class="award">
-    <div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></div>
-    <div class="body"><h3>The Whisperer <span class="pill">Brief 01</span></h3><p>Found the signal everyone else missed — saw through the noise to the insight that mattered.</p></div>
-  </div>
-  <div class="award">
-    <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6L7.1 21l.9-5.5-4-3.9 5.5-.8z"/></svg></div>
-    <div class="body"><h3>Crowd Favourite</h3><p>Audience-voted at the showcase. The room decides — pure popularity, no judges.</p></div>
-  </div>
-  <div class="award">
-    <div class="ic"><svg viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 0 12 0V4H6z"/><path d="M18 3a1 1 0 1 1 2 0c0 1.5-1 2-2 3"/><circle cx="12" cy="12" r="1"/></svg></div>
-    <div class="body"><h3>Fastest Bell</h3><p>First team to ring the "it works" bell. Rewards momentum and getting something running early.</p></div>
-  </div>
+
   <div class="award">
     <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 6h16v10H4z"/><path d="M8 20h8M9 16v4M15 16v4"/><path d="M8 10l2 2 4-4"/></svg></div>
-    <div class="body"><h3>The Storyteller</h3><p>Best 3-minute demo — the team that made us <em>feel</em> the problem and the fix, not just see it.</p></div>
+    <h3>The Storyteller</h3>
+    <p>Best demo — the team that made the room <em>feel</em> the problem and the fix in three minutes. A great system still has to be sold.</p>
+    <span class="how">Room vote — the demo you'd replay for someone who wasn't there.</span>
   </div>
-  <div class="award">
-    <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6"/></svg></div>
-    <div class="body"><h3>People's MVP <span class="pill">Individual</span></h3><p>The one person who unblocked everyone — helped other teams, kept the energy up. Not about their own build.</p></div>
+
+</div>
+
+<div class="everyone">
+  <div class="ic2"><svg viewBox="0 0 24 24"><path d="M6 2h12l2 6-8 14L4 8z"/><path d="M6 2l6 6 6-6M2 8h20"/></svg></div>
+  <div>
+    <h3>Everyone leaves with something</h3>
+    <p>A goody bag for every participant — tote, notebook, and a little build kit (a nod to what the day's about). The winning teams pick a prize: the podcast, the build kit, or the game. No one goes home empty-handed.</p>
   </div>
 </div>
 
-<footer>All awards fictional-company-agnostic and reusable for future workshops. Swap brief-specific names (Reply Guy / Filler Killer / Whisperer) if the briefs change.</footer>
+<footer>Three awards for up to ~5 teams — deliberately fewer awards than teams, because it's a celebration, not a ranking. Trophies/prizes are silly and physical: people photograph them, and those photos are the post-event LinkedIn recap. (Superseded the earlier 5-award draft per the Jul 14 catch-up.)</footer>
 </body>
 </html>

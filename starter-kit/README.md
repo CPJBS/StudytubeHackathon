@@ -33,7 +33,7 @@ The result is fully participant-safe: hand the same zip to every team (or load i
 
 - [ ] `dist/learnloop-assets.zip` built with the script (never hand-assembled) and spot-checked: no `mentor-kit/`, no answer key, `grep -r "voice status"` comes back empty
 - [ ] Zip distributed via **Google Drive** link, identical for all (GitHub access on request via Casper)
-- [ ] API key + credit cap issued per team — **created on the day itself, never shared in advance** — handed at kickoff
+- [ ] Team Claude account (login) issued per team — **created on the day itself, never shared in advance** — handed at kickoff; own login noted as backup
 - [ ] Browser fallback ready (claude.ai Project with the same assets) for any broken install
 - [ ] Mentor-kit printed/at hand for mentors (`mentor-cards.md` + `close-the-loop-runbook.md`) — teams never see it
 - [ ] Demo-time holdouts ready: `accounts-holdout.csv` (REACH), `unseen-drafts.md` (SPEAK), `late-signal-drop.md` + `late-data-drop.csv` + `fresh-questions.md` (SENSE)

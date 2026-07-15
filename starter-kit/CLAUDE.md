@@ -37,7 +37,7 @@ You'll get ~3 minutes to show what you built. Aim for **something that runs / so
 ## Ground rules
 
 - **All the data is fictional.** LearnLoop isn't real — build freely.
-- **Credits:** your team's API key has a spend cap. It's plenty for today — no need to ration, but don't run giant jobs in a loop for no reason.
+- **Your account:** each team gets a shared Claude account (we cover it) — log in together on one laptop. Plenty for today, so build freely; just don't run giant jobs in a loop for no reason. Working on your own laptop too? Use your own Claude login.
 - **Stuck for more than a few minutes?** Grab a mentor (Chiel, Casper, or Dimitri). That's what we're here for.
 
 Now open `README.md` and go. 🚀
