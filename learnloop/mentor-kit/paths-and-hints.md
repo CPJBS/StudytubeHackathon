@@ -62,11 +62,14 @@ Note: ACC-002 surfaces on almost every path (that is fine, it is the shared anch
 | Clean-list first | Seven accounts never touched; start where the well is not poisoned | `send-log.csv` untouched contacts | Untouched often means lower-tier fit |
 | Channel-switch | 20+ opens, zero replies = interested, wrong door; switch to call/LinkedIn | `send-log.csv` opens-vs-replies pattern | Opens are a weak signal; risks over-reading pixels |
 
+**Seeded contact noise (Jul 15):** contacts.csv now carries ~18 CRM-junk rows (CON-131 to CON-148): interns and Werkstudenten, wrong-department whitepaper downloaders, an external consultant whose contract ended, a shared mailbox at the live-RFP account (CON-143), a parental-leave auto-reply (CON-146), a duplicate record (CON-139 = CON-060), and **CON-135 Rainer Holzapfel: the L&D Director whose departure IS ACC-013's vacancy signal, still in the CRM and bounced 8 sends.** The two Executive Assistants (CON-132, CON-144) are ambiguous on purpose: noise as message targets, gold as gatekeepers. `persona_role` is CRM optimism, not ground truth — several junk rows are tagged "champion". A machine that emails the leaver or personalises to the shared mailbox has skipped hygiene; a team that catches the tagging optimism has done real committee-mapping.
+
 **Hints for stuck teams:**
 - **H1:** "How many of your first ten touches are email? What did email earn last quarter? The number is in the baseline."
 - **H2:** "Four people replied positively last quarter and nobody followed up. Have you found them yet?"
 - **H3:** "Who in `warm-paths.md` can open a door your sequence cannot? And what does spending that favor cost, since it spends once?"
 - **H4:** "Take one account through the whole machine by hand: committee, doors, timing, asset briefs. Then automate what you just did."
+- **H5 (contact hygiene):** "Your machine just emailed an intern, a shared mailbox, and someone who left in February. Would it know? What in the data could have told it?"
 
 ---
 

@@ -70,7 +70,7 @@ The market you're working plays by different rules than NL:
 | 2 | [`burned-templates.md`](./burned-templates.md) | The 4-touch, one-door motion that produced 0.4%, with why-this-fails notes. The anti-pattern to beat. |
 | 3 | [`berlin-pod-call-notes.md`](./berlin-pod-call-notes.md) | 5 call notes from the pod: how the warm wins actually happened, and what killed the cold calls. The objections in here are your play-design map. |
 | 4 | [`accounts.csv`](./accounts.csv) | The 50 target accounts (DE/AT/CH): firmographics, tech signals, A/B/C tiers. Skim 10 rows, trust the rest — your tool reads them all. |
-| 5 | [`contacts.csv`](./contacts.csv) | ~130 contacts mapped to the buying committee. Joins on `account_id`. |
+| 5 | [`contacts.csv`](./contacts.csv) | ~150 contacts — the pod's raw CRM export. The buying committee is in there; so is everyone who ever scanned a badge or downloaded a whitepaper. `persona_role` is the pod's optimistic tagging, not ground truth. Joins on `account_id`. |
 | 6 | [`warm-paths.md`](./warm-paths.md) | The pod's who-could-open-which-door note: beachhead customers, events, references, hearsay. Doors that aren't email. |
 | 7 | [`send-log.csv`](./send-log.csv) | Last quarter's send history, one row per contact. Who's burned, who bounced, who's untouched — your suppression and routing input. Joins on `contact_id`. |
 | 8 | [`baseline-and-targets.md`](./baseline-and-targets.md) | The funnel, the targets, and the **starter signals** (your stand-in until the Signal Room's triage arrives). |
