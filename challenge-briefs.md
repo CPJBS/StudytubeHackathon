@@ -2,7 +2,7 @@
 
 **Event:** July 16, 2026 · Studytube × Unmuted
 **Format:** Each team is assigned one brief (by number — no choosing) → build the fix with Claude (~2 hrs build + finale)
-**Fictional company:** **LearnLoop** — a B2B SaaS scale-up. Every brief ships with a complete data pack. Every team gets an API key + credits for the day.
+**Fictional company:** **LearnLoop** — a B2B SaaS scale-up. Every brief ships with a complete data pack. Every team gets a sponsored Claude account for the day.
 
 > Each brief maps to a real pain point participants have likely faced in their own job. Cases are framed so the *fix is buildable inside the session* with Claude.
 
@@ -60,7 +60,7 @@ Five enterprise logos wanted from 50 DACH accounts this quarter. Current outboun
 ## Cross-cutting prep (all briefs)
 
 - **LearnLoop company bible** — one shared fiction: what they sell, ICP, size, stage, competitors, so all three briefs live in the same world
-- **Claude access on the day** — API key + credits per team (decision: how provisioned — see plan)
+- **Claude access on the day** — one sponsored Claude Max account per team (~$100), created day-of on a fresh login; own Claude login as backup
 - **Brief release** — tease domain on LP, full brief + data pack revealed at event (or day-before email)
 
 ---

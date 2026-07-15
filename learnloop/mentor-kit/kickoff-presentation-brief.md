@@ -100,7 +100,7 @@ Total talk time: ~9.5 minutes across 8 beats.
 *Context: fast logistics; the wall behind you does the remembering. Keep momentum, don't linger.*
 
 - Teams of 3. **Briefs are assigned by team number — no choosing.** (Everyone would pick the voice brief; the machine needs all three.)
-- Every team gets: the data pack, the LearnLoop one-pager, an API key with plenty of credits, and a starter prompt pack.
+- Every team gets: the data pack, the LearnLoop one-pager, a sponsored team Claude account (log in together on one laptop; your own login works as backup), and a starter prompt pack.
 - Mentors from Studytube and Unmuted roam all afternoon. Stuck for more than a few minutes? Wave.
 - 17:30: demos. 3 to 4 minutes, live, no slides. Rough and real beats polished and hypothetical.
 - The room votes: the trophy goes to "closest to ship-ready".
