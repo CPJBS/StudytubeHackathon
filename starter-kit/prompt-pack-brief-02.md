@@ -1,6 +1,6 @@
 # Prompt Pack — Brief 02: The Brand Voice Machine
 
-Paste these into Claude Code to get moving. They escalate from "learn the voice" to "a production line: brief in, on-voice asset out." Adapt freely — these are starters, not a script.
+Paste these into Claude Code to get moving. They escalate from "learn the voice" to "a production line: brief in, on-voice asset out." Adapt freely — these are starters, not a script, and they walk only **one** of several machines you could build (a rules-first gate, an exemplar-matcher, per-author drift profiles, a transcreation-first line). Swap the spine freely.
 
 ---
 

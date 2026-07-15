@@ -8,7 +8,7 @@ Paste these into Claude Code to get moving. They escalate from "first triage" to
 > Read `signal-feed.md` and `accounts.csv`. Rank the 50 accounts hot / warm / cold. For every hot account, cite the exact signal(s) and why they matter for a learning platform. Flag any feed item you suspect is noise — something that looks like a trigger but isn't — and say why.
 
 **2. Adjudicate the org**
-> Read `what-the-org-believes.md` — five leaders, five theories, at most one of them right. For each claim, use the calibration data (`funnel-analytics.csv`, `linkedin-engagement.csv`, `reviews.md`) to rule: right, wrong, or half-right, with evidence and a confidence level. Where the data can't rule, say so and name what you'd instrument.
+> Read `what-the-org-believes.md` — five leaders, five theories. For each claim, use the calibration data (`funnel-analytics.csv`, `linkedin-engagement.csv`, `reviews.md`) to rule: right, wrong, or half-right, with evidence and a confidence level. Where the data can't rule, say so and name what you'd instrument.
 
 **3. Calibrate the heat score**
 > From `funnel-analytics.csv`, `linkedin-engagement.csv` and `reviews.md`: what does a good-fit, likely-to-convert account look like for LearnLoop specifically? Reconcile the channel-naming mess first, don't treat blank as zero, and be suspicious of the loudest month. Then fold what you learned back into the triage from prompt 1 — what re-ranks, and why?

@@ -1,4 +1,4 @@
-# Contact Signals — Public LinkedIn Activity (Tier-A Accounts)
+# Contact Signals — Public LinkedIn Activity
 
 > **FICTIONAL MATERIAL.** LearnLoop, all accounts, all contacts, and every post/comment excerpt below are invented for the GTM AI Workshop. No real people, companies, or LinkedIn content.
 
@@ -89,3 +89,15 @@ Public activity pulled manually by the pod; if you can't quote it, don't claim i
 
 - **11 Mar 2026 · LinkedIn post (DE)** — ~289 reactions · 34 comments · 19 reposts
   > "Nach der Reorg stehen wir vor einer einfachen Wahrheit: Unser Legacy-SkillForge-System kommt mit REACH-Nachqualifizierungen und Schweizer Compliance-Anforderungen nicht mehr hinterher. Ein System, das für die Organisationsstruktur von vor zehn Jahren gebaut wurde, liefert keine Antworten auf die Fragen von heute."
+
+### CON-073 — Dr. Franz Edelweiss — VP HR — Edelweiss Finanzdienste AG
+*(CRM note: newly appointed; no contact yet)*
+
+- **02 Jul 2026 · LinkedIn post (DE)** — ~140 reactions · 22 comments
+  > "Vier Wochen im Amt. Was ich gelernt habe: Transformation heißt zuerst ehrlich hinschauen — welche Kompetenzen haben wir, welche brauchen wir wirklich, und was kostet uns die Lücke? Wir werden Strukturen verändern. Nicht jede Antwort wird bequem sein."
+
+### CON-060 — Dr. Andrea Alpenrose — VP People — Alpenrose Tourismus AG
+*(CRM note: no touch yet; Stefan Moser (People Ops) knows the Vienna logo's People Ops lead — see warm-paths)*
+
+- **12 Jun 2026 · LinkedIn post (DE)** — ~90 reactions · 14 comments
+  > "Saisonstart: 340 neue Mitarbeitende in sechs Wochen an Bord geholt — in vier Sprachen. Stolz auf das Team. Aber ich frage mich jedes Jahr aufs Neue: Wie viel von dem, was wir in Woche eins schulen, ist in Woche vier noch da?"

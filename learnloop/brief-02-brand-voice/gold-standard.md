@@ -1,6 +1,6 @@
 # Gold Standard — the voice, done right
 
-> This is the target. One complete piece that nails the LearnLoop voice, annotated line-by-line with *why* each choice works. When you build a checker or a rewrite loop, this is what "on-voice" looks like. Calibrate against it.
+> One complete piece that nails the LearnLoop voice, annotated line-by-line with *why* each choice works. When you build a checker or a rewrite loop, this is one clear picture of "on-voice" — a reference point, not the only acceptable sound. The corpus shows the range; this shows the anatomy.
 >
 > *(Fictional. See `../learnloop-company-bible.md`.)*
 
@@ -61,4 +61,4 @@ Ends on a point, not a platitude — and the CTA is a challenge ("you're reporti
 - No adjective stacking, no feature soup: the product is described as a mechanism and a reframe.
 - Confident but warm: contractions, a dry aside, a direct question to the reader — a person, not a brand-bot.
 
-**If a rewrite loop produces something that reads like this — leads with a claim, proves with a number, names the real pain, and closes on a point — it's holding the line. That's the whole job.**
+**If a rewrite loop produces something that reads like this — leads with a claim, proves with a number, names the real pain, and closes on a point — it's holding the line. How your machine holds it is up to you.**

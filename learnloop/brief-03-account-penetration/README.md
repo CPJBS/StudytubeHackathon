@@ -33,7 +33,7 @@ The backstory matters: the Berlin pod won LearnLoop's first 9 German customers t
 
 A scoping note that saves you an hour: **you own distribution — the play, the doors, the orchestration. The message itself already exists; your machine decides where, to whom, and when it lands.** Signal capture and triage belong to the Signal Room; the words belong to the Brand Voice team (order them with an asset brief — audience, signal, angle, format, language). A team that spends the afternoon writing copy or hunting signals is doing another brief's job with worse tools.
 
-And one real-world constraint for your routing logic: **the pod is three people.** A human touch — a call, a personal LinkedIn note — costs roughly 100x an automated one, and Frieda can do maybe eight meaningful calls a day. So the machine's job includes deciding *which door for which account*: a hot Tier-A with a live signal deserves a call brief for a human, not another email; a burned or bounced contact (check `send-log.csv`) shouldn't get email at all. Routing an account to a person, with the research attached, is a valid output of your machine — arguably the most valuable one.
+And one real-world constraint for your routing logic: **the pod is three people.** A human touch — a call, a personal LinkedIn note — costs roughly 100x an automated one, and Frieda can do maybe eight meaningful calls a day. So the machine's job includes deciding *which door for which account*: a hot Tier-A with a live signal deserves a call brief for a human, not another email; a burned or bounced contact (check `send-log.csv`) shouldn't get email at all. Routing an account to a person, with the research attached, is a valid output of your machine — often the highest-leverage one. So is email at scale on a fresh signal to a clean contact. Deciding which is which *is* the machine.
 
 ---
 
@@ -92,7 +92,7 @@ Adapt freely — these are starters, not scripts.
    *"Read berlin-pod-call-notes.md and win-loss-call-notes.md. List every objection and buying trigger German buyers actually voiced. Turn them into motion rules: which doors work in DACH, what proof has to be in the room, and when a human call beats any email."*
 
 3. **One full attack plan.**
-   *"For ACC-013: map the buying committee from contacts.csv. Choose the play — who gets email, who gets a call brief for the pod, who we reach via a reference (warm-paths.md) or an event. Sequence and time the touches. Then write the asset brief for each touch: audience, signal, angle, format, language — NOT the copy itself; that's the Brand Voice Machine's job."*
+   *"For [pick an account]: map the buying committee from contacts.csv. Choose the play — who gets email, who gets a call brief for the pod, who we reach via a reference (warm-paths.md) or an event. Sequence and time the touches. Then write the asset brief for each touch: audience, signal, angle, format, language — NOT the copy itself; that's the Brand Voice Machine's job."*
 
 4. **Make it a machine.**
    *"Now make it repeatable: any account_id in → attack plan + asset briefs out. Respect send-log.csv (no email to burned or bounced contacts) and the German rules in this README. Show where a human reviews, and run it on a second account to prove it."*

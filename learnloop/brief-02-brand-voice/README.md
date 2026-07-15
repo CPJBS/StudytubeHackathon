@@ -39,7 +39,7 @@ Division of labour, so nobody duplicates work: the Signal Room (Brief 01) owns *
 | # | File | What it is |
 |---|------|-----------|
 | 1 | This README | The brief. |
-| 2 | [`voice-guide.md`](./voice-guide.md) | The official voice rules: principles, DO/DON'T lists, banned words, and how the voice adapts (not translates) for DE and ES. **Your rubric.** |
+| 2 | [`voice-guide.md`](./voice-guide.md) | The official voice rules: principles, DO/DON'T lists, banned words, and how the voice adapts (not translates) for DE and ES. **Raw material — one way to codify the voice, not the only one.** |
 | 3 | [`gold-standard.md`](./gold-standard.md) | One reference piece that nails the voice, annotated line-by-line. Calibrate against this. |
 | 4 | [`asset-briefs-from-the-pod.md`](./asset-briefs-from-the-pod.md) | Three stand-in content requests — the kind the motion machine (Brief 03) orders. Your production inputs. |
 | 5 | [`on-brand-corpus.md`](./on-brand-corpus.md) | 20 on-brand reference pieces across formats. The training set: if your output doesn't sound like these, it isn't ready. |
@@ -54,7 +54,7 @@ Shared world (parent folder): the story one-pager, the bible, `company-facts.jso
 
 ## Suggested starting prompts
 
-Adapt freely — these are starters, not scripts.
+Adapt freely — these are starters, not scripts. And they walk only **one** of several machines you could build: a rules-first gate, an exemplar-matcher ("does it sound like the corpus?"), per-author drift profiles, a transcreation-first line. Swap the spine freely — the machine is yours.
 
 1. **Codify the voice.**
    *"Read voice-guide.md, gold-standard.md and on-brand-corpus.md. Turn the voice into a machine-usable rubric — the structural rules (claim-first, proof, no hedging), not just the banned-word list. Then score every draft in off-brand-stack.md and author-samples/, cite the specific rule broken, and rank worst-to-best."*

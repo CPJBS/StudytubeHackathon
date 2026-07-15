@@ -12,4 +12,4 @@ Circulated by Mila Verhoeven (RevOps) ahead of Thursday's task force, so everyon
 
 **Finance:** "Trial-to-paid conversion has been stuck around 6% all year. The growth model is broken, and we need to be honest with the board about that."
 
-Mila's line, attached to the note: "At most one of these can be true. The data pack is attached."
+Mila's line, attached to the note: "They can't all be right — and I'd bet at least two are half-right. The data pack is attached."

@@ -1,6 +1,6 @@
-# ⚠️ MENTOR-ONLY — Answer Key for Brief 01 (The Signal Room)
+# ⚠️ MENTOR-ONLY — Calibration Notes for Brief 01 (The Signal Room)
 
-> **DO NOT SHARE WITH PARTICIPANTS.** This is the answer key. It lists every deliberate contradiction and red herring planted in the data, plus the real insights buried underneath — so you can tell whether a team *found signal* or *pattern-matched noise*.
+> **DO NOT SHARE WITH PARTICIPANTS.** These are the seams we seeded — NOT a grading standard: multiple defensible rankings exist. Grade the evidence trail, not agreement with this document. It lists every deliberate contradiction and red herring planted in the data, plus the real insights buried underneath — so you can tell whether a team *found signal* or *pattern-matched noise*.
 >
 > Fictional data · GTM AI Workshop. There is intentionally no pre-cleaned "correct" dataset; the mess is the exercise.
 
@@ -109,7 +109,13 @@ A strong output lands **2–4 of these**, each with evidence and a confidence le
 Brief 01's core deliverable is now **signal triage**: which of the 50 target accounts is hot, which is not, why, and who to contact right now. The funnel/LinkedIn/reviews mess above is the **calibration layer** (what "hot for LearnLoop" means). Everything earlier in this key stays valid — as calibration and depth material, no longer the core.
 
 **New ground truth for `signal-feed.md`:**
-- **Noise decoys** — 8 accounts whose *only* feed item is a decoy: **ACC-021, ACC-024, ACC-029, ACC-031, ACC-034, ACC-039, ACC-040, ACC-046** (capex-earmarked funding, non-L&D hiring sprees, irrelevant expansions, ML "training data" red herring). A triage that ranks any of these hot has been fooled.
+- **Noise decoys** — 8 accounts whose *only* feed item is a decoy: **ACC-021, ACC-024, ACC-029, ACC-031, ACC-034, ACC-039, ACC-040, ACC-046** (capex-earmarked funding, non-L&D hiring sprees, irrelevant expansions, ML "training data" red herring). A triage that ranks one of these hot on its FEED ITEM has been fooled by it. A team ranking one hot on other grounds — ACC-024/ACC-021 warm-path access, plain tier fit — has made a different, defensible call: probe which it is.
 - **Signal-quiet accounts** — zero feed items: **ACC-001, ACC-010, ACC-023, ACC-041, ACC-043, ACC-045**. Good teams deprioritise them *with reasoning*. Sharp teams notice ACC-001 is feed-quiet but signal-rich in `accounts.csv` and the Berlin pod call notes — the feed is not the only source.
 - **The pod's hand-tagged appendix** (end of the feed) is their judgment, not ground truth — teams may verify or dispute it; both are good analysis.
-- **Live test:** `../../learnloop/mentor-kit/late-signal-drop.md` at ~15:30 — ACC-010 must move UP (new CHRO + BaFin audit), ACC-023 must NOT move (bottling capex), ACC-043 → "watch, don't act" (governance freeze).
+- **Live test:** `../../learnloop/mentor-kit/late-signal-drop.md` at ~15:30 — ACC-010 moves up on most reads (new CHRO + BaFin audit) — though a team keeping the live-RFP account (ACC-032) on top can defend it; ACC-023 moving up means the capex tell was missed; ACC-043 → "watch, don't act" is the mature read.
+
+---
+
+## Addendum v4 (Jul 15) — multi-outcome pass
+
+The scaffolds no longer agree on a single hot-set — **by design**: ACC-024 and ACC-029 are now **Tier A** in `accounts.csv` (fit ≠ timing); the pod's appendix now tags **ACC-024, ACC-029, ACC-046** (deliberate pod fallibility — disputing the appendix is a finding, not a failure); `contact-signals.md` now includes CON-073 (ACC-029) and CON-060 (ACC-024) with deliberately ambiguous posts. At least five philosophies are defensible and land on different top-3s: regulation-deadline, leadership-change, competitor-displacement, warm-path, burn-aware. Grade the evidence trail, never the pattern choice.

@@ -26,7 +26,7 @@ The market is emitting signals — funding rounds, new CHROs, regulation deadlin
 
 LearnLoop's machine has three functions: SENSE (which account, why now), REACH (what we do about it), SPEAK (the words it needs). You're building SENSE — the part of the machine that decides where everyone else's effort goes.
 
-The stakes: LearnLoop is betting the quarter on 50 German accounts with a 3-person pod. Every hour the pod spends on the wrong account is gone. Right now "which account is hot" is decided by gut feel and whoever spoke loudest in the Monday meeting — read `what-the-org-believes.md`: five leaders, five theories, at most one of them right. Your triage settles arguments with evidence.
+The stakes: LearnLoop is betting the quarter on 50 German accounts with a 3-person pod. Every hour the pod spends on the wrong account is gone. Right now "which account is hot" is decided by gut feel and whoever spoke loudest in the Monday meeting — read `what-the-org-believes.md`: five leaders, five theories — some wrong, several probably half-right. Your triage referees with evidence.
 
 **Your inputs and outputs:** you consume the raw signal feed, the account universe, and the company's own messy performance data. You produce **the triage**: top accounts, the why, and the hook — exactly the input an outbound machine (Brief 03) would act on — plus a read on which content actually pulls, which a content team (Brief 02) would love to have. Your brief stands alone and is judged alone. But it's one part of a full system — so build your output as one clean screen another team could pick up cold, not a lecture.
 
@@ -58,12 +58,12 @@ There is no pre-cleaned "correct" table hiding behind this. Real GTM data looks 
 | 2 | [`signal-feed.md`](./signal-feed.md) | **The core input.** ~50 dated market signals for the 50 target accounts: funding, regulation (EU AI Act, NIS2…), headcount growth, full job-ad texts, subsidies — plus the pod's own hand-tagged shortlist as an appendix (their judgment, not ground truth). Some of this feed is noise. Joins on `account_id`. |
 | 3 | [`../brief-03-account-penetration/accounts.csv`](../brief-03-account-penetration/accounts.csv) | The 50-account universe (firmographics, tech signals, tiers). Lives in the motion machine's folder — same company. |
 | 4 | [`contact-signals.md`](./contact-signals.md) | Person-level signals: quotable public LinkedIn activity for 10 key contacts. |
-| 5 | [`what-the-org-believes.md`](./what-the-org-believes.md) | Five leaders' current theories. Your triage gets to referee. Pick your suspect now — you'll probably be wrong. |
+| 5 | [`what-the-org-believes.md`](./what-the-org-believes.md) | Five leaders' current theories. Your triage gets to referee — and the data may prove several of them half-right. |
 | 6 | [`funnel-analytics.csv`](./funnel-analytics.csv) | Calibration: ~12 months of web + funnel data by channel. Raw. |
 | 7 | [`linkedin-engagement.csv`](./linkedin-engagement.csv) | Calibration: ~30 LinkedIn posts with engagement metrics. Raw. |
 | 8 | [`reviews.md`](./reviews.md) | Calibration: 21 reviews including the first German customers. The signal is a pattern, not a quote. |
 
-(An answer key exists. You don't get it. Your demo is better if you earn it.)
+(There is no single right ranking. Two teams weighting different signals can both be right — what gets judged is whether your triage can defend its read with evidence.)
 
 Shared world (parent folder): the story one-pager, the bible, `company-facts.json`, `win-loss-call-notes.md` (why deals really close — calibration gold), `customer-quote-bank.md`, `rate-card.md` (deal-size sanity checks), `gtm-roster.md`.
 

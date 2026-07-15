@@ -66,7 +66,7 @@ Compiled by the Berlin pod (Lukas Brandt, Frieda Sommer, Joris van Dam) from pre
 
 **2026-04-24 · ACC-033 · headcount_growth** — Wörthersee Hotels & Resorts AG, the 820-employee Klagenfurt hospitality group, featured in a regional tourism-trade note on rising seasonal churn, with roughly a third of frontline staff turning over between seasons. The People Ops Lead described onboarding as "starting from zero, twice a year," with no system currently built to shorten that ramp. (tourism trade bulletin)
 
-**2026-04-28 · ACC-029 · leadership** — Edelweiss Finanzdienste AG, the 890-employee Vienna financial-services firm, named a new VP HR, according to a financial-press wire item. The appointment brief, seen by the outlet, centres on cost-base restructuring following recent FMA findings rather than any stated training or L&D mandate; the incoming VP's prior role was in workforce-reduction consulting. (financial-press wire)
+**2026-04-28 · ACC-029 · leadership** — Edelweiss Finanzdienste AG, the 890-employee Vienna financial-services firm, named a new VP HR, according to a financial-press wire item. The appointment brief, seen by the outlet, centres on cost-base restructuring following recent FMA findings; the incoming VP's prior role was in workforce-reduction consulting. (financial-press wire)
 
 **2026-04-30 · ACC-048 · regulation** — Rigi Versicherung AG, the 1,050-employee Lucerne insurer, confirmed to an insurance trade press outlet that FINMA circulars now require documented, recurring competency training for its agent network, not just onboarding certification. The CHRO said the firm's current Traida-run process "was built for onboarding, not ongoing proof," with an audit-trail gap the compliance officer flagged internally. (insurance trade press)
 
@@ -92,7 +92,7 @@ Compiled by the Berlin pod (Lukas Brandt, Frieda Sommer, Joris van Dam) from pre
 
 **2026-05-20 · ACC-019 · tool-churn** — Lindenhof Versicherung AG, the 1,450-employee Stuttgart insurer, is tying L&D performance to customer-NPS KPIs at a faster cadence than its current SkillForge reporting can support, according to public comments from an L&D manager at the firm, picked up in an insurance-sector newsletter roundup. Reporting delays reportedly leave quarterly reviews answering last quarter's questions. (insurance-sector newsletter)
 
-**2026-05-20 · ACC-034 · leadership** — Kaiserblick Maschinen GmbH, the 590-employee Wels engineering firm, brought in an external CHRO, a regional employment bulletin reported. The appointment is explicitly interim, covering a parental-leave absence with no budget authority over new initiatives, per the bulletin — a caretaker arrangement rather than the kind of incoming mandate that typically resets vendor priorities. (regional employment bulletin)
+**2026-05-20 · ACC-034 · leadership** — Kaiserblick Maschinen GmbH, the 590-employee Wels engineering firm, brought in an external CHRO, a regional employment bulletin reported. The appointment is explicitly interim, covering a parental-leave absence with no budget authority over new initiatives, per the bulletin. (regional employment bulletin)
 
 **2026-05-25 · ACC-036 · job_posting** — Full ad, Helvetia Assurance Group AG, Basel — **L&D Director**
 
@@ -110,7 +110,7 @@ Compiled by the Berlin pod (Lukas Brandt, Frieda Sommer, Joris van Dam) from pre
 
 **2026-06-01 · ACC-042 · leadership** — Zürisee Detailhandel AG, the 1,550-employee Zurich retailer, appointed a new Chief People Officer building her own frontline-reskilling flagship around the group's omnichannel push, a Swiss retail-trade bulletin reported. An L&D Director quoted in the piece said proving the training changes actual on-floor behaviour, not just completion counts, is the mandate he's been handed. (Swiss retail trade bulletin)
 
-**2026-06-05 · ACC-046 · expansion** — Aargau Präzision GmbH, the 430-employee Aarau engineering firm, announced investment in "training" its predictive-maintenance system, an industrial-tech bulletin reported — the training in question is machine-learning model training on sensor data from its production lines, unrelated to staff learning. The firm still has no formal L&D function, per the same piece. (industrial-tech bulletin)
+**2026-06-05 · ACC-046 · expansion** — Aargau Präzision GmbH, the 430-employee Aarau engineering firm, announced investment in "training" its predictive-maintenance system, an industrial-tech bulletin reported — the training in question is machine-learning model training on sensor data from its production lines. The firm still has no formal L&D function, per the same piece. (industrial-tech bulletin)
 
 **2026-06-08 · ACC-027 · expansion** — Bergkristall Pharma GmbH, the 780-employee Graz pharma firm, announced plans to expand operations into Spain, a pharma trade bulletin reported. The L&D Director role, currently being hired, is expected to own GMP-training consistency across both the Austrian site and the new Spanish operation once it stands up. (pharma trade bulletin)
 
@@ -179,14 +179,17 @@ Before this feed existed, the pod kept their own typed-and-dated shortlist of tr
 | ACC-015 | Meridian Software | competitor | Uses Bloomwork; internal complaints about low adoption | ongoing | "Great streaks, no skills" — champion + new RevOps hire want data |
 | ACC-019 | Lindenhof Versicherung | tech_signal | L&D KPIs tied to NPS; SkillForge reporting too slow | ongoing | Champion needs faster reporting cadence — that's the wedge |
 | ACC-022 | Goldregen Handelsgruppe | leadership_hire | New Chief People Officer; omnichannel reskilling is her flagship | 6 weeks | New CPO building a legacy program — align to her flagship |
+| ACC-024 | Alpenrose Tourismus | expansion | Two new resorts opening for the 2026/27 season | recent | Onboarding surge ahead — and Moser knows their People Ops lead (ÖHV); warmest door we have |
 | ACC-026 | Donaustahl Industrie | reorg | Reorg into business units; SkillForge not keeping up | recent | Multi-BU skills view is the story; SkillForge displacement angle |
 | ACC-027 | Bergkristall Pharma | expansion | Announced expansion into Spain | 5 weeks | Mirrors LearnLoop's own DACH+Spain push — scalable multi-market learning |
+| ACC-029 | Edelweiss Finanzdienste | leadership_hire | New VP HR announced | 10 weeks | New HR leadership — possible open window; worth a first touch |
 | ACC-032 | Habsburg Versicherung | rfp | Running an agent-training platform RFP; Traida bolt-on failing | 3 weeks | Get into the RFP now; "learning as an afterthought" line lands here |
 | ACC-035 | Matterhorn Präzision | tech_signal | Needs DE/FR/IT multilingual training; SkillForge English-only pain | ongoing | Multilingual capability is a concrete SkillForge gap to attack |
 | ACC-036 | Helvetia Assurance | job_post | L&D Director role open; FINMA compliance + 3-language workforce | 7 weeks | Buyer gap + hard compliance = urgency; lead the blocker (CISO) on FINMA |
 | ACC-037 | Rhône Biotech | funding_expansion | Scaling into DACH; hiring L&D Manager | 4 weeks | Growth + new champion role = greenfield; GxP + Swissmedic proof needed |
 | ACC-042 | Zürisee Detailhandel | leadership_hire | New CPO; frontline reskilling flagship; omnichannel push | 6 weeks | Same play as ACC-022 — align to the new CPO's flagship program |
 | ACC-044 | Basilisk Chemie | reorg | Reorg + REACH/Swiss compliance; SkillForge legacy struggling | recent | Post-reorg skills mapping + audit-ready compliance; displace SkillForge |
+| ACC-046 | Aargau Präzision | expansion | Investing in "training" per trade press | 5 weeks | Training budget on record and no L&D function yet — greenfield? |
 | ACC-049 | Säntis MedTech | job_post | L&D Director role open 90 days; MDR compliance | 13 weeks | Long-vacant role = acute pain; MDR traceability is the blocker's hook |
 
 **Signal-type legend:** `leadership_hire`, `job_post`, `m_and_a`, `reorg`, `tech_change`, `competitor`, `compliance`, `announcement`, `expansion`, `rfp`, `funding_expansion`.
