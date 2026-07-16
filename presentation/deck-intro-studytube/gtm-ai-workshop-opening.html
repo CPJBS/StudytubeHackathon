@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTM AI Workshop — Opening (Lennart)</title>
+<style>
+  /* Self-contained standalone export of the Claude Design deck
+     "GTM AI Workshop - Opening.dc.html". Renders 1920×1080 slides scaled to
+     fit the window. Brand fonts (Euclid Circular B) are licensed and NOT
+     bundled — falls back to a clean system sans, same policy as FONTS-NOTE.md. */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; background: #05070f; }
+  #stage { position: fixed; inset: 0; overflow: hidden; display: flex;
+    align-items: center; justify-content: center; }
+  #deck { position: absolute; top: 50%; left: 50%; width: 1920px; height: 1080px;
+    transform-origin: center center; }
+  #deck > section { position: absolute; inset: 0; width: 1920px; height: 1080px;
+    box-shadow: 0 40px 120px rgba(0,0,0,.5); }
+  #deck > section:not(.active) { display: none !important; }
+
+  /* Navigation bar */
+  .nav { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%);
+    z-index: 50; display: flex; gap: 14px; align-items: center;
+    background: rgba(255,255,255,.08); backdrop-filter: blur(8px);
+    padding: 8px 14px; border-radius: 999px; color: #fff;
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, sans-serif; font-size: 13px; }
+  .nav button { background: rgba(255,255,255,.14); color: #fff; border: 0;
+    width: 30px; height: 30px; border-radius: 50%; cursor: pointer; font-size: 15px; }
+  .nav button:hover { background: rgba(255,255,255,.28); }
+  .nav .count { font-variant-numeric: tabular-nums; min-width: 68px; text-align: center; }
+  .nav .label { opacity: .7; max-width: 220px; overflow: hidden; white-space: nowrap;
+    text-overflow: ellipsis; }
+  .hint { position: fixed; top: 16px; right: 18px; z-index: 50;
+    color: rgba(255,255,255,.45);
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, sans-serif; font-size: 12px; }
+
+  /* Presenter notes panel (toggle with N) */
+  #notes { position: fixed; left: 18px; bottom: 18px; z-index: 50; max-width: 520px;
+    display: none; background: rgba(9,14,30,.92); color: #E7EAF2; border: 1px solid rgba(255,255,255,.14);
+    border-radius: 12px; padding: 14px 18px; font-size: 14px; line-height: 1.5;
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, sans-serif; }
+  #notes.on { display: block; }
+  #notes b { color: #8B5CF6; display: block; margin-bottom: 6px; font-size: 12px;
+    letter-spacing: .08em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="deck">
+
+  <!-- ============ SLIDE 1 — WELCOME ============ -->
+  <section class="slide active" data-label="Welcome" data-screen-label="01" data-speaker-notes="Warm welcome, thank Unmuted. Context, not a pitch — you're standing inside the company, so here's what it is. Remember one line for the rest of this talk: horizontal product, vertical GTM — that tension shapes everything we do." style="background:linear-gradient(135deg,#2563EB 0%,#8B5CF6 100%);color:#fff;font-family:'Euclid Circular B',ui-sans-serif,sans-serif;padding:104px 112px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <svg viewBox="0 0 173 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:52px;width:auto;display:block"><path fill="#FFFFFF" d="M64.2292 16.1379H69.6661C74.1597 16.1379 77.7958 19.6552 77.7958 24.0345C77.7958 28.4138 74.1597 31.931 69.6661 31.931H64.2292V16.1379ZM69.6661 28.6897C72.3588 28.6897 74.1769 26.569 74.1769 24.0345C74.1769 21.5 72.3588 19.3793 69.6661 19.3793H67.7966V28.6724H69.6661V28.6897ZM111.618 25.5345V16.1379H115.134V25.5862C115.134 27.4483 116.335 28.5862 118.084 28.5862C119.833 28.5862 121.034 27.4483 121.034 25.5862V16.1379H124.567V25.5345C124.567 29.4138 121.857 31.9483 118.101 31.9483C114.311 31.9655 111.618 29.4138 111.618 25.5345ZM46.2204 25.5345V16.1379H49.7364V25.5862C49.7364 27.4483 50.937 28.5862 52.6864 28.5862C54.4358 28.5862 55.6364 27.4483 55.6364 25.5862V16.1379H59.1524V25.5345C59.1524 29.4138 56.4425 31.9483 52.6864 31.9483C48.9131 31.9655 46.2204 29.4138 46.2204 25.5345ZM146.795 16.1379H157V19.4138H150.328V22.3448H155.817V25.7241H150.328V28.6552H157V31.931H146.795V16.1379ZM83.4042 16.1552H79.1164L85.4109 25V31.931H88.9269V24.1207L83.4042 16.1552ZM129.833 31.9483V16.1552H137.293C138.597 16.1552 139.694 16.5862 140.449 17.3966C141.118 18.1034 141.478 19.069 141.478 20.1034C141.478 22.0172 140.672 23.2241 139.471 23.8448C140.724 24.3448 141.77 25.7586 141.77 27.7414C141.77 29.6724 140.672 31.9483 137.568 31.9483H129.833ZM133.126 28.8276H136.556C137.448 28.8276 138.202 28.1724 138.202 27.1724C138.202 26.1724 137.413 25.4828 136.556 25.4828H133.126V28.8276ZM133.126 22.3966H136.419C137.19 22.3966 137.911 21.7414 137.911 20.8276C137.911 19.931 137.156 19.2759 136.419 19.2759H133.126V22.3966ZM34.7806 19.5172H30.7843V16.1379H42.3785V19.5172H38.3309V31.931H34.7977V19.5172H34.7806ZM99.4063 19.5172H92.117L94.4667 16.1379H106.987V19.5172H102.939V31.931H99.4063V19.5172ZM26.6337 24.5345C26.0849 23.8621 25.3303 23.3448 24.4041 22.9655L22.4489 22.1724C22.123 22.0345 21.8143 21.8966 21.5398 21.7931C21.2654 21.6724 21.0253 21.5517 20.8195 21.431C20.6137 21.3103 20.4593 21.1552 20.3564 21.0172C20.2535 20.8621 20.202 20.6897 20.202 20.4655C20.202 20.0517 20.3564 19.7414 20.6823 19.5172C21.0082 19.2931 21.4712 19.1724 22.0372 19.1724C22.6204 19.1724 23.1692 19.2759 23.6666 19.4828C24.2154 19.7241 24.7986 20.1379 25.193 20.4483L25.2616 20.4828L26.9939 17.9828C26.9939 17.9828 26.0335 17.069 24.6785 16.5172C23.8038 16.1724 22.9119 16 22.0201 16C21.214 16 20.4765 16.1207 19.8076 16.3621C19.1558 16.5862 18.5727 16.931 18.0753 17.3448C17.59 17.7496 17.1979 18.2556 16.9262 18.8276C16.6517 19.3966 16.5145 20 16.5145 20.6379C16.5145 21.2069 16.6003 21.7241 16.7718 22.1724C16.9433 22.6207 17.1834 23.0345 17.475 23.3621C17.7666 23.7069 18.1096 24 18.4698 24.2586C18.8299 24.5172 19.2244 24.7241 19.6189 24.8793L21.6084 25.7241L22.5003 26.1034C22.7576 26.2241 22.9977 26.3448 23.1864 26.4655C23.375 26.5862 23.5122 26.7414 23.598 26.8966C23.6837 27.0517 23.7352 27.2414 23.7352 27.4655C23.7352 27.8966 23.5808 28.2241 23.2378 28.4655C22.9119 28.7241 22.3802 28.8448 21.6942 28.8448C21.0768 28.8448 20.425 28.6897 19.7904 28.4138C19.173 28.1379 18.4869 27.6897 17.9209 27.2069L17.8523 27.1379L16 29.8276L16.0515 29.8793C16.8061 30.569 17.6808 31.1034 18.6241 31.4483C19.6189 31.8103 20.6308 32 21.6256 32C22.5346 32 23.3579 31.8621 24.0782 31.6034C24.7986 31.3448 25.416 30.9828 25.9134 30.5517C26.4108 30.1207 26.7881 29.6034 27.0625 29.0172C27.3198 28.431 27.457 27.8103 27.457 27.1724C27.457 26.1034 27.1826 25.2069 26.6337 24.5345Z"></path></svg>
+      <span style="display:inline-flex;align-items:center;gap:12px;height:52px;padding:0 22px;border-radius:999px;background:rgba(255,255,255,0.14);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.24);font-size:19px;font-weight:600;letter-spacing:0.02em">16 July 2026 · Amsterdam</span>
+    </div>
+    <div>
+      <h1 style="color:#fff;font-size:120px;font-weight:700;letter-spacing:-0.03em;line-height:0.98;margin:0;text-wrap:balance"><span style="font-weight:400">Welcome.</span> This is Studytube.</h1>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:18px">
+      <div style="background:#fff;border-radius:16px;padding:28px 26px;min-height:158px;box-shadow:0 6px 20px rgba(17,41,90,0.14);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:8px">
+        <div style="font-size:38px;font-weight:700;color:#11295A;letter-spacing:-0.02em;line-height:1.05">€29M <span style="font-size:19px;font-weight:600;letter-spacing:0">ARR</span></div>
+        <div style="font-size:16px;font-weight:500;color:#4A5163;line-height:1.35">Revenue</div>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:28px 26px;min-height:158px;box-shadow:0 6px 20px rgba(17,41,90,0.14);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:8px">
+        <div style="font-size:38px;font-weight:700;color:#11295A;letter-spacing:-0.02em;line-height:1.05">100-5k <span style="font-size:19px;font-weight:600;letter-spacing:0">FTE</span></div>
+        <div style="font-size:16px;font-weight:500;color:#4A5163;line-height:1.35">ICP company size</div>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:28px 26px;min-height:158px;box-shadow:0 6px 20px rgba(17,41,90,0.14);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:8px">
+        <div style="font-size:38px;font-weight:700;color:#11295A;letter-spacing:-0.02em;line-height:1.05">200+ <span style="font-size:19px;font-weight:600;letter-spacing:0">people</span></div>
+        <div style="font-size:16px;font-weight:500;color:#4A5163;line-height:1.35">Amsterdam + Köln</div>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:28px 26px;min-height:158px;box-shadow:0 6px 20px rgba(17,41,90,0.14);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:8px">
+        <div style="font-size:38px;font-weight:700;color:#11295A;letter-spacing:-0.02em;line-height:1.05">700+ <span style="font-size:19px;font-weight:600;letter-spacing:0">orgs</span></div>
+        <div style="font-size:16px;font-weight:500;color:#4A5163;line-height:1.35">1M+ learners on the platform</div>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:28px 26px;min-height:158px;box-shadow:0 6px 20px rgba(17,41,90,0.14);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:8px">
+        <div style="font-size:38px;font-weight:700;color:#11295A;letter-spacing:-0.02em;line-height:1.05">10–12 <span style="font-size:19px;font-weight:600;letter-spacing:0">mo</span></div>
+        <div style="font-size:16px;font-weight:500;color:#4A5163;line-height:1.35">CAC payback</div>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:28px 26px;min-height:158px;box-shadow:0 6px 20px rgba(17,41,90,0.14);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:8px">
+        <div style="font-size:38px;font-weight:700;color:#11295A;letter-spacing:-0.02em;line-height:1.05">Horizontal</div>
+        <div style="font-size:16px;font-weight:500;color:#4A5163;line-height:1.35">Product · vertical GTM</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 2 — THE ENGINE ============ -->
+  <section class="slide" data-label="The engine" data-screen-label="02" data-speaker-notes="The open kitchen: where the budget goes, what I'd double down on. The 95% beat: statistically, most of you are my 95% — you will never buy Studytube. That's exactly why this format works. (pause for laugh)" style="background:#F5F6F8;color:#1B2559;font-family:'Euclid Circular B',ui-sans-serif,sans-serif;padding:76px 96px;box-sizing:border-box;display:flex;flex-direction:column;overflow:hidden">
+    <h1 style="color:#11295A;font-size:60px;font-weight:700;letter-spacing:-0.025em;line-height:1.02;margin:0;max-width:1500px;text-wrap:balance">Our audience hates being sold to. So we stopped.</h1>
+
+    <div style="display:flex;gap:48px;flex:1;margin-top:48px;align-items:stretch">
+      <!-- LEFT HALF: the loop -->
+      <div style="width:620px;flex:none;display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px">
+          <div>
+            <div style="font-size:26px;font-weight:700;color:#11295A;letter-spacing:-0.01em">How the engine runs</div>
+            <div style="font-size:24px;color:#6B7385;font-weight:500;margin-top:6px">Content-heavy loops for the <strong style="color:#11295A;font-weight:600">95% not in market right now</strong> — built for a noisy market.</div>
+          </div>
+          <div style="text-align:right;flex:none">
+            <div style="font-size:38px;font-weight:700;color:#F5913E;letter-spacing:-0.01em;line-height:1">€2.1M</div>
+            <div style="font-size:16px;color:#6B7385;font-weight:500;margin-top:2px">marketing budget</div>
+          </div>
+        </div>
+      <!-- Loop diagram -->
+      <div style="position:relative;width:620px;height:474px;flex:none">
+        <svg viewBox="0 0 620 512" width="620" height="512" style="position:absolute;inset:0">
+          <defs>
+            <linearGradient id="loopgrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#2563EB"></stop>
+              <stop offset="1" stop-color="#8B5CF6"></stop>
+            </linearGradient>
+            <marker id="loophead" markerWidth="16" markerHeight="16" refX="8" refY="8" orient="auto" markerUnits="userSpaceOnUse">
+              <path d="M0,0 L16,8 L0,16 Z" fill="#8B5CF6"></path>
+            </marker>
+          </defs>
+          <path d="M361,111 A150,150 0 1 1 259,111" fill="none" stroke="url(#loopgrad)" stroke-width="12" stroke-linecap="round" marker-end="url(#loophead)"></path>
+        </svg>
+        <!-- center label -->
+        <div style="position:absolute;left:210px;top:228px;width:200px;text-align:center">
+          <div style="font-size:15px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:#8B5CF6">The loop</div>
+          <div style="font-size:15px;color:#6B7385;margin-top:4px;font-weight:500">our content engine</div>
+        </div>
+        <!-- Top node -->
+        <div style="position:absolute;left:195px;top:58px;width:230px;background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(17,41,90,0.10);padding:16px 18px;box-sizing:border-box">
+          <span style="display:inline-flex;align-items:center;height:26px;padding:0 12px;border-radius:999px;background:#F5913E;color:#fff;font-size:13px;font-weight:600;letter-spacing:0.02em">Create</span>
+          <div style="font-size:16px;color:#2F3646;margin-top:9px;line-height:1.32;font-weight:500">Flagship events + yearly research make most of the content</div>
+        </div>
+        <!-- Lower-right node -->
+        <div style="position:absolute;left:325px;top:300px;width:230px;background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(17,41,90,0.10);padding:16px 18px;box-sizing:border-box">
+          <span style="display:inline-flex;align-items:center;height:26px;padding:0 12px;border-radius:999px;background:#8B5CF6;color:#fff;font-size:13px;font-weight:600;letter-spacing:0.02em">Distribute</span>
+          <div style="font-size:16px;color:#2F3646;margin-top:9px;line-height:1.32;font-weight:500">Everything else exists to distribute it</div>
+        </div>
+        <!-- Lower-left node -->
+        <div style="position:absolute;left:65px;top:300px;width:230px;background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(17,41,90,0.10);padding:16px 18px;box-sizing:border-box">
+          <span style="display:inline-flex;align-items:center;height:26px;padding:0 12px;border-radius:999px;background:#2563EB;color:#fff;font-size:13px;font-weight:600;letter-spacing:0.02em">Point</span>
+          <div style="font-size:16px;color:#2F3646;margin-top:9px;line-height:1.32;font-weight:500">SDR &amp; AE playbooks send people here — not to demos</div>
+        </div>
+      </div>
+
+      </div>
+
+      <div style="width:1px;background:#E1E4EB;align-self:stretch;flex:none"></div>
+
+      <!-- RIGHT HALF: the highlights -->
+      <div style="flex:1;display:flex;flex-direction:column;gap:14px">
+        <div>
+          <div style="font-size:26px;font-weight:700;color:#11295A;letter-spacing:-0.01em">These few tactics carry ~80% of pipeline</div>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-start">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:18px 0;border-top:1px solid #E1E4EB">
+            <span style="font-size:24px;font-weight:700;color:#11295A;letter-spacing:-0.01em">L&amp;D Move</span>
+            <span style="font-size:20px;color:#4A5163;font-weight:500;text-align:right"><span style="font-weight:700">400</span> opps</span>
+          </div>
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:18px 0;border-top:1px solid #E1E4EB">
+            <span style="font-size:24px;font-weight:700;color:#11295A;letter-spacing:-0.01em">L&amp;D Impact Podcast</span>
+            <span style="font-size:20px;color:#4A5163;font-weight:500;text-align:right"><span style="font-weight:700">500–1,000</span> listens / episode</span>
+          </div>
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:18px 0;border-top:1px solid #E1E4EB">
+            <span style="font-size:24px;font-weight:700;color:#11295A;letter-spacing:-0.01em">L&amp;D Monitor</span>
+            <span style="font-size:20px;color:#4A5163;font-weight:500;text-align:right">Self-created research</span>
+          </div>
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:18px 0;border-top:1px solid #E1E4EB">
+            <span style="font-size:24px;font-weight:700;color:#11295A;letter-spacing:-0.01em">Micro-products</span>
+            <span style="font-size:20px;color:#4A5163;font-weight:500;text-align:right">Scans &amp; benchmark tools, vibe-coded by our team · <span style="font-weight:700">hundreds</span> of submits</span>
+          </div>
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:18px 0;border-top:1px solid #E1E4EB;border-bottom:1px solid #E1E4EB">
+            <span style="font-size:24px;font-weight:700;color:#11295A;letter-spacing:-0.01em">B2B influencing + ads</span>
+            <span style="font-size:20px;color:#4A5163;font-weight:500;text-align:right">Thought-leadership distribution</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer metric strip -->
+    <div style="background:#11295A;border-radius:16px;padding:20px 40px;margin-top:26px;color:#fff">
+      <div style="display:flex;align-items:center;justify-content:center;gap:48px">
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <div style="font-size:30px;font-weight:700;letter-spacing:-0.01em">SQL→Opp <span style="color:#2563EB">25%→57%</span></div>
+          <div style="font-size:17px;color:rgba(255,255,255,0.72);font-weight:500">Converting far harder</div>
+        </div>
+        <div style="width:1px;height:52px;background:rgba(255,255,255,0.18)"></div>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <div style="font-size:30px;font-weight:700;letter-spacing:-0.01em">MQL→Opp <span style="color:#22C55E">33→18</span> days</div>
+          <div style="font-size:17px;color:rgba(255,255,255,0.72);font-weight:500">Moving through it faster</div>
+        </div>
+        <div style="width:1px;height:52px;background:rgba(255,255,255,0.18)"></div>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <div style="font-size:30px;font-weight:700;letter-spacing:-0.01em">Opp→Closed Won <span style="color:#F5913E">9→7.2</span> months</div>
+          <div style="font-size:17px;color:rgba(255,255,255,0.72);font-weight:500">And closing sooner</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 3 — THE TEAM ============ -->
+  <section class="slide" data-label="The team" data-screen-label="03" data-speaker-notes="Left is the org, split by how human the work is: Community stays human, Brand & Content is people plus AI tools, GTM at Scale builds the context both run on. Right is what we've learned running it: cost is lower but not free, hiring is harder so we hire for mindset, speed comes after a lag, and the real win is talent — a good system makes generalist builders dangerous. The prize isn't the same work faster; it's work that was impossible at 19 people." style="background:#F5F6F8;color:#1B2559;font-family:'Euclid Circular B',ui-sans-serif,sans-serif;padding:80px 112px;box-sizing:border-box;display:flex;flex-direction:column;overflow:hidden">
+    <h1 style="color:#11295A;font-size:52px;font-weight:700;letter-spacing:-0.025em;line-height:1.04;margin:0;max-width:1500px;text-wrap:balance">How we're building marketing in the agentic era</h1>
+
+    <div style="display:flex;gap:56px;flex:1;margin-top:40px;align-items:stretch">
+      <!-- LEFT: The setup -->
+      <div style="flex:0.92;display:flex;flex-direction:column">
+        <div style="font-size:26px;font-weight:700;color:#11295A;letter-spacing:-0.01em">The setup</div>
+        <div style="display:flex;flex-direction:column;gap:16px;margin-top:24px;flex:1;justify-content:flex-start">
+          <div style="background:#fff;border-radius:16px;box-shadow:0 6px 20px rgba(17,41,90,0.08);padding:22px 26px">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px">
+              <div style="font-size:23px;font-weight:700;color:#11295A;letter-spacing:-0.01em">Community</div>
+              <div style="font-size:23px;font-weight:700;color:#11295A;letter-spacing:-0.01em;flex:none">10 FTE</div>
+            </div>
+            <div style="font-size:22px;color:#4A5163;line-height:1.4;margin-top:8px;font-weight:700">Events, Campaign management, Customer marketing, Business Development</div>
+            <div style="font-size:22px;color:#4A5163;line-height:1.45;margin-top:12px">The people team. They create the touchpoints, 1-to-1 and 1-to-many, and build the relationships. This is human work, and it stays that way.</div>
+          </div>
+          <div style="background:#fff;border-radius:16px;box-shadow:0 6px 20px rgba(17,41,90,0.08);padding:22px 26px">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px">
+              <div style="font-size:23px;font-weight:700;color:#11295A;letter-spacing:-0.01em">Brand &amp; Content</div>
+              <div style="font-size:23px;font-weight:700;color:#11295A;letter-spacing:-0.01em;flex:none">6 FTE</div>
+            </div>
+            <div style="font-size:22px;color:#4A5163;line-height:1.4;margin-top:8px;font-weight:700">Content production, Project management, Design, Product Marketing</div>
+            <div style="font-size:22px;color:#4A5163;line-height:1.45;margin-top:12px">They educate customers with content and tools. People bring the story and the taste; AI helps write it, or better, builds the micro-tools that carry it.</div>
+          </div>
+          <div style="background:#fff;border-radius:16px;box-shadow:0 6px 20px rgba(17,41,90,0.08);padding:22px 26px">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px">
+              <div style="font-size:23px;font-weight:700;color:#11295A;letter-spacing:-0.01em">GTM at Scale</div>
+              <div style="font-size:23px;font-weight:700;color:#11295A;letter-spacing:-0.01em;flex:none">3 FTE</div>
+            </div>
+            <div style="font-size:22px;color:#4A5163;line-height:1.4;margin-top:8px;font-weight:700">RevOps, GTM Engineering</div>
+            <div style="font-size:22px;color:#4A5163;line-height:1.45;margin-top:12px">They automate the repetitive stuff and build the context people and AI both run on: the dashboards, and our brain.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="width:1px;background:#E1E4EB;align-self:stretch;flex:none"></div>
+
+      <!-- RIGHT: What we've learned so far -->
+      <div style="flex:1.08;display:flex;flex-direction:column">
+        <div style="font-size:26px;font-weight:700;color:#11295A;letter-spacing:-0.01em">What we've learned so far</div>
+        <div style="display:flex;flex-direction:column;margin-top:22px;flex:1;justify-content:flex-start">
+          <div style="padding:20px 0;border-top:1px solid #E1E4EB">
+            <span style="font-size:23px;font-weight:700;color:#11295A;letter-spacing:-0.01em">Cost. </span><span style="font-size:22px;color:#4A5163;line-height:1.4">Cheaper to run than in 2020, but less than you'd think. Tokens and infrastructure add up fast.</span>
+          </div>
+          <div style="padding:20px 0;border-top:1px solid #E1E4EB">
+            <span style="font-size:23px;font-weight:700;color:#11295A;letter-spacing:-0.01em">Hiring. </span><span style="font-size:22px;color:#4A5163;line-height:1.4">Harder, honestly. A hard skill you can test for in an interview. Curiosity, bias to action, comfort with AI are much harder to spot. So we hire for mindset and rent the specialist skills when we need them.</span>
+          </div>
+          <div style="padding:20px 0;border-top:1px solid #E1E4EB">
+            <span style="font-size:23px;font-weight:700;color:#11295A;letter-spacing:-0.01em">Speed. </span><span style="font-size:22px;color:#4A5163;line-height:1.4">Faster overall. But a system costs time before it saves any, and people get impatient. That impatience is what threatens the build.</span>
+          </div>
+          <div style="padding:20px 0;border-top:1px solid #E1E4EB;border-bottom:1px solid #E1E4EB">
+            <span style="font-size:23px;font-weight:700;color:#11295A;letter-spacing:-0.01em">Talent. </span><span style="font-size:22px;color:#4A5163;line-height:1.4">This is the real win. A good system lifts everyone. The generalists who love to build but never had the deep skills? Give them AI and something to build in, and they get dangerous.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============ SLIDE 4 — WHAT I ASK ============ -->
+  <section class="slide" data-label="What I ask" data-screen-label="04" data-speaker-notes="This is literally a slide from our team day — I'm showing you our homework. My opinion, and how the team works together; I hold myself to the same bar. The gaps we're closing in ourselves are why this event exists." style="background:#F5F6F8;color:#1B2559;font-family:'Euclid Circular B',ui-sans-serif,sans-serif;padding:80px 112px;box-sizing:border-box;display:flex;flex-direction:column;overflow:hidden">
+    <h1 style="color:#11295A;font-size:50px;font-weight:700;letter-spacing:-0.025em;line-height:1.04;margin:0;white-space:nowrap">What I ask my marketers to develop. Myself included.</h1>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;flex:1;margin-top:64px;align-items:start">
+      <!-- Validation -->
+      <div style="background:#fff;border-radius:20px;box-shadow:0 6px 20px rgba(17,41,90,0.08);padding:44px 44px;display:flex;flex-direction:column">
+        <div style="display:flex;align-items:center;gap:14px">
+          <span style="width:44px;height:44px;border-radius:12px;background:#DBE7FE;color:#2563EB;font-size:22px;font-weight:700;display:flex;align-items:center;justify-content:center">1</span>
+          <h2 style="font-size:32px;font-weight:700;color:#11295A;letter-spacing:-0.01em;margin:0">Validation</h2>
+        </div>
+        <p style="font-size:20px;color:#4A5163;line-height:1.45;margin:22px 0 0;min-height:116px">Catching when AI gets it wrong. Knowing what our buyers actually say, what's been tried and rejected, what good looks like <em style="font-style:italic;color:#11295A">for us</em>.</p>
+        <div style="height:1px;background:#E1E4EB;margin:26px 0 22px"></div>
+        <span style="align-self:flex-start;display:inline-flex;align-items:center;height:54px;padding:0 22px;border-radius:14px;background:#DBE7FE;color:#2563EB;font-size:32px;font-weight:700;letter-spacing:-0.01em">Start here</span>
+        <p style="font-size:20px;color:#4A5163;line-height:1.45;margin:16px 0 0">Build a gold-standard folder — ten examples of "great" for everything you produce.</p>
+      </div>
+      <!-- Context -->
+      <div style="background:#fff;border-radius:20px;box-shadow:0 6px 20px rgba(17,41,90,0.08);padding:44px 44px;display:flex;flex-direction:column">
+        <div style="display:flex;align-items:center;gap:14px">
+          <span style="width:44px;height:44px;border-radius:12px;background:#E8DEFE;color:#8B5CF6;font-size:22px;font-weight:700;display:flex;align-items:center;justify-content:center">2</span>
+          <h2 style="font-size:32px;font-weight:700;color:#11295A;letter-spacing:-0.01em;margin:0">Context</h2>
+        </div>
+        <p style="font-size:20px;color:#4A5163;line-height:1.45;margin:22px 0 0;min-height:116px">Providing what AI can't know: brand voice, customer pain points, market differences, campaign history. The knowledge that makes output genuinely ours.</p>
+        <div style="height:1px;background:#E1E4EB;margin:26px 0 22px"></div>
+        <span style="align-self:flex-start;display:inline-flex;align-items:center;height:54px;padding:0 22px;border-radius:14px;background:#E8DEFE;color:#8B5CF6;font-size:32px;font-weight:700;letter-spacing:-0.01em">Start here</span>
+        <p style="font-size:20px;color:#4A5163;line-height:1.45;margin:16px 0 0">Write it down — expertise that lives only in your head can't be used by AI <em style="font-style:italic">or</em> your team.</p>
+      </div>
+      <!-- Workflow design -->
+      <div style="background:#fff;border-radius:20px;box-shadow:0 6px 20px rgba(17,41,90,0.08);padding:44px 44px;display:flex;flex-direction:column">
+        <div style="display:flex;align-items:center;gap:14px">
+          <span style="width:44px;height:44px;border-radius:12px;background:#FDE8D4;color:#E8822C;font-size:22px;font-weight:700;display:flex;align-items:center;justify-content:center">3</span>
+          <h2 style="font-size:32px;font-weight:700;color:#11295A;letter-spacing:-0.01em;margin:0">Workflow design</h2>
+        </div>
+        <p style="font-size:20px;color:#4A5163;line-height:1.45;margin:22px 0 0;min-height:116px">Deciding what AI does, what you do, where the handoff is, and what happens when AI gets it wrong.</p>
+        <div style="height:1px;background:#E1E4EB;margin:26px 0 22px"></div>
+        <span style="align-self:flex-start;display:inline-flex;align-items:center;height:54px;padding:0 22px;border-radius:14px;background:#FDE8D4;color:#E8822C;font-size:32px;font-weight:700;letter-spacing:-0.01em">Start here</span>
+        <p style="font-size:20px;color:#4A5163;line-height:1.45;margin:16px 0 0">Take your ugliest recurring task and split it into steps this week.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 5 — THE FORK ============ -->
+  <section class="slide" data-label="The fork" data-screen-label="05" data-speaker-notes="Everyone in this room uses AI to make campaigns faster; the compounding is one level up. Tease (no handoff yet): hold that thought — in a few minutes Chiel will show you what these systems actually look like. First, two things I owe you: what I don't know, and what I'd do in your shoes." style="background:#11295A;color:#fff;font-family:'Euclid Circular B',ui-sans-serif,sans-serif;padding:80px 112px;box-sizing:border-box;display:flex;flex-direction:column;overflow:hidden">
+    <h1 style="color:#fff;font-size:76px;font-weight:700;letter-spacing:-0.03em;line-height:0.98;margin:0;text-align:center;text-wrap:balance">Heads don't multiply. Systems do.</h1>
+
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:34px;margin-top:36px">
+      <!-- Two comparison cards -->
+      <div style="display:flex;align-items:stretch;gap:26px">
+        <!-- Muted side -->
+        <div style="flex:1;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:22px;padding:32px 40px;display:flex;flex-direction:column">
+          <div style="font-size:15px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.5)">This is where we started</div>
+          <div style="font-size:32px;font-weight:700;color:rgba(255,255,255,0.82);letter-spacing:-0.01em;margin-top:6px">AI-assisted campaigns</div>
+          <div style="display:flex;flex-direction:column;gap:16px;margin-top:24px">
+            <div style="display:flex;align-items:flex-start;gap:16px"><span style="width:24px;height:2px;background:rgba(255,255,255,0.35);flex:none;margin-top:15px"></span><span style="font-size:23px;color:rgba(255,255,255,0.72);font-weight:500;line-height:1.3">Helps once</span></div>
+            <div style="display:flex;align-items:flex-start;gap:16px"><span style="width:24px;height:2px;background:rgba(255,255,255,0.35);flex:none;margin-top:15px"></span><span style="font-size:23px;color:rgba(255,255,255,0.72);font-weight:500;line-height:1.3">Starts from zero every time</span></div>
+            <div style="display:flex;align-items:flex-start;gap:16px"><span style="width:24px;height:2px;background:rgba(255,255,255,0.35);flex:none;margin-top:15px"></span><span style="font-size:23px;color:rgba(255,255,255,0.72);font-weight:500;line-height:1.3">Quality rides on who's prompting</span></div>
+          </div>
+        </div>
+
+        <!-- Arrow -->
+        <div style="display:flex;align-items:center;justify-content:center;flex:none;width:48px">
+          <span style="font-size:46px;color:#F5913E;font-weight:700;line-height:1">→</span>
+        </div>
+
+        <!-- Bright side -->
+        <div style="flex:1;background:linear-gradient(135deg,#2563EB 0%,#8B5CF6 100%);border-radius:22px;padding:32px 40px;display:flex;flex-direction:column;box-shadow:0 24px 60px rgba(37,99,235,0.35)">
+          <div style="font-size:15px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.75)">We are now here</div>
+          <div style="font-size:32px;font-weight:700;color:#fff;letter-spacing:-0.01em;margin-top:6px">Built systems</div>
+          <div style="display:flex;flex-direction:column;gap:16px;margin-top:24px">
+            <div style="display:flex;align-items:flex-start;gap:16px"><span style="width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,0.22);color:#fff;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none;margin-top:3px">✓</span><span style="font-size:23px;color:#fff;font-weight:500;line-height:1.3">Built to be repurposed — and kicks off autonomously</span></div>
+            <div style="display:flex;align-items:flex-start;gap:16px"><span style="width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,0.22);color:#fff;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none;margin-top:3px">✓</span><span style="font-size:23px;color:#fff;font-weight:500;line-height:1.3">We feed it our own context — our website, content and customer data — so the output is genuinely ours</span></div>
+            <div style="display:flex;align-items:flex-start;gap:16px"><span style="width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,0.22);color:#fff;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none;margin-top:3px">✓</span><span style="font-size:23px;color:#fff;font-weight:500;line-height:1.3">Gets sharper the more we use it</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Evidence row -->
+      <div>
+        <div style="display:flex;align-items:center;gap:18px;margin-bottom:18px">
+          <div style="font-size:17px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.6);flex:none">Five we run today</div>
+          <div style="height:1px;background:rgba(255,255,255,0.14);flex:1"></div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:18px;align-items:stretch">
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.10);border-radius:16px;padding:26px 24px">
+            <div style="font-size:27px;font-weight:700;color:#fff">Research agent</div>
+            <div style="font-size:21px;color:rgba(255,255,255,0.78);line-height:1.5;margin-top:12px">Researches whole markets or a specific set of target customers on demand.</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.10);border-radius:16px;padding:26px 24px">
+            <div style="font-size:27px;font-weight:700;color:#fff">Outbound agent</div>
+            <div style="font-size:21px;color:rgba(255,255,255,0.78);line-height:1.5;margin-top:12px">Writes sequences from the content we've already published.</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.10);border-radius:16px;padding:26px 24px">
+            <div style="font-size:27px;font-weight:700;color:#fff">Podcast assistant</div>
+            <div style="font-size:21px;color:rgba(255,255,255,0.78);line-height:1.5;margin-top:12px">Researches every L&amp;D Impact Podcast guest and preps the outreach cadence.</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.10);border-radius:16px;padding:26px 24px">
+            <div style="font-size:27px;font-weight:700;color:#fff">Funnel MCP</div>
+            <div style="font-size:21px;color:rgba(255,255,255,0.78);line-height:1.5;margin-top:12px">Reads our business plan and proactively flags where the funnel can improve.</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.10);border-radius:16px;padding:26px 24px">
+            <div style="font-size:27px;font-weight:700;color:#fff">Claude Design</div>
+            <div style="font-size:21px;color:rgba(255,255,255,0.78);line-height:1.5;margin-top:12px">Where we built our design system — now used consistently across sales and CS.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- ============ SLIDE 6 — WHAT I DON'T KNOW ============ -->
+  <section class="slide" data-label="What I don't know" data-screen-label="06" data-speaker-notes="Deflate any 'they've solved it' impression before it forms. Invite pushback over drinks — if you're the smartest person in the room, you're in the wrong room; please prove me wrong today." style="background:#F5F6F8;color:#1B2559;font-family:'Euclid Circular B',ui-sans-serif,sans-serif;padding:88px 112px;box-sizing:border-box;display:flex;flex-direction:column;overflow:hidden">
+    <h1 style="color:#11295A;font-size:56px;font-weight:700;letter-spacing:-0.025em;line-height:1.02;margin:0;white-space:nowrap">I don't have this figured out. What's on my mind now.</h1>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px">
+      <div style="background:#fff;border-radius:20px;box-shadow:0 6px 20px rgba(17,41,90,0.08);padding:32px 40px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-size:40px;font-weight:700;color:#8B5CF6;letter-spacing:-0.02em">01</span>
+        <span style="font-size:32px;font-weight:500;color:#11295A;letter-spacing:-0.01em;line-height:1.3">Where does human judgment stay non-negotiable?</span>
+      </div>
+      <div style="background:#fff;border-radius:20px;box-shadow:0 6px 20px rgba(17,41,90,0.08);padding:32px 40px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-size:40px;font-weight:700;color:#8B5CF6;letter-spacing:-0.02em">02</span>
+        <span style="font-size:32px;font-weight:500;color:#11295A;letter-spacing:-0.01em;line-height:1.3">Which parts of a content &amp; event engine scale to €100M — and which don't?</span>
+      </div>
+      <div style="background:#fff;border-radius:20px;box-shadow:0 6px 20px rgba(17,41,90,0.08);padding:32px 40px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-size:40px;font-weight:700;color:#8B5CF6;letter-spacing:-0.02em">03</span>
+        <span style="font-size:32px;font-weight:500;color:#11295A;letter-spacing:-0.01em;line-height:1.3">How do you hire for skills that didn't exist 18 months ago?</span>
+      </div>
+      <div style="background:#fff;border-radius:20px;box-shadow:0 6px 20px rgba(17,41,90,0.08);padding:32px 40px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-size:40px;font-weight:700;color:#8B5CF6;letter-spacing:-0.02em">04</span>
+        <span style="font-size:32px;font-weight:500;color:#11295A;letter-spacing:-0.01em;line-height:1.3">What does a marketing team even look like in 2028?</span>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;background:#11295A;border-radius:16px;padding:26px 40px;margin-top:auto;color:#fff">
+      <div style="font-size:26px;font-weight:600;line-height:1.3">I can't tell you where this field lands. <span style="color:#F5913E">I can tell you what I'd do. →</span></div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 7 — IF I WERE YOU ============ -->
+  <section class="slide" data-label="If I were you" data-screen-label="07" data-speaker-notes="Every one of these roles is for people who want to push with AI. If today felt energizing rather than threatening, come find me. Closing relay: that's my part. Now the proof — Chiel." style="background:#F5F6F8;color:#1B2559;font-family:'Euclid Circular B',ui-sans-serif,sans-serif;padding:72px 112px;box-sizing:border-box;display:flex;flex-direction:column;overflow:hidden">
+    <h1 style="color:#11295A;font-size:44px;font-weight:700;letter-spacing:-0.025em;line-height:1.02;margin:0;white-space:nowrap">If you're growing a marketing career right now, here's what I'd do.</h1>
+
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;max-width:1460px;margin-top:16px">
+      <div style="display:flex;align-items:baseline;gap:36px;padding:22px 0;border-top:1px solid #E1E4EB">
+        <span style="font-size:40px;font-weight:700;color:#8B5CF6;letter-spacing:-0.02em;flex:none;width:66px">01</span>
+        <div style="flex:1"><span style="font-size:30px;font-weight:700;color:#11295A;letter-spacing:-0.01em">Talk to actual customers.</span> <span style="font-size:26px;color:#4A5163;line-height:1.35">When did you last speak to one? It was always the job.</span></div>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:36px;padding:22px 0;border-top:1px solid #E1E4EB">
+        <span style="font-size:40px;font-weight:700;color:#8B5CF6;letter-spacing:-0.02em;flex:none;width:66px">02</span>
+        <div style="flex:1"><span style="font-size:30px;font-weight:700;color:#11295A;letter-spacing:-0.01em">Develop your judgment.</span> <span style="font-size:26px;color:#4A5163;line-height:1.35">You can't catch what's wrong on a market you only know through dashboards.</span></div>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:36px;padding:22px 0;border-top:1px solid #E1E4EB">
+        <span style="font-size:40px;font-weight:700;color:#8B5CF6;letter-spacing:-0.02em;flex:none;width:66px">03</span>
+        <div style="flex:1"><span style="font-size:30px;font-weight:700;color:#11295A;letter-spacing:-0.01em">Make AI your daily operating system.</span> <span style="font-size:26px;color:#4A5163;line-height:1.35">Rebuild one recurring workflow a month. What did you stop doing by hand?</span></div>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:36px;padding:22px 0;border-top:1px solid #E1E4EB;border-bottom:1px solid #E1E4EB">
+        <span style="font-size:40px;font-weight:700;color:#8B5CF6;letter-spacing:-0.02em;flex:none;width:66px">04</span>
+        <div style="flex:1"><span style="font-size:30px;font-weight:700;color:#11295A;letter-spacing:-0.01em">Plan your next step, not your next three.</span> <span style="font-size:26px;color:#4A5163;line-height:1.35">The roles you'd aim for in step three don't exist yet.</span></div>
+      </div>
+    </div>
+
+    <!-- Hiring strip -->
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:32px;background:#11295A;border-radius:16px;padding:22px 40px;margin-top:26px;color:#fff">
+      <div style="display:flex;align-items:center;gap:20px">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:34px;height:34px;border-radius:6px;display:block"><rect width="40" height="40" fill="#11295A"></rect><path d="M26.8503 20.7015C26.0838 19.819 25.0299 19.1401 23.7365 18.6422L21.006 17.6013C20.5509 17.4203 20.1198 17.2392 19.7365 17.1034C19.3533 16.945 19.018 16.7866 18.7305 16.6282C18.4431 16.4698 18.2275 16.2662 18.0838 16.0851C17.9401 15.8815 17.8683 15.6552 17.8683 15.361C17.8683 14.8179 18.0838 14.4106 18.5389 14.1164C18.994 13.8222 19.6407 13.6638 20.4311 13.6638C21.2455 13.6638 22.012 13.7996 22.7066 14.0711C23.4731 14.3879 24.2874 14.931 24.8383 15.3384L24.9341 15.3836L27.3533 12.1024C27.3533 12.1024 26.012 10.903 24.1198 10.1789C22.8982 9.72629 21.6527 9.5 20.4072 9.5C19.2814 9.5 18.2515 9.65841 17.3174 9.97522C16.4072 10.2694 15.5928 10.722 14.8982 11.2651C14.2205 11.7964 13.6729 12.4604 13.2934 13.2112C12.9102 13.958 12.7186 14.75 12.7186 15.5873C12.7186 16.3341 12.8383 17.0129 13.0778 17.6013C13.3174 18.1897 13.6527 18.7328 14.0599 19.1627C14.4671 19.6153 14.9461 20 15.4491 20.3394C15.9521 20.6789 16.503 20.9504 17.0539 21.1541L19.8323 22.2629L21.0778 22.7608C21.4371 22.9192 21.7725 23.0776 22.0359 23.236C22.2994 23.3944 22.491 23.5981 22.6108 23.8017C22.7305 24.0054 22.8024 24.2543 22.8024 24.5485C22.8024 25.1142 22.5868 25.5442 22.1078 25.861C21.6527 26.2004 20.9102 26.3588 19.9521 26.3588C19.0898 26.3588 18.1796 26.1552 17.2934 25.7931C16.4311 25.431 15.4731 24.8427 14.6826 24.2091L14.5868 24.1185L12 27.6487L12.0719 27.7166C13.1257 28.6218 14.3473 29.3233 15.6647 29.7759C17.0539 30.2511 18.4671 30.5 19.8563 30.5C21.1257 30.5 22.2754 30.319 23.2814 29.9795C24.2874 29.6401 25.1497 29.1649 25.8443 28.5991C26.5389 28.0334 27.0659 27.3545 27.4491 26.5851C27.8084 25.8157 28 25.0011 28 24.1638C28 22.7608 27.6168 21.5841 26.8503 20.7015Z" fill="white"></path></svg>
+        <div style="font-size:22px;font-weight:600">We're hiring builders — <span style="color:rgba(255,255,255,0.82);font-weight:500">Brand Design · Growth · RevOps / GTM Engineering · Events</span></div>
+      </div>
+      <span style="display:inline-flex;align-items:center;height:40px;padding:0 20px;border-radius:999px;background:rgba(255,255,255,0.12);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.22);font-size:18px;font-weight:600;color:#fff;white-space:nowrap">studytube.com/careers</span>
+    </div>
+  </section>
+
+  </div>
+</div>
+
+<div class="nav">
+  <button id="prev" aria-label="Previous">‹</button>
+  <span class="count"><span id="cur">1</span> / <span id="total">7</span></span>
+  <button id="next" aria-label="Next">›</button>
+  <span class="label" id="label"></span>
+</div>
+<div class="hint">← → to navigate · N for notes · F fullscreen</div>
+<div id="notes"><b>Speaker notes</b><span id="notes-body"></span></div>
+
+<script>
+(function () {
+  var slides = Array.prototype.slice.call(document.querySelectorAll('#deck > section'));
+  var deck = document.getElementById('deck');
+  var i = 0;
+  document.getElementById('total').textContent = slides.length;
+
+  function fit() {
+    var k = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+    deck.style.transform = 'translate(-50%,-50%) scale(' + k + ')';
+  }
+
+  function show(n) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach(function (s, idx) { s.classList.toggle('active', idx === i); });
+    document.getElementById('cur').textContent = i + 1;
+    document.getElementById('label').textContent = slides[i].getAttribute('data-label') || '';
+    document.getElementById('notes-body').textContent = slides[i].getAttribute('data-speaker-notes') || '';
+  }
+
+  document.getElementById('prev').onclick = function () { show(i - 1); };
+  document.getElementById('next').onclick = function () { show(i + 1); };
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { show(i + 1); e.preventDefault(); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { show(i - 1); e.preventDefault(); }
+    else if (e.key === 'Home') { show(0); }
+    else if (e.key === 'End') { show(slides.length - 1); }
+    else if (e.key === 'n' || e.key === 'N') { document.getElementById('notes').classList.toggle('on'); }
+    else if (e.key === 'f' || e.key === 'F') {
+      if (!document.fullscreenElement) { document.documentElement.requestFullscreen(); }
+      else { document.exitFullscreen(); }
+    }
+  });
+
+  window.addEventListener('resize', fit);
+  fit();
+  show(0);
+})();
+</script>
+</body>
+</html>
